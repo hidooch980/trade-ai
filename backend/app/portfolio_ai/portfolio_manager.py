@@ -1,40 +1,43 @@
 class PortfolioManager:
 
     def __init__(self):
-        self.positions=[]
+        self.accounts=[]
 
 
-    def add_position(self,position):
-        self.positions.append(position)
-        return position
+    def add_account(self,account):
+        self.accounts.append(account)
+        return account
 
 
-    def exposure(self):
+    def allocate(self,total_capital,strategies):
 
-        total=0
+        if not strategies:
+            return {}
 
-        for p in self.positions:
-            total+=p.get("risk",0)
+        allocation={}
+
+        share=round(
+            total_capital/len(strategies),
+            2
+        )
+
+        for strategy in strategies:
+            allocation[strategy]=share
+
+        return allocation
+
+
+    def risk_report(self):
+
+        exposure=0
+
+        for account in self.accounts:
+            exposure+=account.get("exposure",0)
 
         return {
-            "total_risk":total,
-            "positions":len(self.positions)
-        }
-
-
-    def check_limit(self,max_risk=5):
-
-        current=self.exposure()["total_risk"]
-
-        if current>=max_risk:
-            return {
-                "approved":False,
-                "reason":"PORTFOLIO_RISK_LIMIT"
-            }
-
-        return {
-            "approved":True,
-            "risk":current
+            "accounts":len(self.accounts),
+            "total_exposure":exposure,
+            "status":"SAFE" if exposure<50 else "WARNING"
         }
 
 
