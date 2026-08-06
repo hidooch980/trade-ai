@@ -11,3 +11,5 @@ venv/
 .idea/
 .vscode/
 *.sqlite3
+backend/data/trade_journal.json
+data/trade_journal.json
