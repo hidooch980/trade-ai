@@ -1,56 +1,59 @@
-class StrategyFactory:
+class StrategyFactoryAI:
 
     def __init__(self):
-        self.strategies=[]
+        self.strategies={}
+        self.tests=[]
 
 
-    def create(self,name,logic):
+    def create_strategy(self,name,rules):
 
-        strategy={
-            "name":name,
-            "logic":logic,
-            "score":50,
-            "status":"TESTING"
+        self.strategies[name]={
+            "rules":rules,
+            "score":0,
+            "status":"CREATED"
         }
 
-        self.strategies.append(strategy)
-
-        return strategy
+        return self.strategies[name]
 
 
-    def optimize(self,name,result):
+    def backtest(self,name,data):
 
-        for strategy in self.strategies:
+        result={
+            "strategy":name,
+            "data":data,
+            "result":"TESTED"
+        }
 
-            if strategy["name"]==name:
+        self.tests.append(result)
 
-                if result.get("profit",0)>0:
-                    strategy["score"]=min(
-                        strategy["score"]+10,
-                        100
-                    )
-                else:
-                    strategy["score"]=max(
-                        strategy["score"]-10,
-                        0
-                    )
-
-                strategy["status"]="READY"
-
-                return strategy
-
-        return None
+        return result
 
 
-    def best(self):
+    def optimize(self,name,score):
 
-        if not self.strategies:
-            return None
+        if name in self.strategies:
+            self.strategies[name]["score"]=score
+            self.strategies[name]["status"]="OPTIMIZED"
 
-        return max(
-            self.strategies,
-            key=lambda x:x["score"]
+        return self.strategies.get(name)
+
+
+    def ranking(self):
+
+        return sorted(
+            self.strategies.items(),
+            key=lambda x:x[1]["score"],
+            reverse=True
         )
 
 
-strategy_factory=StrategyFactory()
+    def status(self):
+
+        return {
+            "strategies":len(self.strategies),
+            "tests":len(self.tests),
+            "factory":"ONLINE"
+        }
+
+
+strategy_factory=StrategyFactoryAI()

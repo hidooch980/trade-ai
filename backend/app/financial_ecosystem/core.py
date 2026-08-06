@@ -1,52 +1,44 @@
 class FinancialEcosystem:
 
     def __init__(self):
-        self.portfolios={}
+        self.services={}
         self.users={}
+        self.events=[]
 
 
-    def create_profile(self,user):
+    def register_service(self,name,service):
 
-        self.users[user]={
-            "risk":"MEDIUM",
-            "portfolio":None
+        self.services[name]={
+            "service":service,
+            "status":"ACTIVE"
         }
+
+        return self.services[name]
+
+
+    def create_profile(self,user,data):
+
+        self.users[user]=data
 
         return self.users[user]
 
 
-    def create_portfolio(self,user,assets):
+    def orchestrate(self,event):
 
-        if user not in self.users:
-            return None
-
-        portfolio={
-            "owner":user,
-            "assets":assets,
-            "status":"ACTIVE"
-        }
-
-        self.portfolios[user]=portfolio
-        self.users[user]["portfolio"]=portfolio
-
-        return portfolio
-
-
-    def analyze(self,user):
+        self.events.append(event)
 
         return {
-            "user":user,
-            "recommendation":"OPTIMIZE_ALLOCATION",
-            "ai":"ACTIVE"
+            "event":event,
+            "status":"COORDINATED"
         }
 
 
     def status(self):
 
         return {
+            "services":len(self.services),
             "users":len(self.users),
-            "portfolios":len(self.portfolios),
-            "system":"ONLINE"
+            "ecosystem":"ONLINE"
         }
 
 

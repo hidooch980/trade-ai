@@ -1,56 +1,54 @@
-class TradingAcademy:
+class TradingAcademyAI:
 
     def __init__(self):
         self.students={}
-        self.courses=[]
+        self.lessons={}
+        self.progress={}
 
 
-    def add_course(self,title,level):
-
-        course={
-            "title":title,
-            "level":level,
-            "status":"ACTIVE"
-        }
-
-        self.courses.append(course)
-
-        return course
-
-
-    def register_student(self,user):
+    def register_student(self,user,level):
 
         self.students[user]={
-            "level":1,
-            "score":0,
-            "courses":[]
+            "level":level,
+            "status":"ACTIVE"
         }
 
         return self.students[user]
 
 
-    def evaluate(self,user,score):
+    def create_learning_path(self,user,path):
 
-        student=self.students.get(user)
+        self.progress[user]={
+            "path":path,
+            "completed":0
+        }
 
-        if not student:
-            return None
-
-        student["score"]+=score
-
-        if student["score"]>=100:
-            student["level"]+=1
-
-        return student
+        return self.progress[user]
 
 
-    def mentor(self,user):
+    def update_progress(self,user,value):
+
+        if user in self.progress:
+            self.progress[user]["completed"]=value
+
+        return self.progress.get(user)
+
+
+    def evaluate(self,user):
 
         return {
             "user":user,
-            "advice":"CONTINUE_LEARNING",
-            "ai":"ACTIVE"
+            "skill":"ANALYZED"
         }
 
 
-academy=TradingAcademy()
+    def status(self):
+
+        return {
+            "students":len(self.students),
+            "paths":len(self.progress),
+            "academy":"ONLINE"
+        }
+
+
+trading_academy=TradingAcademyAI()
