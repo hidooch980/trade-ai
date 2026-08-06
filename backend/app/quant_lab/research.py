@@ -1,39 +1,41 @@
 class QuantResearchLab:
 
     def __init__(self):
-        self.models=[]
+        self.models={}
 
 
     def create_model(self,name,parameters):
 
-        model={
-            "name":name,
+        self.models[name]={
             "parameters":parameters,
             "score":50,
-            "status":"TESTING"
+            "status":"RESEARCH"
         }
 
-        self.models.append(model)
+        return self.models[name]
+
+
+    def evaluate(self,name,performance):
+
+        model=self.models.get(name)
+
+        if not model:
+            return None
+
+        if performance>0:
+            model["score"]=min(
+                model["score"]+10,
+                100
+            )
+        else:
+            model["score"]=max(
+                model["score"]-10,
+                0
+            )
+
+        model["status"]="TESTED"
+
         return model
-
-
-    def evaluate(self,name,metrics):
-
-        for model in self.models:
-
-            if model["name"]==name:
-
-                score=(
-                    metrics.get("win_rate",0)+
-                    metrics.get("stability",0)
-                )//2
-
-                model["score"]=score
-                model["status"]="READY" if score>=70 else "RESEARCH"
-
-                return model
-
-        return None
 
 
     def best_model(self):
@@ -43,7 +45,7 @@ class QuantResearchLab:
 
         return max(
             self.models,
-            key=lambda x:x["score"]
+            key=lambda x:self.models[x]["score"]
         )
 
 
