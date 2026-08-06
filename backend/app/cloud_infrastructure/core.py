@@ -1,64 +1,31 @@
-class AICloudInfrastructure:
+class CloudInfrastructureManager:
 
     def __init__(self):
+        self.nodes=[]
         self.services=[]
-        self.containers=[]
         self.resources=[]
-        self.backups=[]
+        self.deployments=[]
 
+    def register_node(self,data):
+        self.nodes.append(data)
 
-    def register_service(self,name):
+    def register_service(self,data):
+        self.services.append(data)
 
-        service={
-            "name":name,
-            "status":"RUNNING"
-        }
-
-        self.services.append(service)
-
-        return service
-
-
-    def create_container(self,name):
-
-        container={
-            "name":name,
-            "status":"CREATED"
-        }
-
-        self.containers.append(container)
-
-        return container
-
-
-    def monitor_resource(self,data):
-
+    def allocate_resource(self,data):
         self.resources.append(data)
 
-        return {
-            "status":"MONITORED"
-        }
-
-
-    def create_backup(self,name):
-
-        self.backups.append(name)
-
-        return {
-            "backup":name,
-            "status":"READY"
-        }
-
+    def deploy(self,data):
+        self.deployments.append(data)
 
     def status(self):
-
         return {
+            "nodes":len(self.nodes),
             "services":len(self.services),
-            "containers":len(self.containers),
             "resources":len(self.resources),
-            "backups":len(self.backups),
-            "cloud":"ONLINE"
+            "deployments":len(self.deployments),
+            "cloud_layer":"ONLINE"
         }
 
 
-cloud_infrastructure=AICloudInfrastructure()
+cloud_infrastructure=CloudInfrastructureManager()
