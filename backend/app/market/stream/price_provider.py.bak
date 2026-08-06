@@ -1,0 +1,15 @@
+import random
+
+class PriceProvider:
+    def __init__(self):
+        self.price = 2480.0
+
+    def get_price(self, symbol: str):
+        self.price += random.choice([-2, -1, 1, 2])
+        return {
+            "symbol": symbol,
+            "price": round(self.price, 2),
+            "volume": 100
+        }
+
+price_provider = PriceProvider()

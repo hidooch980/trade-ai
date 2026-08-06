@@ -1,0 +1,23 @@
+from abc import ABC, abstractmethod
+
+
+class MT5Connector(ABC):
+
+    @abstractmethod
+    async def connect(self):
+        pass
+
+
+    @abstractmethod
+    async def get_account(self):
+        pass
+
+
+    @abstractmethod
+    async def get_positions(self):
+        pass
+
+
+    @abstractmethod
+    async def send_order(self, order):
+        pass

@@ -9,3 +9,11 @@ async def root():
 @app.get("/health")
 async def health():
     return {"status": "healthy", "service": "trade-ai-api"}
+
+from app.ai.orchestrator import AIOrchestrator
+
+ai_system = AIOrchestrator()
+
+@app.post("/ai/analyze")
+async def ai_analyze(data: dict):
+    return await ai_system.analyze(data)
