@@ -1,7 +1,4 @@
-import secrets
-
-
-class APIGateway:
+class AIAPIGateway:
 
     def __init__(self):
         self.keys={}
@@ -10,42 +7,44 @@ class APIGateway:
 
     def create_key(self,developer):
 
-        key=secrets.token_hex(16)
-
-        self.keys[developer]={
-            "api_key":key,
+        key={
+            "developer":developer,
             "status":"ACTIVE"
         }
 
-        return self.keys[developer]
+        self.keys[developer]=key
+
+        return key
 
 
-    def validate(self,developer,key):
+    def request(self,developer,service):
 
-        data=self.keys.get(developer)
+        req={
+            "developer":developer,
+            "service":service,
+            "status":"RECEIVED"
+        }
 
-        if not data:
-            return False
+        self.requests.append(req)
 
-        return data["api_key"]==key
+        return req
 
 
-    def request_log(self,endpoint):
-
-        self.requests.append(endpoint)
+    def check_permission(self,developer):
 
         return {
-            "endpoint":endpoint,
-            "logged":True
+            "developer":developer,
+            "permission":"VERIFIED"
         }
 
 
-    def stats(self):
+    def status(self):
 
         return {
-            "developers":len(self.keys),
-            "requests":len(self.requests)
+            "keys":len(self.keys),
+            "requests":len(self.requests),
+            "gateway":"ONLINE"
         }
 
 
-api_gateway=APIGateway()
+api_gateway=AIAPIGateway()

@@ -1,52 +1,54 @@
-class QuantResearchLab:
+class AIQuantLab:
 
     def __init__(self):
         self.models={}
+        self.tests=[]
+        self.results=[]
 
 
-    def create_model(self,name,parameters):
+    def create_model(self,name,logic):
 
         self.models[name]={
-            "parameters":parameters,
-            "score":50,
-            "status":"RESEARCH"
+            "logic":logic,
+            "status":"CREATED"
         }
 
         return self.models[name]
 
 
-    def evaluate(self,name,performance):
+    def backtest(self,model,data):
 
-        model=self.models.get(name)
+        result={
+            "model":model,
+            "data":data,
+            "status":"TESTED"
+        }
 
-        if not model:
-            return None
+        self.tests.append(result)
 
-        if performance>0:
-            model["score"]=min(
-                model["score"]+10,
-                100
-            )
-        else:
-            model["score"]=max(
-                model["score"]-10,
-                0
-            )
-
-        model["status"]="TESTED"
-
-        return model
+        return result
 
 
-    def best_model(self):
+    def evaluate(self,model,metrics):
 
-        if not self.models:
-            return None
+        result={
+            "model":model,
+            "metrics":metrics
+        }
 
-        return max(
-            self.models,
-            key=lambda x:self.models[x]["score"]
-        )
+        self.results.append(result)
+
+        return result
 
 
-quant_lab=QuantResearchLab()
+    def status(self):
+
+        return {
+            "models":len(self.models),
+            "tests":len(self.tests),
+            "results":len(self.results),
+            "lab":"ONLINE"
+        }
+
+
+quant_lab=AIQuantLab()

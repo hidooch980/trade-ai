@@ -1,46 +1,41 @@
-class TradingDigitalTwin:
+class AIMarketDigitalTwin:
 
     def __init__(self):
-        self.accounts={}
+        self.models=[]
+        self.scenarios=[]
         self.simulations=[]
 
 
-    def create_account(self,user,balance):
+    def create_model(self,name,data):
 
-        self.accounts[user]={
-            "balance":balance,
-            "equity":balance,
-            "trades":[]
+        model={
+            "name":name,
+            "data":data,
+            "status":"CREATED"
         }
 
-        return self.accounts[user]
+        self.models.append(model)
+
+        return model
 
 
-    def simulate_trade(self,user,trade):
+    def add_scenario(self,name,condition):
 
-        account=self.accounts.get(user)
-
-        if not account:
-            return {
-                "error":"ACCOUNT_NOT_FOUND"
-            }
-
-        pnl=trade.get("pnl",0)
-
-        account["equity"]+=pnl
-        account["trades"].append(trade)
-
-        return {
-            "user":user,
-            "equity":account["equity"],
-            "pnl":pnl
+        scenario={
+            "name":name,
+            "condition":condition
         }
 
+        self.scenarios.append(scenario)
 
-    def scenario(self,name):
+        return scenario
+
+
+    def simulate(self,scenario,decision):
 
         result={
-            "scenario":name,
+            "scenario":scenario,
+            "decision":decision,
             "status":"SIMULATED"
         }
 
@@ -49,4 +44,14 @@ class TradingDigitalTwin:
         return result
 
 
-digital_twin=TradingDigitalTwin()
+    def status(self):
+
+        return {
+            "models":len(self.models),
+            "scenarios":len(self.scenarios),
+            "simulations":len(self.simulations),
+            "twin":"ONLINE"
+        }
+
+
+digital_twin=AIMarketDigitalTwin()
