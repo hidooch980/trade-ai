@@ -1,42 +1,51 @@
+import secrets
+
+
 class APIGateway:
 
-    def __init__(
-        self,
-        monitor,
-        dashboard
-    ):
-
-        self.monitor = monitor
-        self.dashboard = dashboard
+    def __init__(self):
+        self.keys={}
+        self.requests=[]
 
 
-    def health(self):
+    def create_key(self,developer):
+
+        key=secrets.token_hex(16)
+
+        self.keys[developer]={
+            "api_key":key,
+            "status":"ACTIVE"
+        }
+
+        return self.keys[developer]
+
+
+    def validate(self,developer,key):
+
+        data=self.keys.get(developer)
+
+        if not data:
+            return False
+
+        return data["api_key"]==key
+
+
+    def request_log(self,endpoint):
+
+        self.requests.append(endpoint)
 
         return {
-
-            "status": "ONLINE",
-
-            "service": "TRADE_AI_API"
-
+            "endpoint":endpoint,
+            "logged":True
         }
 
 
-    def system_status(self):
+    def stats(self):
 
         return {
-
-            "health": self.health(),
-
-            "monitor": self.monitor.status()
-
+            "developers":len(self.keys),
+            "requests":len(self.requests)
         }
 
 
-    def dashboard_data(
-        self,
-        trades
-    ):
-
-        return self.dashboard.get_dashboard(
-            trades
-        )
+api_gateway=APIGateway()
