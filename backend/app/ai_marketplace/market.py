@@ -1,41 +1,43 @@
-class AITradingMarketplace:
+class AIMarketplace:
 
     def __init__(self):
-        self.products=[]
-        self.traders=[]
+        self.products={}
+        self.sales=[]
 
 
-    def add_product(self,name,category,price):
+    def publish(self,name,owner,price):
 
-        item={
-            "name":name,
-            "category":category,
+        self.products[name]={
+            "owner":owner,
             "price":price,
+            "rating":50,
             "status":"ACTIVE"
         }
 
-        self.products.append(item)
-        return item
+        return self.products[name]
 
 
-    def register_trader(self,name,score):
+    def purchase(self,user,product):
 
-        trader={
-            "name":name,
-            "score":score
+        if product not in self.products:
+            return None
+
+        self.sales.append({
+            "buyer":user,
+            "product":product
+        })
+
+        return {
+            "purchase":"SUCCESS"
         }
 
-        self.traders.append(trader)
-        return trader
+
+    def rate(self,product,score):
+
+        if product in self.products:
+            self.products[product]["rating"]=score
+
+        return self.products.get(product)
 
 
-    def leaderboard(self):
-
-        return sorted(
-            self.traders,
-            key=lambda x:x["score"],
-            reverse=True
-        )
-
-
-marketplace=AITradingMarketplace()
+marketplace=AIMarketplace()
