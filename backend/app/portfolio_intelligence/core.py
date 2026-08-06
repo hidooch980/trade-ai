@@ -1,65 +1,34 @@
 class AIPortfolioIntelligence:
 
     def __init__(self):
-        self.assets=[]
+        self.portfolios=[]
         self.allocations=[]
-        self.risks=[]
-        self.rebalances=[]
+        self.optimizations=[]
+        self.recommendations=[]
 
+    def register_portfolio(self,data):
+        self.portfolios.append(data)
 
-    def add_asset(self,name,data):
+    def allocate_asset(self,data):
+        self.allocations.append(data)
 
-        asset={
-            "name":name,
-            "data":data
-        }
-
-        self.assets.append(asset)
-
-        return asset
-
-
-    def allocate(self,asset,percentage):
-
-        item={
-            "asset":asset,
-            "percentage":percentage
-        }
-
-        self.allocations.append(item)
-
-        return item
-
-
-    def analyze_risk(self,portfolio,result):
-
-        item={
-            "portfolio":portfolio,
-            "risk":result
-        }
-
-        self.risks.append(item)
-
-        return item
-
-
-    def rebalance(self,action):
-
-        self.rebalances.append(action)
-
+    def optimize(self,data):
+        self.optimizations.append(data)
         return {
-            "status":"REBALANCED"
+            "optimization":"COMPLETED",
+            "portfolio":data
         }
 
+    def recommend(self,data):
+        self.recommendations.append(data)
 
     def status(self):
-
         return {
-            "assets":len(self.assets),
+            "portfolios":len(self.portfolios),
             "allocations":len(self.allocations),
-            "risks":len(self.risks),
-            "rebalances":len(self.rebalances),
-            "portfolio":"ONLINE"
+            "optimizations":len(self.optimizations),
+            "recommendations":len(self.recommendations),
+            "portfolio_engine":"ONLINE"
         }
 
 
