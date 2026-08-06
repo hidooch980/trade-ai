@@ -1,0 +1,12 @@
+{
+  "app":"Trade-AI Mobile",
+  "platforms":["Android","iOS"],
+  "features":[
+    "ACCOUNT_MONITOR",
+    "LIVE_TRADING",
+    "AI_ALERTS",
+    "COPY_TRADING",
+    "CHALLENGE_STATUS"
+  ],
+  "api":"http://localhost:8000"
+}
