@@ -28,5 +28,4 @@ class AIOperationsCenter:
             "operations":"ONLINE"
         }
 
-
 operations=AIOperationsCenter()
