@@ -563713,5 +563713,1845 @@
             ]
         },
         "time": "2026-08-06T11:42:32.563554"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2482.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2482.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2482.0,
+                        "current_price": 2482.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2472.0,
+                        "take_profit": 2502.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:42:34.027553"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2479.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2479.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2479.0,
+                        "current_price": 2479.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2469.0,
+                        "take_profit": 2499.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:42:35.533033"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2482.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2482.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2482.0,
+                        "current_price": 2482.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2472.0,
+                        "take_profit": 2502.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:42:36.942821"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2478.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2478.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2478.0,
+                        "current_price": 2478.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2468.0,
+                        "take_profit": 2498.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:42:38.349526"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2478.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2478.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2478.0,
+                        "current_price": 2478.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2468.0,
+                        "take_profit": 2498.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:42:39.765066"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2482.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2482.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2482.0,
+                        "current_price": 2482.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2472.0,
+                        "take_profit": 2502.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:42:41.190968"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2482.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2482.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2482.0,
+                        "current_price": 2482.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2472.0,
+                        "take_profit": 2502.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:42:42.578751"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2479.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2479.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2479.0,
+                        "current_price": 2479.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2469.0,
+                        "take_profit": 2499.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:42:44.010136"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2481.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2481.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2481.0,
+                        "current_price": 2481.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2471.0,
+                        "take_profit": 2501.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:42:45.430642"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2478.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2478.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2478.0,
+                        "current_price": 2478.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2468.0,
+                        "take_profit": 2498.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:42:46.831888"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2479.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2479.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2479.0,
+                        "current_price": 2479.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2469.0,
+                        "take_profit": 2499.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:42:48.239081"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2482.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2482.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2482.0,
+                        "current_price": 2482.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2472.0,
+                        "take_profit": 2502.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:42:49.678288"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2482.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2482.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2482.0,
+                        "current_price": 2482.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2472.0,
+                        "take_profit": 2502.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:42:51.111075"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2479.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2479.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2479.0,
+                        "current_price": 2479.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2469.0,
+                        "take_profit": 2499.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:42:52.676421"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2479.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2479.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2479.0,
+                        "current_price": 2479.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2469.0,
+                        "take_profit": 2499.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:42:54.098857"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2479.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2479.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2479.0,
+                        "current_price": 2479.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2469.0,
+                        "take_profit": 2499.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:42:55.484326"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2481.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2481.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2481.0,
+                        "current_price": 2481.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2471.0,
+                        "take_profit": 2501.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:42:56.886957"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2478.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2478.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2478.0,
+                        "current_price": 2478.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2468.0,
+                        "take_profit": 2498.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:42:58.316385"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2481.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2481.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2481.0,
+                        "current_price": 2481.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2471.0,
+                        "take_profit": 2501.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:42:59.751483"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2478.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2478.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2478.0,
+                        "current_price": 2478.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2468.0,
+                        "take_profit": 2498.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:43:01.173572"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2481.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2481.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2481.0,
+                        "current_price": 2481.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2471.0,
+                        "take_profit": 2501.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:43:02.582994"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2481.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2481.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2481.0,
+                        "current_price": 2481.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2471.0,
+                        "take_profit": 2501.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:43:03.979002"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2479.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2479.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2479.0,
+                        "current_price": 2479.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2469.0,
+                        "take_profit": 2499.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:43:05.418995"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2479.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2479.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2479.0,
+                        "current_price": 2479.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2469.0,
+                        "take_profit": 2499.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:43:06.830621"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2478.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2478.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2478.0,
+                        "current_price": 2478.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2468.0,
+                        "take_profit": 2498.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:43:08.232863"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2479.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2479.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2479.0,
+                        "current_price": 2479.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2469.0,
+                        "take_profit": 2499.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:43:09.663394"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2478.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2478.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2478.0,
+                        "current_price": 2478.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2468.0,
+                        "take_profit": 2498.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:43:11.072814"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2481.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2481.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2481.0,
+                        "current_price": 2481.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2471.0,
+                        "take_profit": 2501.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:43:12.481760"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2478.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2478.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2478.0,
+                        "current_price": 2478.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2468.0,
+                        "take_profit": 2498.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:43:13.958347"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2479.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2479.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2479.0,
+                        "current_price": 2479.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2469.0,
+                        "take_profit": 2499.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:43:15.378637"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2478.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2478.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2478.0,
+                        "current_price": 2478.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2468.0,
+                        "take_profit": 2498.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:43:16.823968"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2481.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2481.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2481.0,
+                        "current_price": 2481.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2471.0,
+                        "take_profit": 2501.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:43:18.229252"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2479.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2479.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2479.0,
+                        "current_price": 2479.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2469.0,
+                        "take_profit": 2499.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:43:19.643591"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2479.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2479.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2479.0,
+                        "current_price": 2479.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2469.0,
+                        "take_profit": 2499.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:43:21.067509"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2482.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2482.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2482.0,
+                        "current_price": 2482.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2472.0,
+                        "take_profit": 2502.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:43:22.554346"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2481.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2481.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2481.0,
+                        "current_price": 2481.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2471.0,
+                        "take_profit": 2501.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:43:23.962651"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2479.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2479.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2479.0,
+                        "current_price": 2479.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2469.0,
+                        "take_profit": 2499.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:43:25.366468"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2481.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2481.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2481.0,
+                        "current_price": 2481.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2471.0,
+                        "take_profit": 2501.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:43:26.787602"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2482.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2482.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2482.0,
+                        "current_price": 2482.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2472.0,
+                        "take_profit": 2502.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:43:28.258764"
+    },
+    {
+        "symbol": "XAUUSD",
+        "decision": "BUY",
+        "entry": 2478.0,
+        "risk": {
+            "position": {
+                "approved": true,
+                "risk_amount": 100.0,
+                "stop_distance": 10.0,
+                "volume": 10.0,
+                "entry_price": 2478.0
+            },
+            "account": {
+                "status": "SAFE",
+                "drawdown": 0.0,
+                "positions": [
+                    {
+                        "ticket": "SIM-1",
+                        "symbol": "XAUUSD",
+                        "side": "BUY",
+                        "volume": 10.0,
+                        "entry_price": 2478.0,
+                        "current_price": 2478.0,
+                        "pnl": 0.0,
+                        "stop_loss": 2468.0,
+                        "take_profit": 2498.0,
+                        "status": "OPEN"
+                    }
+                ]
+            },
+            "drawdown": {
+                "approved": true,
+                "status": "SAFE"
+            }
+        },
+        "smart_money": {
+            "decision": "WAIT",
+            "score": 65,
+            "reasons": [
+                "BULLISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "FVG_CONFIRMED"
+            ]
+        },
+        "time": "2026-08-06T11:43:29.701348"
     }
 ]
