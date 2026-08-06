@@ -1,30 +1,29 @@
-class AIDisasterRecovery:
-
+class EnterpriseDisasterRecovery:
     def __init__(self):
-        self.nodes=[]
         self.backups=[]
+        self.snapshots=[]
+        self.recovery=[]
         self.failovers=[]
-        self.recoveries=[]
 
-    def register_node(self,name):
-        self.nodes.append(name)
+    def create_backup(self,data):
+        self.backups.append(data)
 
-    def backup(self,item):
-        self.backups.append(item)
+    def create_snapshot(self,data):
+        self.snapshots.append(data)
 
-    def failover(self,node):
-        self.failovers.append(node)
+    def recover(self,data):
+        self.recovery.append(data)
 
-    def recover(self,node):
-        self.recoveries.append(node)
+    def execute_failover(self,data):
+        self.failovers.append(data)
 
     def status(self):
         return {
-            "nodes":len(self.nodes),
             "backups":len(self.backups),
+            "snapshots":len(self.snapshots),
+            "recoveries":len(self.recovery),
             "failovers":len(self.failovers),
-            "recoveries":len(self.recoveries),
-            "dr":"ONLINE"
+            "disaster_recovery":"ONLINE"
         }
 
-disaster_recovery = AIDisasterRecovery()
+disaster_recovery=EnterpriseDisasterRecovery()
