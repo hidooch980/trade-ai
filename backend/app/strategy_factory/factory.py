@@ -18,16 +18,26 @@ class StrategyFactory:
         return strategy
 
 
-    def evaluate(self,name,performance):
+    def optimize(self,name,result):
 
-        for s in self.strategies:
+        for strategy in self.strategies:
 
-            if s["name"]==name:
+            if strategy["name"]==name:
 
-                s["score"]=performance
-                s["status"]="ACTIVE" if performance>=70 else "REJECTED"
+                if result.get("profit",0)>0:
+                    strategy["score"]=min(
+                        strategy["score"]+10,
+                        100
+                    )
+                else:
+                    strategy["score"]=max(
+                        strategy["score"]-10,
+                        0
+                    )
 
-                return s
+                strategy["status"]="READY"
+
+                return strategy
 
         return None
 
