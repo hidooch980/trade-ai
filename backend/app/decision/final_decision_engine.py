@@ -1,3 +1,6 @@
+from app.learning.market_memory import market_memory
+
+
 class FinalDecisionEngine:
 
     def decide(
@@ -15,9 +18,17 @@ class FinalDecisionEngine:
             score += 25
             reasons.append("INDICATORS_BUY")
 
+        if indicator_signal.get("decision") == "SELL":
+            score -= 25
+            reasons.append("INDICATORS_SELL")
+
         if ai_signal.get("decision") == "BUY":
             score += 25
             reasons.append("AI_BUY")
+
+        if ai_signal.get("decision") == "SELL":
+            score -= 25
+            reasons.append("AI_SELL")
 
         if risk.get("approved"):
             score += 25
@@ -27,13 +38,27 @@ class FinalDecisionEngine:
             score += 25
             reasons.append("SMART_MONEY_BUY")
 
+        if smart_money.get("decision") == "SELL":
+            score -= 25
+            reasons.append("SMART_MONEY_SELL")
+
         decision = "WAIT"
 
         if score >= 75:
             decision = "BUY"
 
-        elif score <= 25:
+        elif score <= -75:
             decision = "SELL"
+
+        market_memory.add({
+            "decision": decision,
+            "score": score,
+            "reasons": reasons,
+            "indicator": indicator_signal,
+            "ai": ai_signal,
+            "risk": risk,
+            "smart_money": smart_money
+        })
 
         return {
             "engine": "FINAL_DECISION",
