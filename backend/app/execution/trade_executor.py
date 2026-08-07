@@ -34,6 +34,24 @@ class TradeExecutor:
                 "reason": "RISK_REJECTED"
             }
 
+        if risk.get("volume", 0) <= 0:
+            return {
+                "executed": False,
+                "reason": "VOLUME_ZERO_BLOCK"
+            }
+
+        if not risk.get("stop_loss"):
+            return {
+                "executed": False,
+                "reason": "MISSING_STOP_LOSS"
+            }
+
+        if not risk.get("take_profit"):
+            return {
+                "executed": False,
+                "reason": "MISSING_TAKE_PROFIT"
+            }
+
         risk_check = risk_manager.check(
             position_store.get_all(),
             risk["volume"],
@@ -68,7 +86,9 @@ class TradeExecutor:
             "symbol": symbol,
             "side": signal["decision"],
             "volume": risk["volume"],
-            "price": risk.get("entry_price", 0)
+            "price": risk.get("entry_price", 0),
+            "stop_loss": risk.get("stop_loss"),
+            "take_profit": risk.get("take_profit")
         }
 
 
@@ -76,7 +96,8 @@ class TradeExecutor:
 
         trade_journal.add('OPEN_ORDER',order)
 
-        position_store.add({"ticket": mt5_result.get("ticket","SIM-1"),"symbol": symbol,"side": signal["decision"],"volume": risk["volume"],"entry_price": order["price"],"current_price": order["price"],"pnl":0.0,"stop_loss":risk.get("stop_loss",order["price"]-10),"take_profit":risk.get("take_profit",order["price"]+20),"status":"OPEN"})
+        position_store.add({"ticket": mt5_result.get("ticket","SIM-1"),"symbol": symbol,"side": signal["decision"],"volume": risk["volume"],"entry_price": order["price"],"current_price": order["price"],"pnl":0.0,"stop_loss":risk.get("stop_loss"),
+"take_profit":risk.get("take_profit"),"status":"OPEN"})
 
 
         return {

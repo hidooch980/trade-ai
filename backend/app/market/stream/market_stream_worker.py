@@ -1,6 +1,7 @@
 import asyncio
 from app.market.loop.live_market_runner import live_market_runner
 from app.market.feed import feed_factory
+from app.market.market_monitor import market_monitor
 
 price_provider = feed_factory.create('SIMULATION')
 
@@ -17,6 +18,7 @@ class MarketStreamWorker:
                 tick["price"],
                 tick["volume"]
             )
+            market_monitor.update_price(tick["price"])
             print("STREAM:", result["signal"]["decision"], tick["price"])
             await asyncio.sleep(5)
 

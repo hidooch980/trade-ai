@@ -10,7 +10,7 @@ class PositionManager:
         for pos in positions:
 
             if (
-                pos.get("status","OPEN") == "OPEN"
+                pos.get("status") == "OPEN"
                 and pos.get("symbol") == symbol
                 and pos.get("side") == side
             ):

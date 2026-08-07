@@ -9,9 +9,9 @@ pipeline = SignalPipeline()
 
 
 @router.post("/signal")
-def generate_signal(data: dict):
+async def generate_signal(data: dict):
 
-    return pipeline.generate(
+    return await pipeline.generate(
 
         data.get(
             "symbol",

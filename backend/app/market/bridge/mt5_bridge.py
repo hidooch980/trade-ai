@@ -78,16 +78,27 @@ class MT5Bridge(MT5Connector):
                 "reason":check["reason"]
             }
 
+        stop_loss = order.get("stop_loss")
+        take_profit = order.get("take_profit")
+
+        if stop_loss is None or take_profit is None:
+            if order["side"] == "BUY":
+                stop_loss = self.last_price - 10
+                take_profit = self.last_price + 20
+            else:
+                stop_loss = self.last_price + 10
+                take_profit = self.last_price - 20
+
         position={
-            "ticket":f"SIM-{len(position_store.get_all())+1}",
+            "ticket":ticket_manager.new(),
             "symbol":order["symbol"],
             "side":order["side"],
             "volume":order["volume"],
             "entry_price":self.last_price,
             "current_price":self.last_price,
             "pnl":0.0,
-            "stop_loss":self.last_price-10,
-            "take_profit":self.last_price+20,
+            "stop_loss":stop_loss,
+            "take_profit":take_profit,
             "status":"OPEN"
         }
 

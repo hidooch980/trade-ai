@@ -1,6 +1,7 @@
 from fastapi import APIRouter
 from app.execution.position_store import position_store
 from app.execution.trade_history import trade_history
+from app.ai.learning.trade_result_pipeline import trade_result_pipeline
 
 router=APIRouter(prefix="/api/trading")
 
@@ -35,6 +36,18 @@ async def close_position(ticket:str):
         "reason":"MANUAL_CLOSE"
     }
     trade_history.closed_trades.append(trade)
+    trade_history.save()
+
+    trade_result_pipeline.process(
+        symbol=closed["symbol"],
+        decision=closed["side"],
+        entry_price=closed["entry_price"],
+        exit_price=closed["current_price"],
+        volume=closed["volume"],
+        pnl=closed["pnl"],
+        strategy="SMART_MONEY_M1"
+    )
+
     return {"closed":True,"trade":trade}
 
 from app.execution.position_monitor import position_monitor

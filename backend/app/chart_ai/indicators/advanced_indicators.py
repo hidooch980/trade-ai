@@ -1,0 +1,141 @@
+import math
+
+
+class AdvancedIndicators:
+
+    def sma(self, values, period):
+        if len(values) < period:
+            return sum(values) / len(values)
+
+        return sum(values[-period:]) / period
+
+
+    def rsi(self, closes, period=14):
+
+        if len(closes) <= period:
+            return 50
+
+        gains=[]
+        losses=[]
+
+        for i in range(1, len(closes)):
+            diff=closes[i]-closes[i-1]
+
+            if diff >= 0:
+                gains.append(diff)
+                losses.append(0)
+            else:
+                gains.append(0)
+                losses.append(abs(diff))
+
+        avg_gain=sum(gains[-period:])/period
+        avg_loss=sum(losses[-period:])/period
+
+        if avg_loss == 0:
+            return 100
+
+        rs=avg_gain/avg_loss
+
+        return 100-(100/(1+rs))
+
+
+    def atr(self,candles,period=14):
+
+        trs=[]
+
+        for c in candles[-period:]:
+
+            tr=c["high"]-c["low"]
+
+            trs.append(tr)
+
+        return sum(trs)/len(trs)
+
+
+    def macd(self,closes):
+
+        fast=self.sma(closes,12)
+        slow=self.sma(closes,26)
+
+        return fast-slow
+
+
+    def bollinger(self,closes,period=20):
+
+        middle=self.sma(closes,period)
+
+        data=closes[-period:]
+
+        variance=sum(
+            (x-middle)**2 for x in data
+        )/len(data)
+
+        std=math.sqrt(variance)
+
+        return {
+            "upper":middle+2*std,
+            "middle":middle,
+            "lower":middle-2*std
+        }
+
+
+    def analyze(self,candles):
+
+        closes=[
+            c["close"]
+            for c in candles
+        ]
+
+        result={}
+
+        result["rsi"]=self.rsi(closes)
+
+        result["atr"]=self.atr(candles)
+
+        result["macd"]=self.macd(closes)
+
+        result["bollinger"]=self.bollinger(closes)
+
+
+        score=0
+        reasons=[]
+
+
+        if result["rsi"] < 30:
+            score+=15
+            reasons.append("RSI_OVERSOLD")
+
+
+        elif result["rsi"] > 70:
+            score-=5
+            reasons.append("RSI_HIGH")
+
+
+        if result["macd"] > 0:
+            score+=10
+            reasons.append("MACD_BULLISH")
+
+        else:
+            score-=5
+            reasons.append("MACD_WEAK")
+
+
+        if closes[-1] > result["bollinger"]["upper"]:
+            score+=10
+            reasons.append("BOLLINGER_BREAKOUT")
+
+
+        elif closes[-1] < result["bollinger"]["lower"]:
+            score-=10
+            reasons.append("BOLLINGER_BREAKDOWN")
+
+
+        result["score"]=score
+        result["reasons"]=reasons
+
+
+        return result
+
+
+
+advanced_indicators=AdvancedIndicators()

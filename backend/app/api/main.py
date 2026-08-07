@@ -15,9 +15,10 @@ app=FastAPI(title="Trade-AI API",version="1.0.0")
 
 @app.on_event("startup")
 async def startup_event():
-    asyncio.create_task(
-        market_stream_worker.start("XAUUSD")
-    )
+    for symbol in ["EURUSD","GBPUSD","XAUUSD","BTCUSD"]:
+        asyncio.create_task(
+            market_stream_worker.start(symbol)
+        )
 
 
 app.include_router(dashboard.router)

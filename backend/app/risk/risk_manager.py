@@ -5,6 +5,19 @@ class RiskManager:
         self.max_exposure = 100000
 
     def check(self, positions, volume, price):
+
+        if volume <= 0:
+            return {
+                "approved": False,
+                "reason": "INVALID_VOLUME"
+            }
+
+        if price <= 0:
+            return {
+                "approved": False,
+                "reason": "INVALID_PRICE"
+            }
+
         exposure = sum(
             p.get("volume",0) * p.get("entry_price",0)
             for p in positions

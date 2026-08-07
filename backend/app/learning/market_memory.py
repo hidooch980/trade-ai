@@ -37,6 +37,16 @@ class MarketMemory:
         return self.save(data)
 
 
+
+
+    def status(self):
+        history = self.get_history()
+        return {
+            "records": len(history),
+            "memory_file": self.file,
+            "status": "ONLINE"
+        }
+
     def get_history(self):
 
         with open(self.file,"r") as f:

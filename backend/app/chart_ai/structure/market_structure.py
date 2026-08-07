@@ -2,13 +2,23 @@ class MarketStructureEngine:
 
     def analyze(self, candles):
 
-        if len(candles) < 3:
+        if len(candles) < 5:
             return {
                 "status": "INSUFFICIENT_DATA"
             }
 
-        prev = candles[-2]
-        last = candles[-1]
+        highs = [c["high"] for c in candles[-5:]]
+        lows = [c["low"] for c in candles[-5:]]
+
+        bullish = 0
+        bearish = 0
+
+        for i in range(1, len(highs)):
+            if highs[i] > highs[i-1] and lows[i] >= lows[i-1]:
+                bullish += 1
+
+            if highs[i] < highs[i-1] and lows[i] <= lows[i-1]:
+                bearish += 1
 
         result = {
             "trend": "RANGE",
@@ -17,25 +27,14 @@ class MarketStructureEngine:
             "choch": False
         }
 
-
-        if last["high"] > prev["high"] and last["low"] > prev["low"]:
-
+        if bullish >= 2:
             result["trend"] = "BULLISH"
             result["structure"] = "HH-HL"
-
-
-        elif last["high"] < prev["high"] and last["low"] < prev["low"]:
-
-            result["trend"] = "BEARISH"
-            result["structure"] = "LH-LL"
-
-
-        if last["high"] > prev["high"]:
             result["bos"] = True
 
-
-        if last["low"] < prev["low"]:
+        elif bearish >= 2:
+            result["trend"] = "BEARISH"
+            result["structure"] = "LH-LL"
             result["choch"] = True
-
 
         return result

@@ -36,9 +36,18 @@ class OrderBlockEngine:
             }
 
 
+        score = 0
+
+        if block_type == "BULLISH":
+            score = 20
+
+        elif block_type == "BEARISH":
+            score = -20
+
         return {
             "engine": "ORDER_BLOCK",
             "type": block_type,
             "zone": zone,
-            "confidence": 50
+            "confidence": 50,
+            "score": score
         }

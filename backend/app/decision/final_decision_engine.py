@@ -1,4 +1,6 @@
 from app.learning.market_memory import market_memory
+from app.decision.confidence.confidence_engine import confidence_engine
+from app.ai.memory.adaptive_strategy_memory import adaptive_strategy_memory
 
 
 class FinalDecisionEngine:
@@ -12,43 +14,78 @@ class FinalDecisionEngine:
     ):
 
         score = 0
+
+        memory_weight = adaptive_strategy_memory.get_weight('SMART_MONEY_M1')
+        score += (memory_weight.get('score',50)-50) * 0.2
         reasons = []
+        reasons.append('ADAPTIVE_MEMORY_APPLIED')
 
-        if indicator_signal.get("decision") == "BUY":
-            score += 25
-            reasons.append("INDICATORS_BUY")
+        # Smart Money اصلی ترین وزن
+        smart_score = smart_money.get("score", 0)
 
-        if indicator_signal.get("decision") == "SELL":
-            score -= 25
-            reasons.append("INDICATORS_SELL")
+        score += smart_score * 0.6
 
-        if ai_signal.get("decision") == "BUY":
-            score += 25
-            reasons.append("AI_BUY")
+        if smart_score > 0:
+            reasons.append("SMART_MONEY_BULLISH")
+        elif smart_score < 0:
+            reasons.append("SMART_MONEY_BEARISH")
 
-        if ai_signal.get("decision") == "SELL":
-            score -= 25
-            reasons.append("AI_SELL")
 
+        # ساختار بازار
+        trend = indicator_signal.get("trend")
+
+        if trend == "BULLISH":
+            score += 20
+            reasons.append("BULLISH_STRUCTURE")
+
+        elif trend == "BEARISH":
+            score -= 20
+            reasons.append("BEARISH_STRUCTURE")
+        elif trend == "RANGE":
+            reasons.append("RANGE_STRUCTURE")
+        elif trend == "RANGE":
+            reasons.append("RANGE_STRUCTURE")
+
+        # Indicator Fusion score
+        indicator_score = indicator_signal.get("score", 0)
+
+        score += indicator_score * 0.5
+
+        if indicator_score > 0:
+            reasons.append("INDICATOR_FUSION_BULLISH")
+        elif indicator_score < 0:
+            reasons.append("INDICATOR_FUSION_BEARISH")
+
+
+        # تایید AI
+        ai_decision = ai_signal.get("decision")
+
+        if ai_decision == "BUY":
+            score += 10
+            reasons.append("AI_CONFIRM_BUY")
+
+        elif ai_decision == "SELL":
+            score -= 10
+            reasons.append("AI_CONFIRM_SELL")
+
+
+        # ریسک
         if risk.get("approved"):
-            score += 25
-            reasons.append("RISK_APPROVED")
+            reasons.append("RISK_OK")
 
-        if smart_money.get("decision") == "BUY":
-            score += 25
-            reasons.append("SMART_MONEY_BUY")
+        else:
+            score = 0
+            reasons.append("RISK_BLOCK")
 
-        if smart_money.get("decision") == "SELL":
-            score -= 25
-            reasons.append("SMART_MONEY_SELL")
 
         decision = "WAIT"
 
-        if score >= 75:
+        if score >= 55:
             decision = "BUY"
 
-        elif score <= -75:
+        elif score <= -60:
             decision = "SELL"
+
 
         market_memory.add({
             "decision": decision,
@@ -60,9 +97,27 @@ class FinalDecisionEngine:
             "smart_money": smart_money
         })
 
+
+        score = max(-100, min(100, score))
+
+        confidence = confidence_engine.calculate(
+            decision,
+            score,
+            smart_money,
+            risk
+        )
+
+        if confidence.get("confidence", 0) > 100:
+            confidence["confidence"] = 100
+
+        if not confidence["trade_allowed"]:
+            decision = "WAIT"
+            reasons.append("LOW_CONFIDENCE_BLOCK")
+
         return {
             "engine": "FINAL_DECISION",
             "decision": decision,
             "score": score,
+            "confidence": confidence,
             "reasons": reasons
         }

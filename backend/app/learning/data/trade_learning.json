@@ -1,0 +1,78 @@
+[
+  {
+    "time": "2026-08-07T08:49:03.479485",
+    "trade": {
+      "ticket": "TEST-SELL",
+      "symbol": "BTCUSD",
+      "side": "SELL",
+      "volume": 1,
+      "entry_price": 100,
+      "close_price": 75,
+      "pnl": 25,
+      "reason": "EXIT_TRIGGERED",
+      "close_time": "2026-08-07T08:49:03.478198"
+    }
+  },
+  {
+    "time": "2026-08-07T08:49:03.481865",
+    "trade": {
+      "ticket": "TEST-CLOSE-1",
+      "symbol": "BTCUSD",
+      "side": "BUY",
+      "volume": 1,
+      "entry_price": 100,
+      "close_price": 100,
+      "pnl": 0,
+      "reason": "EXIT_TRIGGERED",
+      "close_time": "2026-08-07T08:49:03.480027"
+    }
+  },
+  {
+    "time": "2026-08-07T10:42:45.582218",
+    "trade": {
+      "symbol": "EURUSD",
+      "decision": "BUY",
+      "pnl": 100
+    }
+  },
+  {
+    "time": "2026-08-07T10:46:01.229659",
+    "trade": {
+      "symbol": "EURUSD",
+      "decision": "BUY",
+      "pnl": 0.010000000000000009
+    }
+  },
+  {
+    "time": "2026-08-07T10:47:28.533395",
+    "trade": {
+      "symbol": "EURUSD",
+      "decision": "BUY",
+      "pnl": 100
+    }
+  },
+  {
+    "time": "2026-08-07T11:06:31.364367",
+    "trade": {
+      "symbol": "EURUSD",
+      "decision": "BUY",
+      "pnl": 0.0025000000000000022
+    }
+  },
+  {
+    "time": "2026-08-07T11:07:15.540478",
+    "trade": {
+      "symbol": "EURUSD",
+      "decision": "BUY",
+      "pnl": -0.0015000000000000013
+    }
+  },
+  {
+    "time": "2026-08-07T11:49:03.370564",
+    "trade": {
+      "symbol": "EURUSD",
+      "decision": "BUY",
+      "pnl": 0.0015000000000000013
+    }
+  }
+]

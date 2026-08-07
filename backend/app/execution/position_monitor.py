@@ -2,11 +2,14 @@ from app.execution.break_even import break_even
 from app.execution.trailing_stop import trailing_stop
 from app.execution.position_store import position_store
 from app.execution.trade_history import trade_history
+from app.execution.close_manager import close_manager
+from app.ai.learning.trade_learning_engine import trade_learning_engine
+from app.ai.learning.trade_result_pipeline import trade_result_pipeline
 
 class PositionMonitor:
 
     def check(self, positions, price):
-        actions=[]
+        actions = []
 
         for p in positions:
             current = price
@@ -17,6 +20,7 @@ class PositionMonitor:
                 pnl = (p.get("entry_price",0) - current) * p.get("volume",0)
 
             if p.get("take_profit") and current >= p["take_profit"]:
+                print("AUTO CLOSE TP:", p.get("ticket"), price, pnl)
                 actions.append({
                     "ticket": p["ticket"],
                     "action": "CLOSE",
@@ -24,7 +28,8 @@ class PositionMonitor:
                     "pnl": pnl
                 })
 
-            if p.get("stop_loss") and current <= p["stop_loss"]:
+            elif p.get("stop_loss") and current <= p["stop_loss"]:
+                print("AUTO CLOSE SL:", p.get("ticket"), price, pnl)
                 actions.append({
                     "ticket": p["ticket"],
                     "action": "CLOSE",
@@ -34,27 +39,58 @@ class PositionMonitor:
 
         return actions
 
+
     def update(self, price):
-        closed=[]
+        closed = []
+
         for p in position_store.get_all()[:]:
-            p["current_price"]=price
+            p["current_price"] = price
+
             trailing_stop.update(p)
             break_even.update(p)
-            if p["side"]=="BUY":
-                p["pnl"]=(price-p["entry_price"])*p["volume"]
-                if p.get("take_profit") and price>=p["take_profit"]:
+
+            if p["side"] == "BUY":
+                p["pnl"] = (price - p["entry_price"]) * p["volume"]
+
+                if p.get("take_profit") and price >= p["take_profit"]:
+                    print("AUTO CLOSE TP:", p["ticket"], price, p["pnl"])
                     closed.append(p)
-                if p.get("stop_loss") and price<=p["stop_loss"]:
+
+                elif p.get("stop_loss") and price <= p["stop_loss"]:
+                    print("AUTO CLOSE SL:", p["ticket"], price, p["pnl"])
                     closed.append(p)
+
             else:
-                p["pnl"]=(p["entry_price"]-price)*p["volume"]
+                p["pnl"] = (p["entry_price"] - price) * p["volume"]
+
         for p in closed:
             position_store.remove(p["ticket"])
-            trade_history.closed_trades.append({
-                **p,
-                "close_price":p["current_price"],
-                "reason":"SL_TP_TRIGGERED"
-            })
+
+            trade_history.add(
+                {
+                    "ticket": p.get("ticket"),
+                    "symbol": p.get("symbol"),
+                    "side": p.get("side"),
+                    "volume": p.get("volume"),
+                    "entry_price": p.get("entry_price")
+                },
+                p.get("current_price"),
+                "SL_TP_TRIGGERED"
+            )
+
+            trade_result_pipeline.process(
+                symbol=p.get("symbol"),
+                decision=p.get("side"),
+                entry_price=p.get("entry_price"),
+                exit_price=p.get("current_price"),
+                volume=p.get("volume"),
+                pnl=p.get("pnl"),
+                strategy="SMART_MONEY_M1"
+            )
+
+        position_store.save()
+
         return position_store.get_all()
 
-position_monitor=PositionMonitor()
+
+position_monitor = PositionMonitor()

@@ -18,20 +18,27 @@ class MACDEngine:
 
             return value
 
-        fast_ema = ema(
-            prices[-fast:],
-            fast
-        )
+        macd_series = []
 
-        slow_ema = ema(
-            prices[-slow:],
-            slow
-        )
+        for i in range(slow, len(prices) + 1):
+            fast_ema = ema(
+                prices[i-fast:i],
+                fast
+            )
 
-        macd_value = fast_ema - slow_ema
+            slow_ema = ema(
+                prices[i-slow:i],
+                slow
+            )
+
+            macd_series.append(
+                fast_ema - slow_ema
+            )
+
+        macd_value = macd_series[-1]
 
         signal_value = ema(
-            prices[-signal_period:],
+            macd_series[-signal_period:],
             signal_period
         )
 

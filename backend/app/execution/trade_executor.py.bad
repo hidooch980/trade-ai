@@ -1,0 +1,99 @@
+from app.market.bridge.mt5_bridge import mt5_bridge
+from app.execution.position_manager import position_manager
+from app.execution.position_store import position_store
+from app.risk.risk_manager import risk_manager
+from app.journal.trade_journal import trade_journal
+
+
+class TradeExecutor:
+
+    def __init__(self):
+        self.mt5 = mt5_bridge
+
+
+    async def execute(
+        self,
+        symbol,
+        signal,
+        risk
+    ):
+
+        if signal.get("decision") not in [
+            "BUY",
+            "SELL"
+        ]:
+            return {
+                "executed": False,
+                "reason": "NO_TRADE_SIGNAL"
+            }
+
+
+        if not risk.get("approved"):
+            return {
+                "executed": False,
+                "reason": "RISK_REJECTED"
+            }
+
+        risk_check = risk_manager.check(
+            position_store.get_all(),
+            risk["volume"],
+            risk.get("entry_price",0)
+        )
+
+        if not risk_check["approved"]:
+            return {
+                "executed": False,
+                "reason": risk_check["reason"]
+            }
+
+
+        account_positions = position_store.get_all()
+
+
+        position_check = position_manager.can_open(
+            symbol,
+            signal["decision"],
+            account_positions
+        )
+
+
+        if not position_check["allowed"]:
+            return {
+                "executed": False,
+                "reason": position_check["reason"]
+            }
+
+
+        from datetime import datetime, timezone
+    from app.execution.trade_history import trade_history
+
+    for closed in trade_history.closed_trades[-10:]:
+        if closed.get("symbol")==symbol and closed.get("side")==signal["decision"]:
+            try:
+                diff=(datetime.now(timezone.utc)-datetime.fromisoformat(closed["close_time"])).seconds
+                if diff < 60:
+                    return {"executed":False,"reason":"TRADE_COOLDOWN"}
+            except:
+                pass
+
+    order = {
+            "symbol": symbol,
+            "side": signal["decision"],
+            "volume": risk["volume"],
+            "price": risk.get("entry_price", 0)
+        }
+
+
+        mt5_result = await self.mt5.send_order(order)
+
+        trade_journal.add('OPEN_ORDER',order)
+
+
+        return {
+            "executed": True,
+            "order": {
+                **order,
+                "status": "PENDING_MT5",
+                "mt5": mt5_result
+            }
+        }
