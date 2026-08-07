@@ -74,5 +74,33 @@
       "decision": "BUY",
       "pnl": 0.0015000000000000013
     }
+  },
+  {
+    "time": "2026-08-07T12:22:20.979787",
+    "trade": {
+      "ticket": "SIM-495",
+      "symbol": "GBPUSD",
+      "side": "SELL",
+      "volume": 0.0,
+      "entry_price": 1.28,
+      "close_price": 1.28,
+      "pnl": 0.0,
+      "reason": "EXIT_TRIGGERED",
+      "close_time": "2026-08-07T12:22:20.978354"
+    }
+  },
+  {
+    "time": "2026-08-07T12:22:21.739414",
+    "trade": {
+      "ticket": "SIM-494",
+      "symbol": "EURUSD",
+      "side": "BUY",
+      "volume": 0.25,
+      "entry_price": 1.1,
+      "close_price": 1.0998,
+      "pnl": -0.0,
+      "reason": "EXIT_TRIGGERED",
+      "close_time": "2026-08-07T12:22:21.738026"
+    }
   }
 ]

@@ -30696,5 +30696,3492 @@
         "score": 90
       }
     }
+  },
+  {
+    "time": "2026-08-07T12:20:26.933371",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 85
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 85
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 85
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:27.005856",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "ETHUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 85
+      },
+      "ai": {
+        "symbol": "ETHUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 85
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 85
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:27.070693",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "EURUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 85
+      },
+      "ai": {
+        "symbol": "EURUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 85
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 85
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:27.145567",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "GBPUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 85
+      },
+      "ai": {
+        "symbol": "GBPUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 85
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 85
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:27.216443",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "XAUUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 85
+      },
+      "ai": {
+        "symbol": "XAUUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 85
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 85
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:27.285914",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "USDJPY",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 85
+      },
+      "ai": {
+        "symbol": "USDJPY",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 85
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 85
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:44.693480",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:44.775015",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:44.852537",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:44.931917",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:45.007351",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:45.085880",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:45.169194",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:45.238737",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:45.313668",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:45.390363",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:45.462605",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:45.537510",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:45.621302",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:45.697017",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:45.768065",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:45.853362",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:45.928232",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:46.009166",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:46.090819",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:46.172326",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:46.255447",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:46.335711",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:46.418708",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:46.497524",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:46.578093",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:46.649050",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:46.734270",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:46.820685",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:46.898082",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:46.978943",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:47.063365",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:47.152097",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:47.255046",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:47.341900",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:47.427036",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:47.503382",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:47.585958",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:47.672537",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:47.758927",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:47.835835",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:47.918694",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:47.999579",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:48.089844",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:48.179980",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:48.261895",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:48.332091",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:48.408440",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:48.481142",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:48.556980",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:48.629857",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:48.701941",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:48.778727",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:48.855294",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:48.932994",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:49.029103",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:49.100291",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:49.173940",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:49.242547",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:49.319551",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:49.397642",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:49.469974",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:49.556919",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:49.643184",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:49.720522",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:49.800141",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:49.900517",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:49.993793",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:50.086312",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:50.172514",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:50.259559",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:50.352717",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:50.433722",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:50.526794",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:50.610205",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:50.695821",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:50.774669",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:50.846543",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:50.917559",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:50.991628",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:51.064137",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:51.136608",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:51.219288",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:51.301190",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:51.371340",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:51.452355",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:51.549187",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:51.634947",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:51.713567",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:51.789845",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:51.864824",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:51.950979",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:52.029343",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:52.104367",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:52.176876",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:52.248254",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:52.321646",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:52.391995",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:52.462829",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:52.536069",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:20:52.609497",
+    "data": {
+      "decision": "WAIT",
+      "score": 0,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_BLOCK"
+      ],
+      "indicator": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "ai": {
+        "symbol": "BTCUSD",
+        "direction": "BUY",
+        "confidence": 90,
+        "score": 90
+      },
+      "risk": {
+        "allowed": true
+      },
+      "smart_money": {
+        "score": 90
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:22:20.901138",
+    "data": {
+      "decision": "BUY",
+      "score": 62.5,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "BULLISH_STRUCTURE",
+        "INDICATOR_FUSION_BULLISH",
+        "AI_CONFIRM_SELL",
+        "RISK_OK"
+      ],
+      "indicator": {
+        "trend": "BULLISH",
+        "structure": "HH-HL",
+        "decision": "WAIT",
+        "score": 5,
+        "votes": [
+          "BUY",
+          "SELL_CONFIRM"
+        ]
+      },
+      "ai": {
+        "decision": "SELL"
+      },
+      "risk": {
+        "approved": true
+      },
+      "smart_money": {
+        "decision": "BUY",
+        "score": 75,
+        "chart": {
+          "decision": "BUY",
+          "score": 75,
+          "reasons": [
+            "RSI_HIGH",
+            "MACD_BULLISH",
+            "BULLISH_STRUCTURE",
+            "BUY_SIDE_LIQUIDITY",
+            "BULLISH_ORDER_BLOCK",
+            "BULLISH_FVG"
+          ]
+        },
+        "market": {
+          "symbol": "EURUSD",
+          "smart_money": "NEUTRAL",
+          "score": 0,
+          "reasons": []
+        }
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:22:21.681040",
+    "data": {
+      "decision": "SELL",
+      "score": -65.5,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BEARISH",
+        "BEARISH_STRUCTURE",
+        "INDICATOR_FUSION_BEARISH",
+        "RISK_OK"
+      ],
+      "indicator": {
+        "trend": "BEARISH",
+        "structure": "LH-LL",
+        "decision": "WAIT",
+        "score": -35,
+        "votes": [
+          "SELL",
+          "SELL_CONFIRM"
+        ]
+      },
+      "ai": {
+        "decision": "WAIT"
+      },
+      "risk": {
+        "approved": true
+      },
+      "smart_money": {
+        "decision": "WAIT",
+        "score": -55,
+        "chart": {
+          "decision": "WAIT",
+          "score": -55,
+          "reasons": [
+            "RSI_OVERSOLD",
+            "MACD_BULLISH",
+            "BOLLINGER_BREAKDOWN",
+            "BEARISH_STRUCTURE",
+            "BEARISH_ORDER_BLOCK",
+            "BEARISH_FVG"
+          ]
+        },
+        "market": {
+          "symbol": "GBPUSD",
+          "smart_money": "UNKNOWN",
+          "score": 0
+        }
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:22:22.349890",
+    "data": {
+      "decision": "WAIT",
+      "score": -4.5,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BEARISH",
+        "RANGE_STRUCTURE",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_OK"
+      ],
+      "indicator": {
+        "trend": "RANGE",
+        "structure": null,
+        "decision": "WAIT",
+        "score": 5,
+        "votes": [
+          "BUY",
+          "SELL_CONFIRM"
+        ]
+      },
+      "ai": {
+        "decision": "WAIT"
+      },
+      "risk": {
+        "approved": true
+      },
+      "smart_money": {
+        "decision": "WAIT",
+        "score": -20,
+        "chart": {
+          "decision": "WAIT",
+          "score": -20,
+          "reasons": [
+            "MACD_BULLISH",
+            "BUY_SIDE_LIQUIDITY",
+            "SELL_SIDE_LIQUIDITY",
+            "BEARISH_ORDER_BLOCK"
+          ]
+        },
+        "market": {
+          "symbol": "XAUUSD",
+          "smart_money": "UNKNOWN",
+          "score": 0
+        }
+      }
+    }
+  },
+  {
+    "time": "2026-08-07T12:22:23.026520",
+    "data": {
+      "decision": "WAIT",
+      "score": -3.5,
+      "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BEARISH",
+        "RANGE_STRUCTURE",
+        "INDICATOR_FUSION_BEARISH",
+        "RISK_OK"
+      ],
+      "indicator": {
+        "trend": "RANGE",
+        "structure": null,
+        "decision": "WAIT",
+        "score": -5,
+        "votes": [
+          "SELL",
+          "BUY_CONFIRM"
+        ]
+      },
+      "ai": {
+        "decision": "WAIT"
+      },
+      "risk": {
+        "approved": true
+      },
+      "smart_money": {
+        "decision": "WAIT",
+        "score": -10,
+        "chart": {
+          "decision": "WAIT",
+          "score": -10,
+          "reasons": [
+            "MACD_WEAK",
+            "BUY_SIDE_LIQUIDITY",
+            "SELL_SIDE_LIQUIDITY"
+          ]
+        },
+        "market": {
+          "symbol": "BTCUSD",
+          "smart_money": "UNKNOWN",
+          "score": 0
+        }
+      }
+    }
   }
 ]
