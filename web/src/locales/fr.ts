@@ -1,0 +1,239 @@
+const fr: Record<string, string> = {
+  "brand.name": "Trade AI",
+  "brand.tagline": "Trading pour compte propre assisté par IA",
+
+  "nav.challenges": "Challenges",
+  "nav.how": "Comment ça marche",
+  "nav.platform": "Plateforme",
+  "nav.payouts": "Paiements",
+  "nav.faq": "FAQ",
+  "nav.about": "À propos",
+  "nav.contact": "Contact",
+  "nav.dashboard": "Tableau de bord",
+  "nav.login": "Connexion",
+  "nav.register": "Être financé",
+  "nav.logout": "Déconnexion",
+
+  "hero.badge": "Moteur IA actif · 4 marchés en direct",
+  "hero.title": "Tradez notre capital.",
+  "hero.titleAccent": "Gardez jusqu'à 90 %.",
+  "hero.sub":
+    "Réussissez une évaluation transparente, obtenez jusqu'à 200 000 $ de capital et laissez notre moteur de risque IA surveiller chaque position à vos côtés.",
+  "hero.cta": "Démarrer un challenge",
+  "hero.cta2": "Comment ça marche",
+  "hero.note": "Aucune règle cachée. Aucune limite de temps. Paiement tous les 14 jours.",
+
+  "stats.traders": "Traders financés",
+  "stats.paid": "Total versé",
+  "stats.countries": "Pays",
+  "stats.uptime": "Disponibilité du moteur",
+
+  "models.title": "Choisissez votre évaluation",
+  "models.sub": "Trois voies vers le financement. Même partage, rythme différent.",
+  "models.evaluation": "Évaluation",
+  "models.express": "Express",
+  "models.instant": "Instantané",
+  "models.evaluationDesc": "Deux phases. Frais les plus bas. La voie classique.",
+  "models.expressDesc": "Une phase. Financé plus vite, objectifs plus serrés.",
+  "models.instantDesc": "Sans évaluation. Capital réel dès le premier jour.",
+  "models.accountSize": "Taille du compte",
+  "models.fee": "Frais uniques",
+  "models.profitTarget": "Objectif de profit",
+  "models.dailyLoss": "Perte journalière max.",
+  "models.maxLoss": "Perte totale max.",
+  "models.split": "Partage des profits",
+  "models.timeLimit": "Limite de temps",
+  "models.unlimited": "Illimitée",
+  "models.phase1": "Phase 1",
+  "models.phase2": "Phase 2",
+  "models.select": "Commencer avec",
+  "models.popular": "Le plus choisi",
+  "models.refund": "Frais remboursés au premier paiement",
+
+  "how.title": "De l'inscription au paiement",
+  "how.sub": "Quatre étapes. Tout est mesuré selon des règles publiées à l'avance.",
+  "how.s1.t": "Choisissez un challenge",
+  "how.s1.d":
+    "Choisissez une taille de compte et un modèle. Payez les frais uniques — remboursés au premier paiement.",
+  "how.s2.t": "Atteignez l'objectif",
+  "how.s2.d":
+    "Tradez votre propre stratégie sur MT5. Restez dans les limites de perte journalière et totale.",
+  "how.s3.t": "Soyez financé",
+  "how.s3.d":
+    "Les identifiants de votre compte financé arrivent dans les 24 heures suivant la vérification.",
+  "how.s4.t": "Retirez",
+  "how.s4.d":
+    "Demandez un paiement tous les 14 jours. Vous gardez 80 % — jusqu'à 90 % avec le scaling.",
+
+  "platform.title": "Le moteur derrière le compte",
+  "platform.sub":
+    "Trade AI n'est pas qu'un bureau de financement. L'infrastructure qui exécute vos trades les surveille aussi.",
+  "platform.f1.t": "Gouverneur de risque IA",
+  "platform.f1.d":
+    "Contrôles d'exposition, de drawdown et de corrélation en continu, position par position — vous êtes averti avant une infraction, pas après.",
+  "platform.f2.t": "Intelligence de marché en direct",
+  "platform.f2.d":
+    "Les ticks en flux sur EURUSD, GBPUSD, XAUUSD et BTCUSD alimentent un modèle smart money et liquidité consultable dans le tableau de bord.",
+  "platform.f3.t": "Un journal qui s'écrit seul",
+  "platform.f3.d":
+    "Chaque exécution, clôture et motif est enregistré et noté. La boucle de rétroaction en fait un profil de performance par instrument.",
+  "platform.f4.t": "Backtest avant de risquer",
+  "platform.f4.d":
+    "Testez n'importe quelle stratégie sur des bougies historiques depuis votre compte et comparez-la à vos résultats réels.",
+  "platform.f5.t": "Natif MT5",
+  "platform.f5.d":
+    "Connectez le terminal que vous utilisez déjà. Notre pont reflète les positions en temps réel — sans latence de copy trading.",
+  "platform.f6.t": "Supervision Guardian",
+  "platform.f6.d":
+    "Un processus superviseur permanent contrôle la santé d'exécution et ferme automatiquement les positions orphelines.",
+
+  "payout.title": "Les paiements, sans détour",
+  "payout.sub": "La partie que la plupart des firmes enterrent dans un PDF.",
+  "payout.p1.t": "Tous les 14 jours",
+  "payout.p1.d":
+    "La première demande s'ouvre 14 jours après le premier trade financé. Ensuite, à chaque cycle.",
+  "payout.p2.t": "80 % → 90 %",
+  "payout.p2.d":
+    "Le partage de base est de 80 %. Le scaling ajoute 5 % à chaque palier de profit, plafonné à 90 %.",
+  "payout.p3.t": "Payé en 24 h",
+  "payout.p3.d": "Virement bancaire, USDT ou Wise. Sous un jour ouvré après validation.",
+  "payout.p4.t": "Frais remboursés",
+  "payout.p4.d": "Les frais du challenge sont intégralement ajoutés à votre premier paiement.",
+
+  "rules.title": "Les règles, toutes",
+  "rules.sub": "Si ce n'est pas sur cette page, ce n'est pas une règle.",
+  "rules.allowed": "Autorisé",
+  "rules.forbidden": "Interdit",
+  "rules.a1": "Trading pendant les news",
+  "rules.a2": "Conserver une position le week-end",
+  "rules.a3": "Expert Advisors et algorithmes",
+  "rules.a4": "Hedging au sein d'un même compte",
+  "rules.f1": "Abus de latence et arbitrage",
+  "rules.f2": "Copy trading entre comptes financés",
+  "rules.f3": "Flux d'ordres coordonné en groupe",
+  "rules.f4": "Scalping au tick sous 15 secondes",
+
+  "testi.title": "Les traders de notre desk",
+  "testi.sub": "Comptes à paiement vérifié.",
+
+  "faq.title": "Des questions qui méritent une réponse",
+  "faq.q1": "L'évaluation a-t-elle une limite de temps ?",
+  "faq.a1":
+    "Non. Les deux phases se déroulent sans échéance. La seule exigence : placer au moins un trade tous les 30 jours pour que le compte ne soit pas considéré comme inactif.",
+  "faq.q2": "Comment la perte journalière est-elle calculée ?",
+  "faq.a2":
+    "Par rapport au plus élevé entre votre solde initial et votre equity au dernier reset quotidien (00:00 heure serveur), pertes et profits flottants inclus. Le tableau de bord affiche la marge restante en temps réel.",
+  "faq.q3": "Puis-je utiliser un Expert Advisor ?",
+  "faq.a3":
+    "Oui, en évaluation comme sur compte financé. Ce qui est interdit, c'est un EA dont l'avantage vient de l'exploitation de la latence du flux ou de la coordination d'ordres sur plusieurs comptes.",
+  "faq.q4": "Que se passe-t-il si j'enfreins une règle ?",
+  "faq.a4":
+    "Le compte est fermé et vous gardez tout paiement déjà validé. Vous pouvez recommencer avec des frais réduits. Le moteur de risque vous alerte à 80 % de chaque limite avant cela.",
+  "faq.q5": "Sur quelles plateformes puis-je trader ?",
+  "faq.a5":
+    "MetaTrader 5 aujourd'hui, via notre propre pont. Positions et historique sont reflétés en direct dans le tableau de bord Trade AI.",
+  "faq.q6": "Prenez-vous une part des pertes ?",
+  "faq.a6":
+    "Non. Les pertes sont pour la firme. Votre risque se limite aux frais uniques du challenge.",
+
+  "cta.title": "Le capital est prêt.",
+  "cta.sub": "Commencez l'évaluation aujourd'hui et tradez un compte financé ce mois-ci.",
+  "cta.button": "Être financé",
+
+  "footer.product": "Produit",
+  "footer.company": "Entreprise",
+  "footer.legal": "Mentions légales",
+  "footer.terms": "Conditions d'utilisation",
+  "footer.privacy": "Politique de confidentialité",
+  "footer.risk": "Avertissement sur les risques",
+  "footer.refund": "Politique de remboursement",
+  "footer.careers": "Carrières",
+  "footer.blog": "Blog",
+  "footer.affiliate": "Programme d'affiliation",
+  "footer.support": "Support",
+  "footer.rights": "Tous droits réservés.",
+  "footer.disclaimer":
+    "Trade AI fournit des comptes de trading simulés à des fins d'évaluation. Rien sur ce site ne constitue un conseil en investissement. Le trading comporte un risque de perte substantiel et ne convient pas à tous les investisseurs.",
+
+  "auth.loginTitle": "Content de vous revoir",
+  "auth.loginSub": "Connectez-vous à votre compte Trade AI.",
+  "auth.registerTitle": "Créez votre compte",
+  "auth.registerSub": "Un compte pour les challenges, les paiements et le tableau de bord.",
+  "auth.username": "Nom d'utilisateur",
+  "auth.email": "E-mail",
+  "auth.password": "Mot de passe",
+  "auth.deviceName": "Nom de l'appareil (facultatif)",
+  "auth.submitLogin": "Se connecter",
+  "auth.submitRegister": "Créer le compte",
+  "auth.noAccount": "Pas encore de compte ?",
+  "auth.haveAccount": "Déjà inscrit ?",
+  "auth.forgot": "Mot de passe oublié ?",
+  "auth.forgotTitle": "Réinitialiser le mot de passe",
+  "auth.forgotSub": "Nous vous enverrons un lien par e-mail.",
+  "auth.sendReset": "Envoyer le lien",
+  "auth.resetSent": "Si cette adresse existe, le lien est en route.",
+  "auth.registered": "Compte créé. Vous pouvez vous connecter.",
+  "auth.passwordHint": "8 caractères minimum.",
+
+  "dash.title": "Desk en direct",
+  "dash.sub": "Tout ci-dessous est lu directement depuis le backend Trade AI.",
+  "dash.system": "Système",
+  "dash.market": "Marché",
+  "dash.guardian": "Guardian",
+  "dash.positions": "Positions ouvertes",
+  "dash.history": "Historique des trades",
+  "dash.journal": "Journal IA",
+  "dash.sessions": "Sessions actives",
+  "dash.performance": "Performance IA",
+  "dash.stream": "Flux de ticks en direct",
+  "dash.refresh": "Actualiser",
+  "dash.close": "Fermer",
+  "dash.empty": "Rien à afficher pour l'instant.",
+  "dash.loginRequired": "Connectez-vous pour voir votre desk.",
+  "dash.journalCount": "Entrées de journal",
+  "dash.backtest": "Backtest",
+  "dash.runBacktest": "Lancer le backtest",
+  "dash.symbol": "Instrument",
+  "dash.timeframe": "Unité de temps",
+  "dash.runSignal": "Générer un signal",
+  "dash.runMarket": "Lancer le cycle marché",
+  "dash.tools": "Outils du moteur",
+
+  "state.loading": "Chargement…",
+  "state.error": "Backend injoignable",
+  "state.offline": "Hors ligne",
+  "state.online": "En ligne",
+  "state.connecting": "Connexion",
+
+  "about.title": "Pourquoi nous avons créé une prop firm",
+  "about.sub": "Nous étions les traders qui recevaient les refus évasifs.",
+  "about.body1":
+    "Trade AI a commencé comme moteur d'exécution et de risque, pas comme bureau de financement. Nous l'avons fait tourner deux ans sur notre propre capital : données de marché en flux, un gouverneur de risque IA au-dessus de chaque position, et un journal qui notait chaque décision après coup.",
+  "about.body2":
+    "La raison de l'ouvrir à des traders externes est simple. L'infrastructure passe à l'échelle, le talent discrétionnaire non — et la plupart des programmes de financement recalent les traders sur des règles jamais écrites clairement. Les nôtres tiennent sur une page, et le moteur qui les applique vous montre les chiffres en direct.",
+  "about.body3":
+    "Nous gagnons quand les traders financés gagnent. C'est tout le modèle. Nous n'avons aucun intérêt à vous recaler sur un détail technique.",
+  "about.v1.t": "Règles publiques",
+  "about.v1.d": "Chaque limite figure sur le site et dans votre tableau de bord, calculée à l'identique.",
+  "about.v2.t": "Alerte avant l'infraction",
+  "about.v2.d":
+    "Le moteur de risque signale à 80 % de chaque limite. L'échec silencieux est un défaut de conception.",
+  "about.v3.t": "Paiements à l'heure",
+  "about.v3.d": "Cycles fixes de 14 jours, traités en un jour ouvré.",
+
+  "contact.title": "Parlez à un humain",
+  "contact.sub": "Le support répond en moins de 4 heures, tous les jours.",
+  "contact.name": "Votre nom",
+  "contact.message": "Message",
+  "contact.send": "Envoyer",
+  "contact.sent": "Merci — nous répondrons par e-mail.",
+  "contact.channels": "Autres canaux",
+
+  "common.perMonth": "/ challenge",
+  "common.mostChosen": "Le plus choisi",
+  "common.viewAll": "Tout voir",
+  "common.back": "Retour",
+  "common.retry": "Réessayer",
+};
+
+export default fr;
