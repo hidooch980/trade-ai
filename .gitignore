@@ -1,5 +1,36 @@
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
-*.log
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# Node
+node_modules/
+dist/
+.vite/
+*.tsbuildinfo
+
+# Runtime / secrets
 .env
+*.log
+*.pid
+logs/
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+
+# Backups and scratch files (never commit these)
+*.bak
+*.bak[0-9]
+*.bak.*
+*.bak_*
+*.before_fix
+*.orig
+*~
+
+# Large binaries
+mt5/*.exe
