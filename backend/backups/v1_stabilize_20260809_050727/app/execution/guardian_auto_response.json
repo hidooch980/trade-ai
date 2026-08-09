@@ -1,0 +1,35 @@
+{
+  "time": "2026-08-09T05:07:21.656337+00:00",
+  "engine": "SUPERVISOR_GUARDIAN_SYNC",
+  "responses": [
+    {
+      "ticket": "SIM-2663",
+      "symbol": "USDJPY",
+      "pnl": 0.0,
+      "drawdown": 0.0,
+      "action": "MONITOR"
+    },
+    {
+      "ticket": "SIM-2664",
+      "symbol": "AUDUSD",
+      "pnl": 0.0,
+      "drawdown": 0.0,
+      "action": "MONITOR"
+    },
+    {
+      "ticket": "E2E-LIVE-SAFE",
+      "symbol": "GBPUSD",
+      "pnl": 0.0,
+      "drawdown": 0.0,
+      "action": "MONITOR"
+    },
+    {
+      "ticket": "E2E-LIVE-SL",
+      "symbol": "USDJPY",
+      "pnl": 0.0,
+      "drawdown": 0.0,
+      "action": "MONITOR"
+    }
+  ],
+  "status": "CONNECTED"
+}

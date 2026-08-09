@@ -1,0 +1,17 @@
+{
+  "auth.not_authenticated": "احراز هویت انجام نشده است",
+  "auth.invalid_token": "توکن نامعتبر یا منقضی شده است",
+  "auth.user_not_found": "کاربر پیدا نشد",
+  "auth.invalid_credentials": "نام کاربری یا رمز عبور نادرست است",
+  "auth.email_exists": "این ایمیل قبلاً ثبت شده است",
+  "auth.username_exists": "این نام کاربری قبلاً ثبت شده است",
+  "auth.registered": "ثبت‌نام با موفقیت انجام شد",
+  "auth.login_success": "ورود با موفقیت انجام شد",
+  "error.unauthorized": "احراز هویت الزامی است",
+  "error.forbidden": "دسترسی غیرمجاز است",
+  "error.not_found": "منبع موردنظر پیدا نشد",
+  "error.method_not_allowed": "متد درخواست مجاز نیست",
+  "error.validation": "خطای اعتبارسنجی اطلاعات",
+  "error.http": "خطا در درخواست",
+  "error.internal": "خطای داخلی سرور"
+}

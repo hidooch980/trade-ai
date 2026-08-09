@@ -1,0 +1,17 @@
+{
+  "time": "2026-08-07T14:51:29.982993+00:00",
+  "engine": "CLOSED_TRADE_ANALYZER",
+  "closed_trades": 1,
+  "wins": 0,
+  "losses": 0,
+  "analysis": [
+    {
+      "ticket": "PAPER-TEST-001",
+      "symbol": "BTCUSD",
+      "pnl": 0,
+      "result": "BREAKEVEN",
+      "lesson": "NEUTRAL"
+    }
+  ],
+  "brain_update": "NORMAL"
+}

@@ -1,0 +1,14 @@
+{
+  "time": "2026-08-07T14:23:33.340497+00:00",
+  "positions_checked": 1,
+  "exit_decisions": [
+    {
+      "ticket": "PAPER-TEST-001",
+      "symbol": "BTCUSD",
+      "profit": -499.989,
+      "action": "CLOSE",
+      "reason": "STOP_LOSS"
+    }
+  ],
+  "engine": "EXIT_INTELLIGENCE"
+}

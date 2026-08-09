@@ -1,0 +1,35 @@
+{
+  "time": "2026-08-09T05:07:21.767822+00:00",
+  "engine": "GUARDIAN_ACTION_EXECUTOR",
+  "executed": [
+    {
+      "ticket": "SIM-2663",
+      "symbol": "USDJPY",
+      "action": "MONITOR",
+      "event": "NO_ACTION",
+      "volume": 0.01
+    },
+    {
+      "ticket": "SIM-2664",
+      "symbol": "AUDUSD",
+      "action": "MONITOR",
+      "event": "NO_ACTION",
+      "volume": 0.01
+    },
+    {
+      "ticket": "E2E-LIVE-SAFE",
+      "symbol": "GBPUSD",
+      "action": "MONITOR",
+      "event": "NO_ACTION",
+      "volume": 0.01
+    },
+    {
+      "ticket": "E2E-LIVE-SL",
+      "symbol": "USDJPY",
+      "action": "MONITOR",
+      "event": "NO_ACTION",
+      "volume": 0.01
+    }
+  ],
+  "status": "ACTIVE"
+}

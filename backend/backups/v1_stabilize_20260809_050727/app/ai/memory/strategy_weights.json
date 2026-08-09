@@ -1,0 +1,7 @@
+{
+  "updated": "2026-08-07T14:10:51.513776+00:00",
+  "positive_samples": 7,
+  "negative_samples": 4,
+  "learning_score": 27.27,
+  "strategy_mode": "AGGRESSIVE"
+}

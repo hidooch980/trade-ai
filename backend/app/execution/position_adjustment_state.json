@@ -1,0 +1,24 @@
+{
+  "time": "2026-08-07T15:02:30.799970+00:00",
+  "engine": "AUTO_POSITION_ADJUSTMENT",
+  "adjusted_positions": 2,
+  "positions": [
+    {
+      "ticket": "167ada3d-5c96-4b68-aa28-c1c0a12492b9",
+      "symbol": "BTCUSD",
+      "old_volume": 0.01,
+      "new_volume": 0.01,
+      "action": "MONITOR",
+      "status": "UNCHANGED"
+    },
+    {
+      "ticket": "c8d45a0b-1c19-42ea-96b9-ce23bd9d170d",
+      "symbol": "BTCUSD",
+      "old_volume": 0.005,
+      "new_volume": 0.005,
+      "action": "MONITOR",
+      "status": "UNCHANGED"
+    }
+  ],
+  "status": "ACTIVE"
+}

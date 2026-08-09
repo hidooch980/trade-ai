@@ -1,0 +1,270 @@
+from __future__ import annotations
+
+from typing import Any
+
+from app.broker.core.router import broker_router
+from app.broker.discovery.web_discovery import broker_web_discovery
+from app.broker.security.credential_manager import credential_manager
+
+
+class BrokerConnectionManager:
+    """
+    Central broker connection lifecycle.
+
+    Flow:
+        broker
+        -> discovery
+        -> credential resolution
+        -> adapter
+        -> connection
+
+    Raw credentials are never returned by connection results.
+    """
+
+    def __init__(self):
+        self._connections: dict[str, Any] = {}
+
+    @staticmethod
+    def _normalize(value: str) -> str:
+        return str(value or "").strip().lower()
+
+    async def discover(self, broker_name: str) -> dict:
+        broker_name = str(broker_name or "").strip()
+
+        adapter = broker_router.resolve(broker_name)
+
+        if adapter is not None:
+            credential_types = []
+
+            for record in credential_manager.list():
+                if self._normalize(record.broker) == self._normalize(broker_name):
+                    credential_types.append(record.connection_type)
+
+            return {
+                "success": True,
+                "query": broker_name,
+                "source": "registered_adapter",
+                "profile": {
+                    "name": broker_name,
+                },
+                "adapter": adapter.__name__,
+                "ready_for_connection": True,
+                "credentials_required": True,
+                "credentials_found": bool(credential_types),
+                "credential_connection_types": sorted(set(credential_types)),
+            }
+
+        return await broker_web_discovery.discover(broker_name)
+
+    async def connect(
+        self,
+        broker_name: str,
+        connection_type: str = "mt5",
+        credentials: dict | None = None,
+        credential_id: str | None = None,
+        config: dict | None = None,
+    ) -> dict:
+        broker_name = str(broker_name or "").strip()
+        connection_type = str(connection_type or "").strip().lower()
+
+        adapter_cls = broker_router.resolve(broker_name)
+
+        if adapter_cls is None:
+            discovery = await self.discover(broker_name)
+
+            return {
+                "connected": False,
+                "status": "BROKER_NOT_FOUND",
+                "broker": broker_name,
+                "discovery": discovery,
+            }
+
+        # Explicit credentials take precedence.
+        if credentials is not None:
+            if not isinstance(credentials, dict) or not credentials:
+                return {
+                    "connected": False,
+                    "status": "INVALID_CREDENTIALS",
+                    "broker": broker_name,
+                    "adapter": adapter_cls.__name__,
+                    "connection_type": connection_type,
+                }
+
+            stored = credential_manager.store(
+                broker=broker_name,
+                connection_type=connection_type,
+                credentials=credentials,
+            )
+
+            credential_id = stored["credential_id"]
+
+        # Resolve existing credential.
+        if credential_id is not None:
+            try:
+                connection_credentials = credential_manager.get(
+                    credential_id
+                )
+            except KeyError:
+                return {
+                    "connected": False,
+                    "status": "CREDENTIAL_NOT_FOUND",
+                    "broker": broker_name,
+                    "adapter": adapter_cls.__name__,
+                    "connection_type": connection_type,
+                    "credential_id": credential_id,
+                }
+
+            metadata = credential_manager.metadata(credential_id)
+
+            if (
+                self._normalize(metadata["broker"])
+                != self._normalize(broker_name)
+                or self._normalize(metadata["connection_type"])
+                != self._normalize(connection_type)
+            ):
+                return {
+                    "connected": False,
+                    "status": "CREDENTIAL_MISMATCH",
+                    "broker": broker_name,
+                    "adapter": adapter_cls.__name__,
+                    "connection_type": connection_type,
+                    "credential_id": credential_id,
+                }
+
+        else:
+            connection_credentials = (
+                credential_manager.get_for_connection(
+                    broker_name,
+                    connection_type,
+                )
+            )
+
+        if connection_credentials is None:
+            return {
+                "connected": False,
+                "status": "CREDENTIALS_REQUIRED",
+                "broker": broker_name,
+                "adapter": adapter_cls.__name__,
+                "connection_type": connection_type,
+                "credential_id": None,
+            }
+
+        adapter = adapter_cls()
+
+        try:
+            result = await adapter.connect(
+                credentials=connection_credentials,
+                config=config,
+            )
+        except Exception as exc:
+            return {
+                "connected": False,
+                "status": "CONNECTION_ERROR",
+                "broker": broker_name,
+                "adapter": adapter_cls.__name__,
+                "connection_type": connection_type,
+                "credential_id": credential_id,
+                "error": type(exc).__name__,
+            }
+
+        if isinstance(result, dict):
+            connected = bool(result.get("connected", True))
+            status = result.get("status", "CONNECTED")
+        else:
+            connected = True
+            status = "CONNECTED"
+
+        if not connected:
+            return {
+                "connected": False,
+                "status": status,
+                "broker": broker_name,
+                "adapter": adapter_cls.__name__,
+                "connection_type": connection_type,
+                "credential_id": credential_id,
+            }
+
+        key = self._normalize(broker_name)
+
+        self._connections[key] = {
+            "adapter": adapter,
+            "broker": broker_name,
+            "connection_type": connection_type,
+            "credential_id": credential_id,
+        }
+
+        return {
+            "connected": True,
+            "status": status,
+            "broker": broker_name,
+            "adapter": adapter_cls.__name__,
+            "connection_type": connection_type,
+            "credential_id": credential_id,
+        }
+
+    async def disconnect(self, broker_name: str) -> dict:
+        key = self._normalize(broker_name)
+
+        connection = self._connections.get(key)
+
+        if connection is None:
+            return {
+                "disconnected": False,
+                "status": "NOT_CONNECTED",
+                "broker": broker_name,
+            }
+
+        adapter = connection["adapter"]
+
+        try:
+            result = await adapter.disconnect()
+        finally:
+            del self._connections[key]
+
+        return {
+            "disconnected": True,
+            "status": (
+                result.get("status", "DISCONNECTED")
+                if isinstance(result, dict)
+                else "DISCONNECTED"
+            ),
+            "broker": broker_name,
+        }
+
+    def connected_brokers(self) -> list[str]:
+        return sorted(self._connections.keys())
+
+    async def health_check(self, broker_name: str) -> dict:
+        key = self._normalize(broker_name)
+
+        connection = self._connections.get(key)
+
+        if connection is None:
+            return {
+                "healthy": False,
+                "status": "NOT_CONNECTED",
+                "broker": broker_name,
+            }
+
+        adapter = connection["adapter"]
+
+        try:
+            result = await adapter.health_check()
+
+            return {
+                "healthy": bool(result.get("healthy", False)),
+                "status": result.get("status", "UNKNOWN"),
+                "broker": broker_name,
+                "adapter": type(adapter).__name__,
+            }
+
+        except Exception as exc:
+            return {
+                "healthy": False,
+                "status": "ERROR",
+                "broker": broker_name,
+                "error": type(exc).__name__,
+            }
+
+
+broker_connection_manager = BrokerConnectionManager()

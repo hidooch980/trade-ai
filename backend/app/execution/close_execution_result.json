@@ -1,0 +1,10 @@
+[
+  {
+    "ticket": "PAPER-TEST-001",
+    "symbol": "BTCUSD",
+    "profit": -499.989,
+    "status": "CLOSED",
+    "reason": "STOP_LOSS",
+    "time": "2026-08-07T14:24:10.897172+00:00"
+  }
+]

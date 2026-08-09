@@ -1,17 +1,3 @@
-from datetime import datetime
+from app.ai.journal.trade_journal import trade_journal
 
-class TradeJournal:
-    def __init__(self):
-        self.logs=[]
-
-    def add(self,event,data):
-        self.logs.append({
-            "time":datetime.utcnow().isoformat(),
-            "event":event,
-            "data":data
-        })
-
-    def all(self):
-        return self.logs
-
-trade_journal=TradeJournal()
+__all__ = ["trade_journal"]

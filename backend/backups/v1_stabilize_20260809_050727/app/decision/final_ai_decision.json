@@ -1,0 +1,9 @@
+{
+  "time": "2026-08-07T14:21:37.497839+00:00",
+  "decision": "BUY",
+  "reason": "STRICT_FILTER_ACCEPTED",
+  "score": 81.66666666666667,
+  "confidence": 60,
+  "strategy_mode": "STRICT_FILTER",
+  "risk_gate": "ALLOW"
+}

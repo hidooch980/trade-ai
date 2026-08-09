@@ -1,0 +1,38 @@
+[
+  {
+    "ticket": "SIM-2407",
+    "symbol": "EURUSD",
+    "side": "SELL",
+    "volume": 0.45,
+    "entry_price": 1.1015,
+    "current_price": 1.1013,
+    "pnl": 8.999999999999009e-05,
+    "stop_loss": 1.1037,
+    "take_profit": 1.0982,
+    "status": "OPEN"
+  },
+  {
+    "ticket": "SIM-2408",
+    "symbol": "GBPUSD",
+    "side": "SELL",
+    "volume": 0.39,
+    "entry_price": 1.2699,
+    "current_price": 1.269,
+    "pnl": 0.00035100000000004794,
+    "stop_loss": 1.27244,
+    "take_profit": 1.26609,
+    "status": "OPEN"
+  },
+  {
+    "ticket": "SIM-2409",
+    "symbol": "EURUSD",
+    "side": "BUY",
+    "volume": 0.45,
+    "entry_price": 1.1011,
+    "current_price": 1.1013,
+    "pnl": 8.999999999999009e-05,
+    "stop_loss": 1.0989,
+    "take_profit": 1.1044,
+    "status": "OPEN"
+  }
+]

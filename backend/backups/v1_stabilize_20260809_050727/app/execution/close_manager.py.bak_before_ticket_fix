@@ -1,0 +1,86 @@
+from app.execution.trade_history import trade_history
+from app.execution.position_store import position_store
+from app.ai.learning.trade_learning_engine import trade_learning_engine
+from app.ai.learning.trade_result_pipeline import trade_result_pipeline
+
+
+class CloseManager:
+
+    async def close(
+        self,
+        mt5,
+        ticket,
+        exit_price=None,
+        reason="EXIT_TRIGGERED"
+    ):
+        positions = position_store.get_all()
+
+        for pos in positions:
+
+            if pos.get("ticket") != ticket:
+                continue
+
+            if pos.get("status") != "OPEN":
+                return {
+                    "closed": False,
+                    "reason": "POSITION_NOT_OPEN",
+                    "ticket": ticket
+                }
+
+            price = (
+                exit_price
+                if exit_price is not None
+                else pos.get(
+                    "current_price",
+                    getattr(mt5, "last_price", pos.get("entry_price", 0))
+                )
+            )
+
+            clean_pos = {
+                "ticket": pos.get("ticket"),
+                "symbol": pos.get("symbol"),
+                "side": pos.get("side"),
+                "volume": pos.get("volume"),
+                "entry_price": pos.get("entry_price")
+            }
+
+            # 1. ثبت تاریخچه — فقط یک بار
+            trade = trade_history.add(
+                clean_pos,
+                price,
+                reason
+            )
+
+            # 2. حذف واقعی پوزیشن
+            position_store.remove(ticket)
+
+            # 3. ارسال نتیجه به سیستم یادگیری — فقط یک بار
+            learning_result = trade_result_pipeline.process(
+                symbol=pos.get("symbol"),
+                decision=pos.get("side"),
+                entry_price=pos.get("entry_price"),
+                exit_price=price,
+                volume=pos.get("volume"),
+                pnl=trade.get("pnl", 0),
+                strategy="SMART_MONEY_M1"
+            )
+
+            # 4. یادگیری مستقیم قدیمی نیز حفظ می‌شود
+
+            return {
+                "closed": True,
+                "ticket": ticket,
+                "symbol": pos.get("symbol"),
+                "reason": reason,
+                "trade": trade,
+                "learning": learning_result
+            }
+
+        return {
+            "closed": False,
+            "reason": "POSITION_NOT_FOUND",
+            "ticket": ticket
+        }
+
+
+close_manager = CloseManager()

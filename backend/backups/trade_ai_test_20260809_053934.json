@@ -1,0 +1,15 @@
+{
+    "trades": [
+        {
+            "symbol": "XAUUSD",
+            "side": "BUY",
+            "profit": 50
+        }
+    ],
+    "signals": [
+        {
+            "decision": "BUY",
+            "confidence": 85
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+from app.broker.core.registry import broker_registry
+from app.broker.discovery.broker_detector import broker_detector
+
+
+class BrokerSearch:
+    async def search(self, query: str) -> dict:
+        query = str(query or "").strip()
+
+        registered = broker_registry.get(query)
+        detection = broker_detector.detect(query)
+
+        return {
+            "query": query,
+            "registered": registered is not None,
+            "adapter": registered.__name__ if registered else None,
+            "detection": detection,
+            "brokers": broker_registry.list(),
+            "requires_external_discovery": registered is None,
+        }
+
+
+broker_search = BrokerSearch()

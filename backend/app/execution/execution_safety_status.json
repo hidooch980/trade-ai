@@ -1,0 +1,7 @@
+{
+  "time": "2026-08-07T14:15:04.287713+00:00",
+  "execution": "BLOCKED",
+  "reason": "POSITION_EXISTS",
+  "symbol": "BTCUSD",
+  "decision": "BUY"
+}

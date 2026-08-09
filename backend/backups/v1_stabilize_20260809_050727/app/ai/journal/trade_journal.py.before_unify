@@ -1,0 +1,133 @@
+import json
+import os
+import tempfile
+from pathlib import Path
+from datetime import datetime
+
+
+class TradeJournal:
+
+    def __init__(self):
+        self.file = Path(
+            "data/trade_journal.json"
+        )
+
+        self.file.parent.mkdir(
+            exist_ok=True
+        )
+
+        if not self.file.exists():
+            self.file.write_text("[]")
+
+
+    def _atomic_write(self, data):
+        payload = json.dumps(
+            data,
+            indent=4
+        )
+
+        self.file.parent.mkdir(
+            exist_ok=True
+        )
+
+        fd, tmp = tempfile.mkstemp(
+            dir=str(self.file.parent),
+            prefix=".trade_journal_",
+            suffix=".tmp",
+            text=True
+        )
+
+        try:
+            with os.fdopen(fd, "w", encoding="utf-8") as f:
+                f.write(payload)
+                f.flush()
+                os.fsync(f.fileno())
+
+            os.replace(tmp, self.file)
+
+        finally:
+            if os.path.exists(tmp):
+                os.unlink(tmp)
+
+    def record(
+        self,
+        symbol,
+        decision,
+        price,
+        risk,
+        smart_money
+    ):
+
+        data = json.loads(
+            self.file.read_text()
+        )
+
+
+        trade = {
+            "symbol": symbol,
+            "decision": decision,
+            "entry": price,
+            "risk": risk,
+            "smart_money": smart_money,
+            "time": datetime.utcnow().isoformat()
+        }
+
+
+        data.append(trade)
+
+
+        self._atomic_write(data)
+
+
+        return trade
+
+
+
+    def history(
+        self
+    ):
+
+        return json.loads(
+            self.file.read_text()
+        )
+
+
+    def replace_history(self, trades):
+        if not isinstance(trades, list):
+            raise ValueError("TRADE_HISTORY_MUST_BE_LIST")
+
+        self._atomic_write(trades)
+
+        return trades
+
+
+    def record_closed(
+        self,
+        symbol,
+        decision,
+        entry_price,
+        exit_price,
+        volume,
+        pnl
+    ):
+        data = self.history()
+
+        trade = {
+            "symbol": symbol,
+            "decision": decision,
+            "entry": entry_price,
+            "exit": exit_price,
+            "volume": volume,
+            "profit": pnl,
+            "status": "CLOSED",
+            "time": datetime.utcnow().isoformat()
+        }
+
+        data.append(trade)
+
+        self.replace_history(data)
+
+        return trade
+
+
+trade_journal = TradeJournal()

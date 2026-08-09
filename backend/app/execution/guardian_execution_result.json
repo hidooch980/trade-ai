@@ -1,0 +1,21 @@
+{
+  "time": "2026-08-09T10:57:23.146640+00:00",
+  "engine": "GUARDIAN_ACTION_EXECUTOR",
+  "executed": [
+    {
+      "ticket": "SIM-2664",
+      "symbol": "AUDUSD",
+      "action": "MONITOR",
+      "event": "NO_ACTION",
+      "volume": 0.01
+    },
+    {
+      "ticket": "E2E-LIVE-SAFE",
+      "symbol": "GBPUSD",
+      "action": "MONITOR",
+      "event": "NO_ACTION",
+      "volume": 0.01
+    }
+  ],
+  "status": "ACTIVE"
+}

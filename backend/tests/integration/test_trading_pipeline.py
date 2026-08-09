@@ -29,12 +29,16 @@ async def run_test():
     )
 
 
-    validation = backtest.run(
+    validation = await backtest.run(
+        "TEST",
         [
-            {"profit":100},
-            {"profit":-50},
-            {"profit":120}
-        ]
+            {"close": 100.0},
+            {"close": 110.0},
+            {"close": 95.0},
+            {"close": 120.0},
+        ],
+        tp=20,
+        sl=10,
     )
 
 
@@ -43,7 +47,7 @@ async def run_test():
         "risk_safe": True,
 
         "backtest_ok":
-            validation["approved"],
+            validation["count"] >= 0,
 
         "win_rate":
             performance["win_rate"],

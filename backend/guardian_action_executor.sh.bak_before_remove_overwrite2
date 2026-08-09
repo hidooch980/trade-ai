@@ -1,0 +1,148 @@
+#!/bin/bash
+
+cd /opt/trade-ai/backend || exit 1
+
+LOG="guardian_action_executor_$(date +%Y%m%d_%H%M%S).log"
+
+echo "=== GUARDIAN ACTION EXECUTOR ===" | tee -a $LOG
+
+./venv/bin/python - <<'PY' | tee -a $LOG
+
+import json
+import os
+from datetime import datetime, timezone
+
+
+response_file="app/execution/guardian_auto_response.json"
+position_file="positions.json"
+
+output="app/execution/guardian_execution_result.json"
+
+
+def load(path, default):
+    if os.path.exists(path):
+        try:
+            return json.load(open(path))
+        except:
+            return default
+    return default
+
+
+guardian=load(response_file,{})
+positions=load(position_file,[])
+
+
+if not isinstance(positions,list):
+    positions=[]
+
+
+responses=guardian.get("responses",[])
+
+response_map={
+    r.get("ticket"):r
+    for r in responses
+}
+
+
+executed=[]
+
+
+for p in positions:
+
+    if p.get("status")!="OPEN":
+        continue
+
+    ticket=p.get("ticket")
+    action=response_map.get(ticket,{}).get("action","MONITOR")
+
+    old_volume=p.get("volume",0)
+
+
+    if action=="FORCE_REDUCE":
+
+        p["volume"]=round(old_volume*0.5,4)
+        event="VOLUME_REDUCED"
+
+
+    elif action=="PREPARE_CLOSE":
+        p["close_ready"]=True
+
+        try:
+            import asyncio
+            from app.execution.close_manager import close_manager
+            from app.market.bridge.mt5_bridge import mt5_bridge
+
+            close_result = asyncio.run(
+                close_manager.close(
+                    mt5_bridge,
+                    ticket,
+                    reason="GUARDIAN_AUTO_CLOSE"
+                )
+            )
+
+            if close_result.get("closed") is True:
+                event="CLOSE_EXECUTED"
+                p["status"]="CLOSED"
+                p["close_reason"]="GUARDIAN_AUTO_CLOSE"
+                p["close_result"]=close_result
+            else:
+                event="CLOSE_FAILED"
+                p["close_result"]=close_result
+
+        except Exception as e:
+            event="CLOSE_ERROR"
+            p["close_error"]=str(e)
+
+    else:
+
+        event="NO_ACTION"
+
+
+    executed.append({
+
+        "ticket":ticket,
+        "symbol":p.get("symbol"),
+        "action":action,
+        "event":event,
+        "volume":p.get("volume")
+
+    })
+
+
+result={
+
+    "time":datetime.now(timezone.utc).isoformat(),
+    "engine":"GUARDIAN_ACTION_EXECUTOR",
+    "executed":executed,
+    "status":"ACTIVE"
+
+}
+
+
+os.makedirs("app/execution",exist_ok=True)
+
+
+json.dump(
+    positions,
+    open(position_file,"w"),
+    indent=2
+)
+
+
+json.dump(
+    result,
+    open(output,"w"),
+    indent=2
+)
+
+
+print(json.dumps(result,indent=2))
+print("GUARDIAN ACTION EXECUTOR ACTIVE")
+
+PY
+
+
+curl -s http://127.0.0.1:8000/health | tee -a $LOG
+
+echo "REPORT:$LOG"
+

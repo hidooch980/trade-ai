@@ -1,0 +1,62 @@
+class RiskGovernor:
+
+    def calculate_position_size(
+        self,
+        capital,
+        risk_percent,
+        entry_price,
+        stop_loss,
+        symbol=None,
+        strategy_weight=1
+    ):
+
+        risk_amount = capital * (risk_percent / 100) * strategy_weight
+        min_distance = entry_price * 0.005
+
+        distance = abs(
+            entry_price - stop_loss
+        )
+
+        if distance == 0:
+            return {
+                "approved": False,
+                "reason": "INVALID_STOP_LOSS"
+            }
+
+
+        # Forex position sizing normalization
+        pip_value = 100000
+
+        volume = risk_amount / (distance * pip_value)
+
+        # safety cap
+        volume = min(volume, 10)
+
+
+
+        return {
+            "approved": True,
+            "risk_amount": risk_amount,
+            "stop_distance": distance,
+            "volume": round(volume, 2),
+            "entry_price": entry_price
+        }
+
+
+    def validate_drawdown(
+        self,
+        current_loss_percent
+    ):
+
+        if current_loss_percent >= 10:
+
+            return {
+                "approved": False,
+                "status": "DRAWDOWN_LIMIT"
+            }
+
+
+        return {
+            "approved": True,
+            "status": "SAFE"
+        }

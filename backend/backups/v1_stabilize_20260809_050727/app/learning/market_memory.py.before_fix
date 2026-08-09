@@ -1,0 +1,64 @@
+import json
+import os
+import tempfile
+import os
+from datetime import datetime
+
+
+class MarketMemory:
+
+    def __init__(self):
+        self.file = "app/learning/data/market_memory.json"
+
+        if not os.path.exists(self.file):
+            with open(self.file,"w") as f:
+                json.dump([],f)
+
+
+    def save(self, data):
+        payload = json.dumps(data, indent=4)
+
+        directory = os.path.dirname(self.file) or "."
+
+        fd, tmp = tempfile.mkstemp(
+            dir=directory,
+            prefix=".market_memory_",
+            suffix=".tmp",
+            text=True
+        )
+
+        try:
+            with os.fdopen(fd, "w", encoding="utf-8") as f:
+                f.write(payload)
+                f.flush()
+                os.fsync(f.fileno())
+
+            os.replace(tmp, self.file)
+
+        finally:
+            if os.path.exists(tmp):
+                os.unlink(tmp)
+
+        return True
+
+    def add(self, data):
+        return self.save(data)
+
+
+
+
+    def status(self):
+        history = self.get_history()
+        return {
+            "records": len(history),
+            "memory_file": self.file,
+            "status": "ONLINE"
+        }
+
+    def get_history(self):
+
+        with open(self.file,"r") as f:
+            return json.load(f)
+
+
+market_memory = MarketMemory()

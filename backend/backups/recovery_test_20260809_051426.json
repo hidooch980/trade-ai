@@ -1,0 +1,10 @@
+{
+    "system": "TRADE_AI",
+    "status": "RUNNING",
+    "trades": [
+        {
+            "symbol": "XAUUSD",
+            "result": "WIN"
+        }
+    ]
+}

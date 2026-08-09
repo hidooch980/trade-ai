@@ -1,0 +1,10 @@
+{
+  "time": "2026-08-07T14:40:43.614837+00:00",
+  "memory_state": "LEARNING_POSITIVE",
+  "accuracy": 53.85,
+  "reward_score": 1,
+  "previous_confidence": 60,
+  "feedback": "NEUTRAL",
+  "adjustment": "KEEP",
+  "bridge": "CONNECTED"
+}

@@ -1,0 +1,111 @@
+import hashlib
+import secrets
+from datetime import datetime, timedelta, timezone
+
+from app.models.auth_session import AuthSession
+from app.repositories.auth_session_repository import AuthSessionRepository
+
+REFRESH_TOKEN_DAYS = 30
+
+
+class RefreshTokenReplayError(Exception):
+    pass
+
+
+class AuthSessionManager:
+    def __init__(self, repository: AuthSessionRepository):
+        self.repository = repository
+
+    @staticmethod
+    def hash_token(token: str) -> str:
+        return hashlib.sha256(token.encode("utf-8")).hexdigest()
+
+    @staticmethod
+    def generate_refresh_token() -> str:
+        return secrets.token_urlsafe(64)
+
+    async def create_session(
+        self,
+        user_id,
+        device_name=None,
+        ip_address=None,
+        user_agent=None,
+    ):
+        token = self.generate_refresh_token()
+        token_hash = self.hash_token(token)
+        expires_at = datetime.now(timezone.utc) + timedelta(
+            days=REFRESH_TOKEN_DAYS
+        )
+
+        session = await self.repository.create(
+            user_id=user_id,
+            refresh_token_hash=token_hash,
+            expires_at=expires_at,
+            device_name=device_name,
+            ip_address=ip_address,
+            user_agent=user_agent,
+        )
+
+        return token, session
+
+    async def validate(self, token: str) -> AuthSession | None:
+        item = await self.repository.get_by_hash(self.hash_token(token))
+
+        if not item:
+            return None
+
+        now = datetime.now(timezone.utc)
+
+        if item.revoked_at is not None:
+            return None
+
+        if item.expires_at <= now:
+            return None
+
+        item.last_used_at = now
+        return item
+
+    async def rotate(
+        self,
+        token: str,
+        ip_address=None,
+        user_agent=None,
+    ):
+        item = await self.repository.get_by_hash(
+            self.hash_token(token)
+        )
+
+        if not item:
+            return None
+
+        now = datetime.now(timezone.utc)
+
+        if item.revoked_at is not None:
+            raise RefreshTokenReplayError(
+                "refresh_token_reuse_detected"
+            )
+
+        if item.expires_at <= now:
+            return None
+
+        await self.repository.revoke(item)
+
+        new_token, new_session = await self.create_session(
+            user_id=item.user_id,
+            device_name=item.device_name,
+            ip_address=ip_address or item.ip_address,
+            user_agent=user_agent or item.user_agent,
+        )
+
+        return new_token, new_session
+
+    async def revoke(self, token: str) -> bool:
+        item = await self.repository.get_by_hash(
+            self.hash_token(token)
+        )
+
+        if not item:
+            return False
+
+        await self.repository.revoke(item)
+        return True

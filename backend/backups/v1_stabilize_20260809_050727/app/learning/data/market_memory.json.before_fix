@@ -1,0 +1,48 @@
+{
+    "decision": "WAIT",
+    "score": 20.5,
+    "reasons": [
+        "ADAPTIVE_MEMORY_APPLIED",
+        "SMART_MONEY_BULLISH",
+        "BEARISH_STRUCTURE",
+        "INDICATOR_FUSION_BULLISH",
+        "RISK_OK"
+    ],
+    "indicator": {
+        "trend": "BEARISH",
+        "structure": "LH-LL",
+        "decision": "WAIT",
+        "score": 35,
+        "votes": [
+            "BUY",
+            "BUY_CONFIRM"
+        ]
+    },
+    "ai": {
+        "decision": "WAIT"
+    },
+    "risk": {
+        "approved": true
+    },
+    "smart_money": {
+        "decision": "WAIT",
+        "score": 25,
+        "chart": {
+            "decision": "WAIT",
+            "score": 25,
+            "reasons": [
+                "RSI_HIGH",
+                "MACD_BULLISH",
+                "BOLLINGER_BREAKOUT",
+                "BEARISH_STRUCTURE",
+                "BULLISH_ORDER_BLOCK",
+                "BULLISH_FVG"
+            ]
+        },
+        "market": {
+            "symbol": "BTCUSD",
+            "smart_money": "UNKNOWN",
+            "score": 0
+        }
+    }
+}

@@ -1,0 +1,37 @@
+from fastapi import FastAPI
+from app.market.bridge.mt5_bridge import mt5_bridge
+
+app = FastAPI(title="Trade-AI MT5 Bridge", version="1.0.0")
+
+@app.on_event("startup")
+async def startup():
+    await mt5_bridge.connect()
+
+@app.get("/")
+async def root():
+    return {
+        "status": "RUNNING",
+        "service": "MT5-BRIDGE",
+        "platform": "MT5",
+        "mode": "SIMULATION",
+        "port": 1670
+    }
+
+@app.get("/health")
+async def health():
+    return {
+        "status": "HEALTHY",
+        "connected": mt5_bridge.connected,
+        "platform": "MT5",
+        "mode": "SIMULATION"
+    }
+
+@app.get("/account")
+async def account():
+    return await mt5_bridge.get_account()
+
+@app.get("/positions")
+async def positions():
+    return {
+        "positions": await mt5_bridge.get_positions()
+    }

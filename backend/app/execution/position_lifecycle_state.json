@@ -1,0 +1,26 @@
+{
+  "engine": "POSITION_LIFECYCLE_MONITOR",
+  "open_positions": 2,
+  "positions": [
+    {
+      "ticket": "PAPER-TEST-001",
+      "symbol": "BTCUSD",
+      "side": "BUY",
+      "entry": 50000,
+      "current": 1.1002,
+      "pnl": -499.989,
+      "status": "MONITORED",
+      "time": "2026-08-07T14:45:45.857759+00:00"
+    },
+    {
+      "ticket": "167ada3d-5c96-4b68-aa28-c1c0a12492b9",
+      "symbol": "BTCUSD",
+      "side": "BUY",
+      "entry": 50000,
+      "current": 50000,
+      "pnl": 0.0,
+      "status": "MONITORED",
+      "time": "2026-08-07T14:45:45.857828+00:00"
+    }
+  ]
+}

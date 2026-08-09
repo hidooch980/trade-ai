@@ -1,0 +1,28 @@
+{
+  "time": "2026-08-08T08:40:33.313596+00:00",
+  "engine": "SUPERVISOR_GUARDIAN_SYNC",
+  "responses": [
+    {
+      "ticket": "SIM-2514",
+      "symbol": "GBPUSD",
+      "pnl": -0.0,
+      "drawdown": -0.0076,
+      "action": "MONITOR"
+    },
+    {
+      "ticket": "SIM-2516",
+      "symbol": "EURUSD",
+      "pnl": 0.0005,
+      "drawdown": 0.1092,
+      "action": "MONITOR"
+    },
+    {
+      "ticket": "SIM-2517",
+      "symbol": "GBPUSD",
+      "pnl": -0.0,
+      "drawdown": -0.0076,
+      "action": "MONITOR"
+    }
+  ],
+  "status": "CONNECTED"
+}

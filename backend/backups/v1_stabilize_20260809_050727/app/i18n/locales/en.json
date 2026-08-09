@@ -1,0 +1,17 @@
+{
+  "auth.not_authenticated": "Not authenticated",
+  "auth.invalid_token": "Invalid or expired token",
+  "auth.user_not_found": "User not found",
+  "auth.invalid_credentials": "Invalid username or password",
+  "auth.email_exists": "User email already exists",
+  "auth.username_exists": "Username already exists",
+  "auth.registered": "Registration successful",
+  "auth.login_success": "Login successful",
+  "error.unauthorized": "Authentication required",
+  "error.forbidden": "Access forbidden",
+  "error.not_found": "Resource not found",
+  "error.method_not_allowed": "Method not allowed",
+  "error.validation": "Validation error",
+  "error.http": "Request error",
+  "error.internal": "Internal server error"
+}

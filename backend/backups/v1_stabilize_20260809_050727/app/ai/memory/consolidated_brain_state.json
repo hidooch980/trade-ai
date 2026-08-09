@@ -1,0 +1,9 @@
+{
+  "updated": "2026-08-07T14:24:43.968768+00:00",
+  "samples": 13,
+  "wins": 7,
+  "losses": 6,
+  "accuracy": 53.85,
+  "reward_score": 1,
+  "brain_state": "LEARNING_POSITIVE"
+}

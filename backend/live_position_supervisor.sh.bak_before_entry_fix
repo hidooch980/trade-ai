@@ -1,0 +1,104 @@
+#!/bin/bash
+
+cd /opt/trade-ai/backend || exit 1
+
+LOG="live_position_supervisor_$(date +%Y%m%d_%H%M%S).log"
+
+echo "=== LIVE POSITION SUPERVISOR ===" | tee -a $LOG
+
+./venv/bin/python - <<'PY' | tee -a $LOG
+
+import json
+import os
+from datetime import datetime, timezone
+
+
+position_file="positions.json"
+output="app/execution/live_supervisor_state.json"
+
+
+def load(path, default):
+    if os.path.exists(path):
+        try:
+            return json.load(open(path))
+        except:
+            return default
+    return default
+
+
+positions=load(position_file,[])
+
+if not isinstance(positions,list):
+    positions=[]
+
+
+signals=[]
+
+
+for p in positions:
+
+    if p.get("status")!="OPEN":
+        continue
+
+    ticket=p.get("ticket")
+    symbol=p.get("symbol")
+
+    entry=p.get("entry",50000)
+    current=p.get("current_price",entry)
+    volume=p.get("volume",0)
+
+    pnl=round((current-entry)*volume,4)
+
+    if entry:
+        drawdown=round(((current-entry)/entry)*100,4)
+    else:
+        drawdown=0
+
+
+    if drawdown <= -5:
+        action="PREPARE_CLOSE"
+
+    elif pnl < -100:
+        action="FORCE_REDUCE"
+
+    else:
+        action="MONITOR"
+
+
+    signals.append({
+        "ticket":ticket,
+        "symbol":symbol,
+        "pnl":pnl,
+        "drawdown":drawdown,
+        "action":action
+    })
+
+
+result={
+    "time":datetime.now(timezone.utc).isoformat(),
+    "engine":"LIVE_POSITION_SUPERVISOR",
+    "open_positions":len(signals),
+    "signals":signals,
+    "status":"RUNNING"
+}
+
+
+os.makedirs("app/execution",exist_ok=True)
+
+json.dump(
+    result,
+    open(output,"w"),
+    indent=2
+)
+
+
+print(json.dumps(result,indent=2))
+print("LIVE SUPERVISOR ACTIVE")
+
+PY
+
+
+curl -s http://127.0.0.1:8000/health | tee -a $LOG
+
+echo "REPORT:$LOG"
+

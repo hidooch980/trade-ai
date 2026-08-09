@@ -1,0 +1,18 @@
+{
+  "updated": "2026-08-07T14:51:58.190352+00:00",
+  "total_closed": 1,
+  "wins": 0,
+  "losses": 0,
+  "breakeven": 1,
+  "trades": [
+    {
+      "ticket": "PAPER-TEST-001",
+      "symbol": "BTCUSD",
+      "side": "BUY",
+      "pnl": 0,
+      "result": "BREAKEVEN",
+      "close_reason": "AUTO_CLOSE_BRAIN",
+      "time": "2026-08-07T14:50:29.245273+00:00"
+    }
+  ]
+}

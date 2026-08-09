@@ -1,0 +1,10 @@
+{
+  "time": "2026-08-07T14:54:50.702477+00:00",
+  "engine": "ADAPTIVE_RISK_RECALIBRATION",
+  "wins": 7,
+  "losses": 8,
+  "risk_mode": "DEFENSIVE",
+  "risk_level": "LOW",
+  "position_multiplier": 0.5,
+  "status": "UPDATED"
+}

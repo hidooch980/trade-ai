@@ -7,6 +7,47 @@ class MarketDataService:
         self.validator = DataValidator()
         self.provider = provider
 
+    def process_candle(self, candle):
+        """
+        Validate and normalize a single candle.
+
+        This is intentionally synchronous because the low-level
+        validation path does not require an async provider.
+        """
+        validation = self.validator.validate_candle(candle)
+
+        if not validation.get("valid"):
+            return {
+                "valid": False,
+                "candle": candle.model_dump(),
+                "errors": validation.get("errors", []),
+            }
+
+        data = candle.model_dump()
+
+        return {
+            "valid": True,
+            "candle": data,
+        }
+
+    def process_tick(self, tick):
+        """
+        Validate and normalize a single market tick.
+        """
+        validation = self.validator.validate_tick(tick)
+
+        if not validation.get("valid"):
+            return {
+                "valid": False,
+                "tick": tick.model_dump(),
+                "errors": validation.get("errors", []),
+            }
+
+        return {
+            "valid": True,
+            "tick": tick.model_dump(),
+        }
+
     async def get_market_candles(self, symbol, timeframe, limit=100):
         candles = await self.provider.get_candles(symbol, timeframe, limit)
 

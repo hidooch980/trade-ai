@@ -1,0 +1,14 @@
+{
+  "time": "2026-08-07T14:50:29.245342+00:00",
+  "engine": "AUTO_CLOSE_EXECUTOR_BRAIN",
+  "closed_positions": 1,
+  "closed": [
+    {
+      "ticket": "PAPER-TEST-001",
+      "symbol": "BTCUSD",
+      "pnl": -499.989,
+      "status": "CLOSED"
+    }
+  ],
+  "learning_sync": "UPDATED"
+}

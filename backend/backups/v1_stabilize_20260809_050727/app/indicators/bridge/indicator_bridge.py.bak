@@ -1,0 +1,47 @@
+from app.indicators.trend.ema import EMAEngine
+from app.indicators.momentum.rsi import RSIEngine
+from app.indicators.momentum.macd import MACDEngine
+from app.indicators.core.indicator_fusion import IndicatorFusionEngine
+
+
+class IndicatorBridge:
+
+    def __init__(self):
+        self.ema = EMAEngine()
+        self.rsi = RSIEngine()
+        self.macd = MACDEngine()
+        self.fusion = IndicatorFusionEngine()
+
+    def analyze(self, candles):
+
+        prices = [
+            float(c["close"])
+            for c in candles
+        ]
+
+        ema = self.ema.calculate(prices)
+        rsi = self.rsi.calculate(prices)
+        macd = self.macd.calculate(prices)
+
+        fusion = self.fusion.analyze(
+            ema,
+            rsi,
+            macd,
+            {"signal": "NORMAL"},
+            {"signal": "NEUTRAL"}
+        )
+
+        return {
+            "trend": ema.get("signal"),
+            "momentum": rsi.get("signal"),
+            "ema": ema,
+            "rsi": rsi,
+            "macd": macd,
+            "decision": fusion.get("decision"),
+            "votes": fusion.get("votes"),
+            "risk_flags": fusion.get("risk_flags"),
+            "score": 0
+        }
+
+
+indicator_bridge = IndicatorBridge()

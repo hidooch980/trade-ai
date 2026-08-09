@@ -12,7 +12,7 @@ class BacktestEngine:
         self.trades = []
 
 
-    def run(
+    async def run(
         self,
         symbol,
         candles,
@@ -29,7 +29,7 @@ class BacktestEngine:
 
             price = candle["close"]
 
-            signal = self.pipeline.generate(
+            signal = await self.pipeline.generate(
                 symbol,
                 price
             )
@@ -40,13 +40,13 @@ class BacktestEngine:
             if decision == "BUY" and position is None:
 
                 position = {
-                    "entry": price
+                    "entry_price": price
                 }
 
 
             if position:
 
-                profit = price - position["entry"]
+                profit = price - position["entry_price"]
 
 
                 if profit >= tp or profit <= -sl:
@@ -54,7 +54,7 @@ class BacktestEngine:
                     trade = TradeRecord(
                         symbol,
                         "BUY",
-                        position["entry"],
+                        position["entry_price"],
                         price,
                         1,
                         profit,

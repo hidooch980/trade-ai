@@ -1,0 +1,21 @@
+{
+  "time": "2026-08-09T10:57:22.987805+00:00",
+  "engine": "SUPERVISOR_GUARDIAN_SYNC",
+  "responses": [
+    {
+      "ticket": "SIM-2664",
+      "symbol": "AUDUSD",
+      "pnl": 1159.9935,
+      "drawdown": 17846053.8462,
+      "action": "MONITOR"
+    },
+    {
+      "ticket": "E2E-LIVE-SAFE",
+      "symbol": "GBPUSD",
+      "pnl": 1159.9872,
+      "drawdown": 9062400.0,
+      "action": "MONITOR"
+    }
+  ],
+  "status": "CONNECTED"
+}
