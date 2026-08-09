@@ -1,8 +1,0 @@
-{
-  "time": "2026-08-07T14:43:23.215489+00:00",
-  "permission": "APPROVED",
-  "reason": "FINAL_CHECK_PASSED",
-  "requested_action": "EXECUTE_BUY",
-  "risk_gate": "ALLOW",
-  "engine": "FINAL_EXECUTION_GATE"
-}

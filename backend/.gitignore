@@ -1,0 +1,31 @@
+
+# Runtime / generated data
+data/trade_journal.json
+data/trade_journal.jsonl
+data/*.backup*
+app/learning/data/*.json
+app/learning/data/*.jsonl
+logs/
+positions.json
+positions.json.*
+ticket_counter.json
+closed_trades.json
+
+# MT5 / Wine runtime
+../wineprefix/
+wineprefix/
+../mt5/
+mt5/
+
+# Python/runtime
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Backups / archives
+backups/
+backup_*/
+*.bak
+*.bak_*
+*.tar.gz

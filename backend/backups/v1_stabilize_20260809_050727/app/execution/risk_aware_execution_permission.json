@@ -1,9 +1,0 @@
-{
-  "time": "2026-08-07T14:57:17.226428+00:00",
-  "engine": "RISK_AWARE_EXECUTION_GATE",
-  "requested_action": "EXECUTE_BUY",
-  "risk_mode": "DEFENSIVE",
-  "position_multiplier": 0.5,
-  "allowed_size": "REDUCED",
-  "permission": "APPROVED_WITH_LIMIT"
-}

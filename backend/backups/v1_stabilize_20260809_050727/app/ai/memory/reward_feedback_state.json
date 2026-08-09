@@ -1,8 +1,0 @@
-{
-  "time": "2026-08-07T14:54:05.252394+00:00",
-  "engine": "REWARD_FEEDBACK_REINFORCEMENT",
-  "wins": 7,
-  "losses": 8,
-  "learning_state": "DEFENSIVE",
-  "updated_rewards": 15
-}

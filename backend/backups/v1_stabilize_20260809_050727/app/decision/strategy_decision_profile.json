@@ -1,8 +1,0 @@
-{
-  "time": "2026-08-07T14:21:03.856652+00:00",
-  "strategy": "CAUTIOUS_ADAPTIVE",
-  "decision_mode": "STRICT_FILTER",
-  "risk_bias": "LOW",
-  "confidence": 60,
-  "bridge_status": "CONNECTED"
-}

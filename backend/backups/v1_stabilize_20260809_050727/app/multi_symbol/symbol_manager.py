@@ -1,3 +1,0 @@
-SUPPORTED_SYMBOLS=["XAUUSD","EURUSD","GBPUSD","BTCUSD","ETHUSD"]
-def get_symbols():
-    return SUPPORTED_SYMBOLS
