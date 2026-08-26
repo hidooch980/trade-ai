@@ -1,4 +1,5 @@
 import { Footer } from "./components/Footer";
+import { PromoBar } from "./components/Landing";
 import { Navbar } from "./components/Navbar";
 import { useRoute } from "./app/router";
 import { Home } from "./pages/Home";
@@ -57,6 +58,7 @@ export function App() {
       <div className="aurora" aria-hidden="true" />
       <div className="grid-lines" aria-hidden="true" />
       <div id="app">
+        <PromoBar />
         <Navbar />
         <main>{renderRoute(path)}</main>
         <Footer />

@@ -1,6 +1,17 @@
 import { useApp } from "../app/AppContext";
 import { Link } from "../app/router";
-import { IconArrow } from "../components/Icons";
+import { IconArrow, IconBolt } from "../components/Icons";
+import {
+  BenefitTrio,
+  CompareSection,
+  GuaranteeRibbon,
+  HeadlineStats,
+  IntegrationsStrip,
+  MobileCta,
+  PayoutWall,
+  SupportSection,
+  TrustRow,
+} from "../components/Landing";
 import { LiveHud } from "../components/LiveHud";
 import { PlanPicker } from "../components/PlanPicker";
 import { Reveal } from "../components/Reveal";
@@ -11,7 +22,6 @@ import {
   PlatformSection,
   RulesSection,
   SectionHead,
-  StatsBar,
   StepsSection,
   TestimonialSection,
 } from "../components/Sections";
@@ -36,30 +46,42 @@ export function Home() {
           <p className="lead hero__sub">{t("hero.sub")}</p>
 
           <div className="hero__cta">
-            <Link to="/register" className="btn btn--primary">
+            <Link to="/register" className="btn btn--primary btn--lg">
               {t("hero.cta")}
               <IconArrow />
             </Link>
-            <Link to="/how-it-works" className="btn btn--ghost">
+            <a
+              href="#how"
+              className="btn btn--ghost btn--lg"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("how")?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              <IconBolt width={16} height={16} />
               {t("hero.cta2")}
-            </Link>
+            </a>
           </div>
 
-          <p className="hero__note">{t("hero.note")}</p>
-
+          <GuaranteeRibbon />
+          <TrustRow />
           <LiveHud />
         </div>
       </section>
 
+      <IntegrationsStrip />
+
       <section className="section section--tight">
         <div className="container">
           <Reveal>
-            <StatsBar />
+            <HeadlineStats />
           </Reveal>
         </div>
       </section>
 
-      <section className="section" id="challenges">
+      <BenefitTrio />
+
+      <section className="section" id="models">
         <div className="container">
           <SectionHead
             eyebrow={t("nav.challenges")}
@@ -70,13 +92,17 @@ export function Home() {
         </div>
       </section>
 
+      <CompareSection />
       <StepsSection />
       <PlatformSection />
       <PayoutSection />
+      <PayoutWall />
       <RulesSection />
       <TestimonialSection />
-      <FaqSection limit={4} />
+      <SupportSection />
+      <FaqSection limit={6} />
       <CtaSection />
+      <MobileCta />
     </>
   );
 }

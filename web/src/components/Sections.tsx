@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { useApp } from "../app/AppContext";
 import { Link } from "../app/router";
 import {
@@ -24,7 +24,7 @@ export function SectionHead({
   sub,
   center = true,
 }: {
-  eyebrow?: string;
+  eyebrow?: ReactNode;
   title: string;
   sub?: string;
   center?: boolean;
@@ -158,7 +158,7 @@ export function RulesSection() {
         <div className="rules">
           <Reveal>
             <div className="card" style={{ height: "100%" }}>
-              <h3 className="card__title" style={{ color: "var(--brand)" }}>
+              <h3 className="card__title" style={{ color: "var(--pos)" }}>
                 {t("rules.allowed")}
               </h3>
               <ul className="rule-list">

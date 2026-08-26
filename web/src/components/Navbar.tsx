@@ -1,17 +1,28 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useApp } from "../app/AppContext";
-import { Link, useRoute } from "../app/router";
+import { Link, navigate, useRoute } from "../app/router";
 import { LANGS, type Lang } from "../i18n";
 import { IconClose, IconMenu } from "./Icons";
+import { ThemeToggle } from "./ThemeToggle";
 
-const LINKS = [
-  { to: "/challenges", key: "nav.challenges" },
-  { to: "/how-it-works", key: "nav.how" },
-  { to: "/platform", key: "nav.platform" },
-  { to: "/payouts", key: "nav.payouts" },
-  { to: "/faq", key: "nav.faq" },
-  { to: "/about", key: "nav.about" },
+/**
+ * The site is a single landing page, so the nav points at sections rather than
+ * routes. The standalone pages still exist and stay reachable from the footer.
+ */
+const SECTIONS = [
+  { id: "models", key: "nav.challenges" },
+  { id: "how", key: "nav.how" },
+  { id: "platform", key: "nav.platform" },
+  { id: "payouts", key: "nav.payouts" },
+  { id: "support", key: "nav.support" },
+  { id: "faq", key: "nav.faq" },
 ];
+
+const IDS = SECTIONS.map((s) => s.id);
+
+function scrollToSection(id: string) {
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+}
 
 export function Navbar() {
   const { t, lang, setLang, user, logout } = useApp();
@@ -19,6 +30,10 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
+  const [active, setActive] = useState<string | null>(null);
+  const headerRef = useRef<HTMLElement>(null);
+
+  const onLanding = route === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -26,6 +41,25 @@ export function Navbar() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Highlight whichever section currently owns the top of the viewport.
+  useEffect(() => {
+    if (!onLanding || !("IntersectionObserver" in window)) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        const hit = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+        if (hit) setActive(hit.target.id);
+      },
+      { rootMargin: "-45% 0px -50% 0px" },
+    );
+    IDS.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) io.observe(el);
+    });
+    return () => io.disconnect();
+  }, [onLanding, route]);
 
   // Close the mobile sheet whenever the route changes.
   useEffect(() => setOpen(false), [route]);
@@ -42,15 +76,35 @@ export function Navbar() {
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
+    // The header sits below the promo bar until that scrolls away, so the sheet
+    // has to start at wherever the header actually ends right now.
+    if (open && headerRef.current) {
+      const bottom = headerRef.current.getBoundingClientRect().bottom;
+      document.documentElement.style.setProperty("--nav-bottom", `${Math.round(bottom)}px`);
+    }
     return () => {
       document.body.style.overflow = "";
     };
   }, [open]);
 
+  const goto = useCallback(
+    (id: string) => {
+      setOpen(false);
+      if (onLanding) {
+        scrollToSection(id);
+        return;
+      }
+      // Land on the page first, then jump once the section exists in the DOM.
+      navigate("/");
+      requestAnimationFrame(() => requestAnimationFrame(() => scrollToSection(id)));
+    },
+    [onLanding],
+  );
+
   const current = LANGS.find((l) => l.code === lang) ?? LANGS[0];
 
   const langSwitch = (
-    <div className="lang-menu">
+    <div className="lang-menu nav__util">
       <button
         type="button"
         className="lang-menu__trigger"
@@ -85,9 +139,24 @@ export function Navbar() {
     </div>
   );
 
+  const sectionLinks = (onClose?: () => void) =>
+    SECTIONS.map((s) => (
+      <button
+        key={s.id}
+        type="button"
+        className={`nav__link ${onLanding && active === s.id ? "nav__link--active" : ""}`}
+        onClick={() => {
+          onClose?.();
+          goto(s.id);
+        }}
+      >
+        {t(s.key)}
+      </button>
+    ));
+
   return (
     <>
-      <header className={`nav ${scrolled ? "nav--scrolled" : ""}`}>
+      <header ref={headerRef} className={`nav ${scrolled ? "nav--scrolled" : ""}`}>
         <div className="container nav__inner">
           <Link to="/" className="brand">
             <span className="brand__mark" aria-hidden="true">
@@ -96,19 +165,10 @@ export function Navbar() {
             <span>{t("brand.name")}</span>
           </Link>
 
-          <nav className="nav__links">
-            {LINKS.map((l) => (
-              <Link
-                key={l.to}
-                to={l.to}
-                className={`nav__link ${route === l.to ? "nav__link--active" : ""}`}
-              >
-                {t(l.key)}
-              </Link>
-            ))}
-          </nav>
+          <nav className="nav__links">{sectionLinks()}</nav>
 
           <div className="nav__actions">
+            <ThemeToggle className="nav__util" />
             {langSwitch}
             {user ? (
               <>
@@ -132,7 +192,7 @@ export function Navbar() {
             <button
               className="nav__burger"
               onClick={() => setOpen((o) => !o)}
-              aria-label="Menu"
+              aria-label={t("nav.menu")}
               aria-expanded={open}
             >
               {open ? <IconClose /> : <IconMenu />}
@@ -143,16 +203,45 @@ export function Navbar() {
 
       {open && (
         <div className="nav__mobile">
-          {LINKS.map((l) => (
-            <Link
-              key={l.to}
-              to={l.to}
-              className={`nav__link ${route === l.to ? "nav__link--active" : ""}`}
-              onClick={() => setOpen(false)}
-            >
-              {t(l.key)}
-            </Link>
-          ))}
+          {/* On phones the header only has room for the brand and the CTA, so
+              the theme and language controls move in here. */}
+          <div className="nav__mobile-utils">
+            <ThemeToggle />
+            <div className="lang-menu">
+              <button
+                type="button"
+                className="lang-menu__trigger"
+                aria-haspopup="listbox"
+                aria-expanded={langOpen}
+                onClick={() => setLangOpen((o) => !o)}
+              >
+                <span aria-hidden="true">🌐</span>
+                {current.name}
+              </button>
+              {langOpen && (
+                <ul className="lang-menu__list" role="listbox">
+                  {LANGS.map((l) => (
+                    <li key={l.code}>
+                      <button
+                        type="button"
+                        role="option"
+                        aria-selected={lang === l.code}
+                        className={lang === l.code ? "is-active" : ""}
+                        onClick={() => {
+                          setLang(l.code as Lang);
+                          setLangOpen(false);
+                        }}
+                      >
+                        <span>{l.name}</span>
+                        <span className="lang-menu__code">{l.label}</span>
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </div>
+          {sectionLinks(() => setOpen(false))}
           <Link to="/contact" className="nav__link" onClick={() => setOpen(false)}>
             {t("nav.contact")}
           </Link>

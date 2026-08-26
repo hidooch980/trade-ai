@@ -245,6 +245,70 @@ const en: Dict = {
   "contact.sent": "Thanks — we will reply by email.",
   "contact.channels": "Other channels",
 
+
+  /* landing page */
+  "nav.support": "Support",
+  "nav.menu": "Menu",
+  "theme.label": "Colour theme",
+  "theme.light": "Light theme",
+  "theme.dark": "Dark theme",
+  "promo.text": "Launch offer — 25% off every challenge with code",
+  "promo.short": "25% off with",
+  "promo.ends": "Ends in",
+  "promo.close": "Dismiss offer",
+  "trust.reviews": "verified reviews",
+  "trust.traders": "active traders",
+  "trust.payout": "average payout time",
+  "guarantee.g1": "One-time fee, refunded",
+  "guarantee.g2": "No time limit",
+  "guarantee.g3": "Payouts every 14 days",
+  "guarantee.g4": "EAs and news trading allowed",
+  "bene.b1.tag": "Payouts",
+  "bene.b1.t": "Paid in 24 hours — or $1,000 on us",
+  "bene.b1.d":
+    "An approved payout leaves the same business day. Miss the 24-hour window and we add $1,000 to the transfer.",
+  "bene.b2.tag": "Pricing",
+  "bene.b2.t": "One fee. Nothing recurring.",
+  "bene.b2.d":
+    "You pay once to start a challenge, and it comes back in full with your first payout. No monthly platform charge, ever.",
+  "bene.b3.tag": "Support",
+  "bene.b3.t": "Humans on shift, around the clock",
+  "bene.b3.d":
+    "Six languages, a first reply in under 25 seconds, every day of the year — including the day your account is under pressure.",
+  "wall.live": "Live",
+  "wall.title": "The payout wall",
+  "wall.sub": "Every transfer approved this week, in the order it cleared.",
+  "wall.paidIn": "to payout",
+  "wall.note": "Names shortened at the trader's request.",
+  "stats.payoutTime": "Avg. payout time",
+  "compare.eyebrow": "Side by side",
+  "compare.title": "Which model fits you",
+  "compare.sub": "All three compared on a {size} account.",
+  "compare.feature": "Terms",
+  "compare.best": "Best value",
+  "compare.days": "days",
+  "compare.note":
+    "Figures shown for a {size} account. Every other size follows the same percentages.",
+  "models.firstPayout": "First payout after",
+  "integ.title": "Trade, fund and withdraw where you already are",
+  "integ.platform": "Trading platform",
+  "integ.charts": "Charting",
+  "integ.cards": "Card payments",
+  "integ.crypto": "Crypto payouts",
+  "integ.transfers": "Bank transfers",
+  "integ.security": "Account security",
+  "support.eyebrow": "Support",
+  "support.title": "A desk that answers at 3am",
+  "support.sub":
+    "Most questions are about a rule, and a rule question at the wrong moment costs an account. So the desk is staffed every hour of every day.",
+  "support.contact": "Talk to support",
+  "support.faq": "Read the FAQ",
+  "support.s1": "Coverage",
+  "support.s2": "First reply",
+  "support.s3": "Languages",
+  "support.s4": "Agents on shift",
+  "support.langList": "English · فارسی · العربية · Türkçe · Deutsch · Français",
+  "mobile.from": "From",
   "common.perMonth": "/ challenge",
   "common.mostChosen": "Most chosen",
   "common.viewAll": "View all",
@@ -475,6 +539,69 @@ const fa: Dict = {
   "contact.sent": "ممنون — با ایمیل پاسخ می‌دهیم.",
   "contact.channels": "کانال‌های دیگر",
 
+
+  /* landing page */
+  "nav.support": "پشتیبانی",
+  "nav.menu": "منو",
+  "theme.label": "پوستهٔ رنگی",
+  "theme.light": "پوستهٔ روشن",
+  "theme.dark": "پوستهٔ تیره",
+  "promo.text": "پیشنهاد شروع — ۲۵٪ تخفیف روی همهٔ چالش‌ها با کد",
+  "promo.short": "۲۵٪ تخفیف با کد",
+  "promo.ends": "پایان تا",
+  "promo.close": "بستن پیشنهاد",
+  "trust.reviews": "نظر تأییدشده",
+  "trust.traders": "تریدر فعال",
+  "trust.payout": "میانگین زمان تسویه",
+  "guarantee.g1": "هزینهٔ یک‌بار، قابل بازگشت",
+  "guarantee.g2": "بدون محدودیت زمانی",
+  "guarantee.g3": "تسویه هر ۱۴ روز",
+  "guarantee.g4": "اکسپرت و ترید خبری مجاز",
+  "bene.b1.tag": "تسویه",
+  "bene.b1.t": "پرداخت در ۲۴ ساعت — وگرنه ۱٬۰۰۰ دلار مهمان ما",
+  "bene.b1.d":
+    "تسویهٔ تأییدشده همان روز کاری ارسال می‌شود. اگر از ۲۴ ساعت گذشت، ۱٬۰۰۰ دلار به حواله اضافه می‌کنیم.",
+  "bene.b2.tag": "هزینه",
+  "bene.b2.t": "یک هزینه. بدون تمدید.",
+  "bene.b2.d":
+    "برای شروع چالش یک‌بار پرداخت می‌کنی و همان مبلغ با اولین تسویه کامل برمی‌گردد. هیچ اشتراک ماهانه‌ای در کار نیست.",
+  "bene.b3.tag": "پشتیبانی",
+  "bene.b3.t": "آدم واقعی، شبانه‌روز",
+  "bene.b3.d":
+    "شش زبان، اولین پاسخ زیر ۲۵ ثانیه، همهٔ روزهای سال — از جمله روزی که حسابت زیر فشار است.",
+  "wall.live": "زنده",
+  "wall.title": "دیوار تسویه",
+  "wall.sub": "هر حواله‌ای که این هفته تأیید شد، به‌ترتیب پرداخت.",
+  "wall.paidIn": "تا پرداخت",
+  "wall.note": "نام‌ها به درخواست خودِ تریدرها کوتاه شده‌اند.",
+  "stats.payoutTime": "میانگین زمان تسویه",
+  "compare.eyebrow": "مقایسهٔ رودررو",
+  "compare.title": "کدام مدل به تو می‌خورد",
+  "compare.sub": "هر سه مدل روی حساب {size} مقایسه شده‌اند.",
+  "compare.feature": "شرایط",
+  "compare.best": "بهترین انتخاب",
+  "compare.days": "روز",
+  "compare.note": "اعداد برای حساب {size} است. بقیهٔ حجم‌ها از همین درصدها پیروی می‌کنند.",
+  "models.firstPayout": "اولین تسویه بعد از",
+  "integ.title": "همان‌جا که هستی ترید کن، شارژ کن و برداشت کن",
+  "integ.platform": "پلتفرم معاملاتی",
+  "integ.charts": "نمودار",
+  "integ.cards": "پرداخت کارتی",
+  "integ.crypto": "تسویهٔ کریپتو",
+  "integ.transfers": "حوالهٔ بانکی",
+  "integ.security": "امنیت حساب",
+  "support.eyebrow": "پشتیبانی",
+  "support.title": "میزی که ساعت سه بامداد جواب می‌دهد",
+  "support.sub":
+    "بیشتر سؤال‌ها دربارهٔ یک قانون است، و سؤال قانونی در لحظهٔ اشتباه به قیمت یک حساب تمام می‌شود. برای همین میز پشتیبانی هر ساعت از هر روز فعال است.",
+  "support.contact": "تماس با پشتیبانی",
+  "support.faq": "خواندن سؤالات متداول",
+  "support.s1": "پوشش",
+  "support.s2": "اولین پاسخ",
+  "support.s3": "زبان",
+  "support.s4": "کارشناس فعال",
+  "support.langList": "English · فارسی · العربية · Türkçe · Deutsch · Français",
+  "mobile.from": "از",
   "common.perMonth": "/ چالش",
   "common.mostChosen": "پرانتخاب‌ترین",
   "common.viewAll": "دیدن همه",
@@ -484,8 +611,23 @@ const fa: Dict = {
 
 const dicts: Record<Lang, Dict> = { en, fa, tr, ar, de, fr };
 
-export function translate(lang: Lang, key: string): string {
-  return dicts[lang]?.[key] ?? dicts.en[key] ?? key;
+/**
+ * Looks a key up in the active language, falling back to English so a missing
+ * translation degrades to readable copy instead of a raw key. `vars` fills
+ * `{name}` placeholders in the resolved string.
+ */
+export function translate(
+  lang: Lang,
+  key: string,
+  vars?: Record<string, string | number>,
+): string {
+  const raw = dicts[lang]?.[key] ?? dicts.en[key] ?? key;
+  if (!vars) return raw;
+  return raw.replace(/\{(\w+)\}/g, (match, name: string) =>
+    // FSI…PDI: a value like "$100,000" keeps its own direction inside an
+    // RTL sentence instead of having the "$" flung to the other end.
+    name in vars ? `\u2068${vars[name]}\u2069` : match,
+  );
 }
 
 const FA_DIGITS = ["۰", "۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹"];
