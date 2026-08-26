@@ -2727,3 +2727,215 @@ html[dir="rtl"] .mt5-card__default {
     margin-inline-start: 0;
   }
 }
+
+/* ============================================================== risk brain */
+
+.risk-head-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.risk-head-actions .select {
+  width: auto;
+  min-width: 200px;
+}
+
+/* --------------------------------------------------------------- verdict */
+
+.verdict {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 22px;
+  align-items: center;
+  margin: 24px 0 22px;
+  padding: 20px 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card-grad);
+}
+
+.verdict--allow {
+  border-color: color-mix(in srgb, var(--pos) 38%, transparent);
+}
+
+.verdict--warn {
+  border-color: color-mix(in srgb, var(--amber) 45%, transparent);
+}
+
+.verdict--block {
+  border-color: color-mix(in srgb, var(--red) 45%, transparent);
+}
+
+.verdict__badge {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 9px 18px;
+  border-radius: 999px;
+  white-space: nowrap;
+  color: var(--on-brand);
+}
+
+html[dir="rtl"] .verdict__badge {
+  letter-spacing: 0;
+}
+
+.verdict--allow .verdict__badge {
+  background: var(--pos);
+}
+
+.verdict--warn .verdict__badge {
+  background: var(--amber);
+}
+
+.verdict--block .verdict__badge {
+  background: var(--red);
+}
+
+.verdict__text {
+  font-size: 15px;
+  color: var(--text-2);
+  margin-bottom: 6px;
+}
+
+.verdict__stats {
+  display: flex;
+  gap: 26px;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.verdict__stats dt {
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-3);
+}
+
+html[dir="rtl"] .verdict__stats dt {
+  letter-spacing: 0;
+}
+
+.verdict__stats dd {
+  margin: 3px 0 0;
+  font-size: 17px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------------------------------------------------------------- layout */
+
+.risk-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.risk-side {
+  display: grid;
+  gap: 20px;
+}
+
+/* --------------------------------------------------------------- gauges */
+
+.gauges {
+  display: grid;
+  gap: 18px;
+}
+
+.gauge__head {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: baseline;
+  margin-bottom: 7px;
+}
+
+.gauge__name {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.gauge__value {
+  font-size: 13px;
+  color: var(--text-3);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.gauge__track {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--glass-2);
+  overflow: hidden;
+}
+
+.gauge__fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+.gauge--ok .gauge__fill {
+  background: var(--pos);
+}
+
+.gauge--warn .gauge__fill {
+  background: var(--amber);
+}
+
+.gauge--breach .gauge__fill {
+  background: var(--red);
+}
+
+.gauge__foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+/* -------------------------------------------------------- forms on page */
+
+.whatif__grid,
+.policy__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 16px;
+}
+
+.policy__unit {
+  color: var(--text-3);
+  font-weight: 500;
+}
+
+@media (max-width: 1000px) {
+  .risk-layout {
+    grid-template-columns: 1fr;
+  }
+  .verdict {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .verdict__badge {
+    width: fit-content;
+  }
+}
+
+@media (max-width: 520px) {
+  .whatif__grid,
+  .policy__grid {
+    grid-template-columns: 1fr;
+  }
+  .risk-head-actions .select {
+    min-width: 0;
+    width: 100%;
+  }
+}

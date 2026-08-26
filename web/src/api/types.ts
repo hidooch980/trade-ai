@@ -108,6 +108,69 @@ export interface AccountRegisterPayload {
   make_default?: boolean;
 }
 
+export type RiskDecision = "ALLOW" | "WARN" | "BLOCK";
+export type RuleStatus = "OK" | "WARN" | "BREACH";
+
+export interface RiskRule {
+  rule: string;
+  status: RuleStatus;
+  used: string;
+  limit: string;
+  unit: string;
+  headroom: string;
+  utilisation_percent: string;
+  detail: string;
+}
+
+export interface RiskAssessment {
+  account_id: string;
+  decision: RiskDecision;
+  allowed: boolean;
+  reasons: string[];
+  equity: string;
+  day_start_equity: string;
+  peak_equity: string;
+  exposure: string;
+  open_positions: number;
+  rules: RiskRule[];
+}
+
+export interface RiskPolicy {
+  account_id: string;
+  max_daily_loss_percent: string;
+  max_total_loss_percent: string;
+  max_risk_per_trade_percent: string;
+  max_open_positions: number;
+  max_total_exposure_ratio: string;
+  max_symbol_exposure_percent: string;
+  max_correlated_positions: number;
+  warn_at_percent: string;
+  day_start_equity: string | null;
+  day_started_at: string | null;
+  peak_equity: string | null;
+  updated_at: string | null;
+}
+
+export interface RiskPositionPayload {
+  symbol: string;
+  side: string;
+  volume: string;
+  entry_price: string;
+  current_price?: string | null;
+}
+
+export interface RiskAssessPayload {
+  equity?: string;
+  positions?: RiskPositionPayload[];
+  trade?: {
+    symbol: string;
+    side: string;
+    volume: string;
+    entry_price: string;
+    stop_loss?: string | null;
+  } | null;
+}
+
 export interface RegisterPayload {
   email: string;
   username: string;

@@ -18,6 +18,9 @@ import type {
   AdminUserQuery,
   DashboardStatus,
   GuardianSummary,
+  RiskAssessPayload,
+  RiskAssessment,
+  RiskPolicy,
   TradingAccount,
   TradingAccountList,
   Json,
@@ -317,6 +320,47 @@ export const accounts = {
     }),
 };
 
+/* -------------------------------------------------------------------- risk */
+
+export const risk = {
+  /** GET /api/risk/accounts/{id}/policy */
+  policy: (accountId: string, signal?: AbortSignal) =>
+    request<RiskPolicy>(`/api/risk/accounts/${encodeURIComponent(accountId)}/policy`, {
+      auth: true,
+      signal,
+    }),
+
+  /** PUT /api/risk/accounts/{id}/policy */
+  savePolicy: (accountId: string, changes: Partial<Record<string, string | number>>) =>
+    request<RiskPolicy>(`/api/risk/accounts/${encodeURIComponent(accountId)}/policy`, {
+      method: "PUT",
+      body: changes,
+      auth: true,
+    }),
+
+  /** GET /api/risk/accounts/{id}/state */
+  state: (accountId: string, signal?: AbortSignal) =>
+    request<RiskAssessment>(`/api/risk/accounts/${encodeURIComponent(accountId)}/state`, {
+      auth: true,
+      signal,
+    }),
+
+  /** POST /api/risk/accounts/{id}/assess */
+  assess: (accountId: string, payload: RiskAssessPayload) =>
+    request<RiskAssessment>(`/api/risk/accounts/${encodeURIComponent(accountId)}/assess`, {
+      method: "POST",
+      body: payload,
+      auth: true,
+    }),
+
+  /** POST /api/risk/accounts/{id}/day-reset */
+  resetDay: (accountId: string) =>
+    request<RiskPolicy>(`/api/risk/accounts/${encodeURIComponent(accountId)}/day-reset`, {
+      method: "POST",
+      auth: true,
+    }),
+};
+
 /* --------------------------------------------------------------- dashboard */
 
 export const dashboard = {
@@ -476,6 +520,7 @@ export const api = {
   auth,
   admin,
   accounts,
+  risk,
   dashboard,
   market,
   backtest,

@@ -29,6 +29,7 @@ from sqlalchemy.ext.asyncio import async_sessionmaker, create_async_engine  # no
 import app.models  # noqa: F401,E402  — registers every table on Base.metadata
 from app.api.routes import accounts as account_routes  # noqa: E402
 from app.api.routes import admin_users as admin_routes  # noqa: E402
+from app.api.routes import risk as risk_routes  # noqa: E402
 from app.api.routes import auth as auth_routes  # noqa: E402
 from app.db.session import Base, get_db  # noqa: E402
 from app.i18n.errors import (  # noqa: E402
@@ -43,6 +44,7 @@ TABLES = (
     "auth_sessions",
     "password_reset_tokens",
     "email_verification_tokens",
+    "account_risk_policies",
     "trading_accounts",
     "users",
 )
@@ -92,6 +94,7 @@ async def client(session_factory):
     api.include_router(auth_routes.router)
     api.include_router(admin_routes.router)
     api.include_router(account_routes.router)
+    api.include_router(risk_routes.router)
 
     async def override_get_db():
         async with session_factory() as session:

@@ -6,6 +6,7 @@ import { Home } from "./pages/Home";
 import { AccountPage } from "./pages/Account";
 import { AccountsPage } from "./pages/Accounts";
 import { AdminUsersPage } from "./pages/AdminUsers";
+import { RiskPage } from "./pages/Risk";
 import { ContactPage } from "./pages/Contact";
 import { DashboardPage } from "./pages/Dashboard";
 import { ForgotPasswordPage, LoginPage, RegisterPage } from "./pages/Auth";
@@ -52,6 +53,8 @@ function renderRoute(path: string) {
       return <AccountPage />;
     case "/accounts":
       return <AccountsPage />;
+    case "/risk":
+      return <RiskPage />;
     case "/admin/users":
       return <AdminUsersPage />;
     default:
