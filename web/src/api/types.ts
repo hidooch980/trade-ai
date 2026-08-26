@@ -27,6 +27,36 @@ export interface SessionResponse {
   created_at: string;
 }
 
+export interface AdminUser {
+  id: string;
+  email: string;
+  username: string;
+  language: string;
+  role: string;
+  failed_login_attempts: number;
+  locked_until: string | null;
+  is_locked: boolean;
+  email_verified_at: string | null;
+  active_sessions: number;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface AdminUserList {
+  items: AdminUser[];
+  total: number;
+  limit: number;
+  offset: number;
+}
+
+export interface AdminUserQuery {
+  search?: string;
+  role?: string;
+  locked?: boolean;
+  limit?: number;
+  offset?: number;
+}
+
 export interface RegisterPayload {
   email: string;
   username: string;

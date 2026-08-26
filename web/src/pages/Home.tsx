@@ -3,6 +3,7 @@ import { Link } from "../app/router";
 import { IconArrow, IconBolt } from "../components/Icons";
 import {
   BenefitTrio,
+  BotSection,
   CompareSection,
   GuaranteeRibbon,
   HeadlineStats,
@@ -94,6 +95,7 @@ export function Home() {
 
       <CompareSection />
       <StepsSection />
+      <BotSection />
       <PlatformSection />
       <PayoutSection />
       <PayoutWall />

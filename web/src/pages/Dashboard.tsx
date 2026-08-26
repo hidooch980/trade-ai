@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import {
   ai,
   backtest,
@@ -11,74 +11,15 @@ import type { Json, Position, SessionResponse } from "../api/types";
 import { useApp } from "../app/AppContext";
 import { Link } from "../app/router";
 import { auth } from "../api/client";
-import { IconRefresh } from "../components/Icons";
 import { LiveHud } from "../components/LiveHud";
+import { Panel, useEndpoint } from "../components/Panel";
 
 /* ------------------------------------------------------------- primitives */
-
-function Panel({
-  title,
-  children,
-  onRefresh,
-  busy,
-  action,
-}: {
-  title: string;
-  children: React.ReactNode;
-  onRefresh?: () => void;
-  busy?: boolean;
-  action?: React.ReactNode;
-}) {
-  return (
-    <section className="panel">
-      <header className="panel__head">
-        <h2 className="panel__title">{title}</h2>
-        <div className="panel__tools">
-          {action}
-          {onRefresh && (
-            <button
-              className="btn btn--ghost btn--sm"
-              onClick={onRefresh}
-              disabled={busy}
-              aria-label="refresh"
-            >
-              {busy ? <span className="spinner" /> : <IconRefresh />}
-            </button>
-          )}
-        </div>
-      </header>
-      <div className="panel__body">{children}</div>
-    </section>
-  );
-}
 
 function JsonBlock({ value }: { value: unknown }) {
   const { t } = useApp();
   if (value === null || value === undefined) return <p className="empty">{t("dash.empty")}</p>;
   return <pre className="json">{JSON.stringify(value, null, 2)}</pre>;
-}
-
-/** Generic "fetch on mount + manual refresh" hook. */
-function useEndpoint<T>(fn: (signal?: AbortSignal) => Promise<T>, enabled = true) {
-  const [data, setData] = useState<T | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const [busy, setBusy] = useState(false);
-
-  const load = useCallback(() => {
-    if (!enabled) return;
-    setBusy(true);
-    setError(null);
-    fn()
-      .then((d) => setData(d))
-      .catch((e: unknown) => setError(e instanceof Error ? e.message : String(e)))
-      .finally(() => setBusy(false));
-  }, [fn, enabled]);
-
-  useEffect(() => {
-    load();
-  }, [load]);
-
-  return { data, error, busy, reload: load };
 }
 
 function asArray(value: unknown): Record<string, unknown>[] {

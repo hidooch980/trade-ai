@@ -13,8 +13,8 @@ const SECTIONS = [
   { id: "models", key: "nav.challenges" },
   { id: "how", key: "nav.how" },
   { id: "platform", key: "nav.platform" },
+  { id: "bot", key: "nav.bot" },
   { id: "payouts", key: "nav.payouts" },
-  { id: "support", key: "nav.support" },
   { id: "faq", key: "nav.faq" },
 ];
 
@@ -172,8 +172,13 @@ export function Navbar() {
             {langSwitch}
             {user ? (
               <>
-                <Link to="/dashboard" className="btn btn--ghost btn--sm">
-                  {t("nav.dashboard")}
+                {user.role === "ADMIN" && (
+                  <Link to="/admin/users" className="btn btn--quiet btn--sm nav__util">
+                    {t("nav.admin")}
+                  </Link>
+                )}
+                <Link to="/account" className="btn btn--ghost btn--sm">
+                  {t("nav.account")}
                 </Link>
                 <button className="btn btn--quiet btn--sm" onClick={() => void logout()}>
                   {t("nav.logout")}
@@ -242,15 +247,33 @@ export function Navbar() {
             </div>
           </div>
           {sectionLinks(() => setOpen(false))}
+          <button
+            type="button"
+            className="nav__link"
+            onClick={() => {
+              setOpen(false);
+              goto("support");
+            }}
+          >
+            {t("nav.support")}
+          </button>
           <Link to="/contact" className="nav__link" onClick={() => setOpen(false)}>
             {t("nav.contact")}
           </Link>
           <div className="nav__mobile-actions">
             {user ? (
               <>
+                <Link to="/account" className="btn btn--ghost btn--block">
+                  {t("nav.account")}
+                </Link>
                 <Link to="/dashboard" className="btn btn--ghost btn--block">
                   {t("nav.dashboard")}
                 </Link>
+                {user.role === "ADMIN" && (
+                  <Link to="/admin/users" className="btn btn--ghost btn--block">
+                    {t("nav.admin")}
+                  </Link>
+                )}
                 <button className="btn btn--danger btn--block" onClick={() => void logout()}>
                   {t("nav.logout")}
                 </button>

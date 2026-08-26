@@ -531,6 +531,7 @@ html[dir="rtl"] .eyebrow {
   background: transparent;
   font: inherit;
   text-align: start;
+  white-space: nowrap;
   padding: 8px 14px;
   border-radius: 999px;
   font-size: 15px;
@@ -675,6 +676,7 @@ html[dir="rtl"] .eyebrow {
 }
 
 .nav__mobile .nav__link {
+  white-space: normal;
   font-size: 18px;
   padding: 14px 16px;
   border-radius: var(--radius-sm);
@@ -1587,7 +1589,22 @@ pre.json {
 
 /* ============================================================= responsive */
 
-@media (max-width: 1000px) {
+/* Between the burger breakpoint and a wide desktop the row is tight; buy
+   back the width from padding rather than letting the labels wrap. */
+@media (max-width: 1400px) {
+  .nav__inner {
+    gap: 18px;
+  }
+  .nav__link {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+  .nav__actions {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 1120px) {
   .nav__links {
     display: none;
   }
@@ -2255,5 +2272,268 @@ html[dir="rtl"] .mobile-cta__from {
   }
   .nav__mobile-utils {
     display: flex;
+  }
+}
+
+/* ================================================= account + admin pages */
+
+.page-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.page-head .eyebrow {
+  margin-bottom: 10px;
+}
+
+.page-head .lead {
+  margin-top: 10px;
+  max-width: 60ch;
+}
+
+.avatar--lg {
+  width: 64px;
+  height: 64px;
+  font-size: 24px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.tag--active {
+  color: var(--pos);
+  background: color-mix(in srgb, var(--pos) 14%, transparent);
+  border-color: color-mix(in srgb, var(--pos) 30%, transparent);
+}
+
+.tag--revoked {
+  color: var(--red-fg);
+  background: color-mix(in srgb, var(--red) 12%, transparent);
+  border-color: color-mix(in srgb, var(--red) 30%, transparent);
+}
+
+.tag--expired {
+  color: var(--text-3);
+  background: var(--glass);
+  border-color: var(--line);
+}
+
+.linkish {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  font-weight: 700;
+  color: var(--brand);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ------------------------------------------------------------- filter bar */
+
+.admin-filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 28px 0 20px;
+}
+
+.admin-filters .input {
+  flex: 1 1 260px;
+  max-width: 380px;
+}
+
+.admin-filters .select {
+  width: auto;
+  min-width: 150px;
+}
+
+.select--sm {
+  padding: 6px 10px;
+  font-size: 13px;
+  min-width: 130px;
+}
+
+/* --------------------------------------------------------------- table */
+
+table.data--wide {
+  min-width: 900px;
+}
+
+.admin-user {
+  display: grid;
+  line-height: 1.35;
+}
+
+.admin-user__mail {
+  font-size: 12.5px;
+  color: var(--text-3);
+}
+
+.admin-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+table.data tr.is-open td {
+  background: var(--glass);
+}
+
+.admin-sessions {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.admin-sessions__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.pager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line-soft);
+}
+
+@media (max-width: 640px) {
+  .admin-filters .input,
+  .admin-filters .select {
+    flex: 1 1 100%;
+    max-width: none;
+    width: 100%;
+  }
+  .page-head .avatar--lg {
+    display: none;
+  }
+}
+
+/* ============================================================= trading bot */
+
+.bot-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 34px;
+}
+
+.bot-flow__step {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--card-grad);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.bot-flow__icon {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--brand-dim);
+  color: var(--brand);
+  flex-shrink: 0;
+}
+
+/* Chevron between pills; mirrors itself in RTL via the logical border sides. */
+.bot-flow__arrow {
+  position: absolute;
+  inset-inline-end: -12px;
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid var(--line-strong);
+  border-inline-end: 2px solid var(--line-strong);
+  transform: rotate(45deg);
+}
+
+html[dir="rtl"] .bot-flow__arrow {
+  transform: rotate(-135deg);
+}
+
+.bot-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.bot-card {
+  height: 100%;
+}
+
+.bot-side {
+  display: grid;
+  gap: 20px;
+}
+
+.bot-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px 24px;
+  margin-top: 16px;
+}
+
+.bot-list--who {
+  grid-template-columns: 1fr;
+}
+
+.bot-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  padding: 10px 0;
+  font-size: 14.5px;
+  color: var(--text-2);
+}
+
+.bot-note {
+  margin-top: 22px;
+  text-align: center;
+}
+
+@media (max-width: 860px) {
+  .bot-grid {
+    grid-template-columns: 1fr;
+  }
+  .bot-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .bot-flow {
+    justify-content: flex-start;
+  }
+  .bot-flow__arrow {
+    display: none;
   }
 }

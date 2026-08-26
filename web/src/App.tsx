@@ -3,6 +3,8 @@ import { PromoBar } from "./components/Landing";
 import { Navbar } from "./components/Navbar";
 import { useRoute } from "./app/router";
 import { Home } from "./pages/Home";
+import { AccountPage } from "./pages/Account";
+import { AdminUsersPage } from "./pages/AdminUsers";
 import { ContactPage } from "./pages/Contact";
 import { DashboardPage } from "./pages/Dashboard";
 import { ForgotPasswordPage, LoginPage, RegisterPage } from "./pages/Auth";
@@ -45,6 +47,10 @@ function renderRoute(path: string) {
       return <ForgotPasswordPage />;
     case "/dashboard":
       return <DashboardPage />;
+    case "/account":
+      return <AccountPage />;
+    case "/admin/users":
+      return <AdminUsersPage />;
     default:
       return <NotFoundPage />;
   }

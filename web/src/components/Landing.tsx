@@ -16,11 +16,14 @@ import {
   IconChat,
   IconCheck,
   IconClock,
+  IconEye,
   IconGlobe,
   IconHeadset,
   IconLock,
+  IconPulse,
   IconRocket,
   IconSend,
+  IconShield,
   IconStar,
   IconTarget,
   IconTerminal,
@@ -523,5 +526,102 @@ export function GuaranteeRibbon() {
         </span>
       ))}
     </div>
+  );
+}
+
+/* ============================================================= trading bot */
+
+const BOT_FLOW = [
+  { icon: IconPulse, key: "f1" },
+  { icon: IconTarget, key: "f2" },
+  { icon: IconBolt, key: "f3" },
+  { icon: IconShield, key: "f4" },
+  { icon: IconEye, key: "f5" },
+  { icon: IconCheck, key: "f6" },
+];
+
+const BOT_DOES = ["d1", "d2", "d3", "d4", "d5", "d6", "d7", "d8", "d9", "d10"];
+const BOT_WHO = ["w1", "w2", "w3", "w4"];
+
+/** What the automated trader is, what it does, and who it suits. */
+export function BotSection() {
+  const { t } = useApp();
+
+  return (
+    <section className="section" id="bot">
+      <div className="container">
+        <SectionHead
+          eyebrow={
+            <>
+              <IconRocket width={14} height={14} /> {t("bot.eyebrow")}
+            </>
+          }
+          title={t("bot.title")}
+          sub={t("bot.sub")}
+        />
+
+        <Reveal>
+          <div className="bot-flow">
+            {BOT_FLOW.map(({ icon: Icon, key }, i) => (
+              <div className="bot-flow__step" key={key}>
+                <span className="bot-flow__icon">
+                  <Icon width={18} height={18} />
+                </span>
+                <span className="bot-flow__label">{t(`bot.${key}`)}</span>
+                {i < BOT_FLOW.length - 1 && (
+                  <span className="bot-flow__arrow" aria-hidden="true" />
+                )}
+              </div>
+            ))}
+          </div>
+        </Reveal>
+
+        <div className="bot-grid">
+          <Reveal>
+            <article className="card bot-card">
+              <h3 className="card__title">{t("bot.does.title")}</h3>
+              <ul className="bot-list">
+                {BOT_DOES.map((key) => (
+                  <li key={key}>
+                    <span className="tick">
+                      <IconCheck />
+                    </span>
+                    {t(`bot.${key}`)}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          </Reveal>
+
+          <Reveal delay={90}>
+            <div className="bot-side">
+              <article className="card">
+                <h3 className="card__title">{t("bot.why.title")}</h3>
+                <p className="card__body">{t("bot.why.body1")}</p>
+                <p className="card__body" style={{ marginTop: 12 }}>
+                  {t("bot.why.body2")}
+                </p>
+              </article>
+
+              <article className="card">
+                <h3 className="card__title">{t("bot.who.title")}</h3>
+                <ul className="bot-list bot-list--who">
+                  {BOT_WHO.map((key) => (
+                    <li key={key}>
+                      <span className="tick">
+                        <IconUsers width={12} height={12} />
+                      </span>
+                      {t(`bot.${key}`)}
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            </div>
+          </Reveal>
+        </div>
+
+        <p className="tiny bot-note">{t("bot.note")}</p>
+      </div>
+    </section>
   );
 }

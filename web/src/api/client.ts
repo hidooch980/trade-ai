@@ -11,6 +11,9 @@
  */
 
 import type {
+  AdminUser,
+  AdminUserList,
+  AdminUserQuery,
   DashboardStatus,
   GuardianSummary,
   Json,
@@ -195,6 +198,68 @@ const auth_ = {
 
 export const auth = auth_;
 
+/* ------------------------------------------------------------------- admin */
+
+function queryString(params: Record<string, string | number | boolean | undefined>): string {
+  const search = new URLSearchParams();
+  for (const [key, value] of Object.entries(params)) {
+    if (value === undefined || value === "") continue;
+    search.set(key, String(value));
+  }
+  const out = search.toString();
+  return out ? `?${out}` : "";
+}
+
+export const admin = {
+  /** GET /admin/users */
+  users: (query: AdminUserQuery = {}, signal?: AbortSignal) =>
+    request<AdminUserList>(`/admin/users${queryString({ ...query })}`, {
+      auth: true,
+      signal,
+    }),
+
+  /** GET /admin/users/{id} */
+  user: (id: string, signal?: AbortSignal) =>
+    request<AdminUser>(`/admin/users/${encodeURIComponent(id)}`, { auth: true, signal }),
+
+  /** GET /admin/users/{id}/sessions */
+  userSessions: (id: string, signal?: AbortSignal) =>
+    request<SessionResponse[]>(`/admin/users/${encodeURIComponent(id)}/sessions`, {
+      auth: true,
+      signal,
+    }),
+
+  /** PATCH /admin/users/{id}/role */
+  setRole: (id: string, role: string) =>
+    request<AdminUser>(`/admin/users/${encodeURIComponent(id)}/role`, {
+      method: "PATCH",
+      body: { role },
+      auth: true,
+    }),
+
+  /** POST /admin/users/{id}/lock */
+  lock: (id: string, minutes?: number) =>
+    request<AdminUser>(`/admin/users/${encodeURIComponent(id)}/lock`, {
+      method: "POST",
+      body: minutes ? { minutes } : {},
+      auth: true,
+    }),
+
+  /** POST /admin/users/{id}/unlock */
+  unlock: (id: string) =>
+    request<AdminUser>(`/admin/users/${encodeURIComponent(id)}/unlock`, {
+      method: "POST",
+      auth: true,
+    }),
+
+  /** POST /admin/users/{id}/revoke-sessions */
+  revokeSessions: (id: string) =>
+    request<AdminUser>(`/admin/users/${encodeURIComponent(id)}/revoke-sessions`, {
+      method: "POST",
+      auth: true,
+    }),
+};
+
 /* --------------------------------------------------------------- dashboard */
 
 export const dashboard = {
@@ -352,6 +417,7 @@ export function connectMarketSocket(
 export const api = {
   system,
   auth,
+  admin,
   dashboard,
   market,
   backtest,

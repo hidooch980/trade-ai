@@ -39,6 +39,9 @@ export function Footer() {
               <li>
                 <Link to="/dashboard">{t("nav.dashboard")}</Link>
               </li>
+              <li>
+                <Link to="/account">{t("nav.account")}</Link>
+              </li>
             </ul>
           </div>
 
