@@ -11,11 +11,15 @@
  */
 
 import type {
+  AccountConnection,
+  AccountRegisterPayload,
   AdminUser,
   AdminUserList,
   AdminUserQuery,
   DashboardStatus,
   GuardianSummary,
+  TradingAccount,
+  TradingAccountList,
   Json,
   LanguagesResponse,
   LoginPayload,
@@ -260,6 +264,59 @@ export const admin = {
     }),
 };
 
+/* ---------------------------------------------------------------- accounts */
+
+export const accounts = {
+  /** GET /api/accounts */
+  list: (signal?: AbortSignal) =>
+    request<TradingAccountList>("/api/accounts", { auth: true, signal }),
+
+  /** POST /api/accounts */
+  register: (payload: AccountRegisterPayload) =>
+    request<TradingAccount>("/api/accounts", {
+      method: "POST",
+      body: payload,
+      auth: true,
+    }),
+
+  /** PATCH /api/accounts/{id} */
+  update: (id: string, changes: { name?: string; broker?: string; make_default?: boolean }) =>
+    request<TradingAccount>(`/api/accounts/${encodeURIComponent(id)}`, {
+      method: "PATCH",
+      body: changes,
+      auth: true,
+    }),
+
+  /** PUT /api/accounts/{id}/credentials */
+  setPassword: (id: string, password: string) =>
+    request<TradingAccount>(`/api/accounts/${encodeURIComponent(id)}/credentials`, {
+      method: "PUT",
+      body: { password },
+      auth: true,
+    }),
+
+  /** POST /api/accounts/{id}/connect */
+  connect: (id: string) =>
+    request<AccountConnection>(`/api/accounts/${encodeURIComponent(id)}/connect`, {
+      method: "POST",
+      auth: true,
+    }),
+
+  /** POST /api/accounts/{id}/disconnect */
+  disconnect: (id: string) =>
+    request<AccountConnection>(`/api/accounts/${encodeURIComponent(id)}/disconnect`, {
+      method: "POST",
+      auth: true,
+    }),
+
+  /** DELETE /api/accounts/{id} */
+  remove: (id: string) =>
+    request<null>(`/api/accounts/${encodeURIComponent(id)}`, {
+      method: "DELETE",
+      auth: true,
+    }),
+};
+
 /* --------------------------------------------------------------- dashboard */
 
 export const dashboard = {
@@ -418,6 +475,7 @@ export const api = {
   system,
   auth,
   admin,
+  accounts,
   dashboard,
   market,
   backtest,

@@ -20,16 +20,27 @@ class BrokerConnectionManager:
         -> connection
 
     Raw credentials are never returned by connection results.
+
+    Connections are keyed by (owner, broker). The engine's own connections
+    carry no owner; a user's connection is separate from both the engine's
+    and from every other user's.
     """
 
     def __init__(self):
-        self._connections: dict[str, Any] = {}
+        self._connections: dict[tuple[str | None, str], Any] = {}
 
     @staticmethod
     def _normalize(value: str) -> str:
         return str(value or "").strip().lower()
 
-    async def discover(self, broker_name: str) -> dict:
+    @staticmethod
+    def _owner(owner_id: Any) -> str | None:
+        return None if owner_id is None else str(owner_id)
+
+    def _key(self, owner_id: Any, broker_name: str) -> tuple[str | None, str]:
+        return (self._owner(owner_id), self._normalize(broker_name))
+
+    async def discover(self, broker_name: str, owner_id: Any = None) -> dict:
         broker_name = str(broker_name or "").strip()
 
         adapter = broker_router.resolve(broker_name)
@@ -37,7 +48,7 @@ class BrokerConnectionManager:
         if adapter is not None:
             credential_types = []
 
-            for record in credential_manager.list():
+            for record in credential_manager.list(owner_id=owner_id):
                 if self._normalize(record.broker) == self._normalize(broker_name):
                     credential_types.append(record.connection_type)
 
@@ -64,6 +75,7 @@ class BrokerConnectionManager:
         credentials: dict | None = None,
         credential_id: str | None = None,
         config: dict | None = None,
+        owner_id: Any = None,
     ) -> dict:
         broker_name = str(broker_name or "").strip()
         connection_type = str(connection_type or "").strip().lower()
@@ -71,7 +83,7 @@ class BrokerConnectionManager:
         adapter_cls = broker_router.resolve(broker_name)
 
         if adapter_cls is None:
-            discovery = await self.discover(broker_name)
+            discovery = await self.discover(broker_name, owner_id=owner_id)
 
             return {
                 "connected": False,
@@ -95,6 +107,7 @@ class BrokerConnectionManager:
                 broker=broker_name,
                 connection_type=connection_type,
                 credentials=credentials,
+                owner_id=owner_id,
             )
 
             credential_id = stored["credential_id"]
@@ -103,7 +116,8 @@ class BrokerConnectionManager:
         if credential_id is not None:
             try:
                 connection_credentials = credential_manager.get(
-                    credential_id
+                    credential_id,
+                    owner_id=owner_id,
                 )
             except KeyError:
                 return {
@@ -115,7 +129,10 @@ class BrokerConnectionManager:
                     "credential_id": credential_id,
                 }
 
-            metadata = credential_manager.metadata(credential_id)
+            metadata = credential_manager.metadata(
+                credential_id,
+                owner_id=owner_id,
+            )
 
             if (
                 self._normalize(metadata["broker"])
@@ -137,6 +154,7 @@ class BrokerConnectionManager:
                 credential_manager.get_for_connection(
                     broker_name,
                     connection_type,
+                    owner_id=owner_id,
                 )
             )
 
@@ -163,7 +181,9 @@ class BrokerConnectionManager:
         try:
             result = await adapter.connect(
                 credentials=connection_credentials,
-                config=config,
+                # The adapter needs the owner to decide whether it may touch
+                # the engine's shared bridge or must isolate itself.
+                config={**(config or {}), "owner_id": self._owner(owner_id)},
             )
         except Exception as exc:
             return {
@@ -193,18 +213,18 @@ class BrokerConnectionManager:
                 "credential_id": credential_id,
             }
 
-        key = self._normalize(broker_name)
-
-        self._connections[key] = {
+        self._connections[self._key(owner_id, broker_name)] = {
             "adapter": adapter,
             "broker": broker_name,
             "connection_type": connection_type,
             "credential_id": credential_id,
+            "owner_id": self._owner(owner_id),
         }
 
-        # Keep the execution bridge synchronized with the broker
-        # connection lifecycle.
-        if connection_type == "mt5":
+        # Keep the execution bridge synchronized with the broker connection
+        # lifecycle. Only the engine's own connection drives the shared
+        # bridge — a user connecting their account must not flip it.
+        if connection_type == "mt5" and owner_id is None:
             mt5_bridge.connected = True
 
         return {
@@ -216,8 +236,8 @@ class BrokerConnectionManager:
             "credential_id": credential_id,
         }
 
-    async def disconnect(self, broker_name: str) -> dict:
-        key = self._normalize(broker_name)
+    async def disconnect(self, broker_name: str, owner_id: Any = None) -> dict:
+        key = self._key(owner_id, broker_name)
 
         connection = self._connections.get(key)
 
@@ -235,7 +255,7 @@ class BrokerConnectionManager:
         finally:
             del self._connections[key]
 
-            if connection.get("connection_type") == "mt5":
+            if connection.get("connection_type") == "mt5" and owner_id is None:
                 mt5_bridge.connected = False
 
         return {
@@ -248,11 +268,18 @@ class BrokerConnectionManager:
             "broker": broker_name,
         }
 
-    def connected_brokers(self) -> list[str]:
-        return sorted(self._connections.keys())
+    def connected_brokers(self, owner_id: Any = None) -> list[str]:
+        owner = self._owner(owner_id)
 
-    async def health_check(self, broker_name: str) -> dict:
-        key = self._normalize(broker_name)
+        return sorted(
+            broker for (record_owner, broker) in self._connections if record_owner == owner
+        )
+
+    def is_connected(self, broker_name: str, owner_id: Any = None) -> bool:
+        return self._key(owner_id, broker_name) in self._connections
+
+    async def health_check(self, broker_name: str, owner_id: Any = None) -> dict:
+        key = self._key(owner_id, broker_name)
 
         connection = self._connections.get(key)
 

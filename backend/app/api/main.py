@@ -1,6 +1,6 @@
 import asyncio
 from fastapi import FastAPI, Depends, Request
-from fastapi.exceptions import HTTPException
+from fastapi.exceptions import HTTPException, RequestValidationError
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
 from app.i18n.dependencies import get_request_language
@@ -14,14 +14,20 @@ from app.api.routes import market_signal
 from app.api.routes import trading
 from app.api.routes import auth
 from app.api.routes import admin_users
+from app.api.routes import accounts
 from app.api.routes.signal import router as signal_router
 from app.market.stream.market_stream_worker import market_stream_worker
 from app.i18n.routes import router as i18n_router
-from app.i18n.errors import http_exception_handler, general_exception_handler
+from app.i18n.errors import (
+    http_exception_handler,
+    general_exception_handler,
+    validation_exception_handler,
+)
 
 app=FastAPI(title="Trade-AI API",version="1.0.0",dependencies=[Depends(get_request_language)])
 app.add_exception_handler(StarletteHTTPException, http_exception_handler)
 app.add_exception_handler(HTTPException, http_exception_handler)
+app.add_exception_handler(RequestValidationError, validation_exception_handler)
 app.add_exception_handler(Exception, general_exception_handler)
 
 
@@ -44,6 +50,7 @@ app.include_router(market_status.router)
 app.include_router(trading.router)
 app.include_router(auth.router)
 app.include_router(admin_users.router)
+app.include_router(accounts.router)
 
 @app.get("/")
 def root():

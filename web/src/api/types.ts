@@ -57,6 +57,57 @@ export interface AdminUserQuery {
   offset?: number;
 }
 
+export type AccountKind = "DEMO" | "REAL";
+export type AccountStatus = "PENDING" | "CONNECTED" | "DISCONNECTED" | "ERROR";
+
+export interface TradingAccount {
+  id: string;
+  name: string;
+  platform: string;
+  broker: string | null;
+  server: string | null;
+  login: string | null;
+  account_kind: AccountKind;
+  status: AccountStatus;
+  is_default: boolean;
+  currency: string;
+  balance: string;
+  equity: string;
+  leverage: number | null;
+  /** Whether the server still holds a terminal password for this account. */
+  has_credentials: boolean;
+  last_connected_at: string | null;
+  last_error: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface TradingAccountList {
+  items: TradingAccount[];
+  total: number;
+  /** SIMULATION while the MT5 adapter runs on the in-process bridge. */
+  mode: string;
+}
+
+export interface AccountConnection {
+  account: TradingAccount;
+  connected: boolean;
+  status: string;
+  mode: string;
+  detail: string | null;
+}
+
+export interface AccountRegisterPayload {
+  name: string;
+  server: string;
+  login: string;
+  password: string;
+  account_kind: AccountKind;
+  broker?: string | null;
+  currency?: string;
+  make_default?: boolean;
+}
+
 export interface RegisterPayload {
   email: string;
   username: string;

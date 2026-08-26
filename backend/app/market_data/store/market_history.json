@@ -3,76 +3,6 @@
     {
       "symbol": "EURUSD",
       "timeframe": "M1",
-      "timestamp": "2026-08-08 18:30:02.463450",
-      "open": 1.1091,
-      "high": 1.1091,
-      "low": 1.1085,
-      "close": 1.1085,
-      "volume": 2400
-    },
-    {
-      "symbol": "EURUSD",
-      "timeframe": "M1",
-      "timestamp": "2026-08-08 18:31:03.465917",
-      "open": 1.1083,
-      "high": 1.1085,
-      "low": 1.1068,
-      "close": 1.1085,
-      "volume": 2400
-    },
-    {
-      "symbol": "EURUSD",
-      "timeframe": "M1",
-      "timestamp": "2026-08-08 18:32:04.414720",
-      "open": 1.1083,
-      "high": 1.1097,
-      "low": 1.1078,
-      "close": 1.1097,
-      "volume": 2200
-    },
-    {
-      "symbol": "EURUSD",
-      "timeframe": "M1",
-      "timestamp": "2026-08-08 18:33:02.287033",
-      "open": 1.1102,
-      "high": 1.1103,
-      "low": 1.1091,
-      "close": 1.1096,
-      "volume": 2400
-    },
-    {
-      "symbol": "EURUSD",
-      "timeframe": "M1",
-      "timestamp": "2026-08-08 18:34:03.238980",
-      "open": 1.1101,
-      "high": 1.1101,
-      "low": 1.1088,
-      "close": 1.1091,
-      "volume": 2400
-    },
-    {
-      "symbol": "EURUSD",
-      "timeframe": "M1",
-      "timestamp": "2026-08-08 18:35:04.265131",
-      "open": 1.1096,
-      "high": 1.1116,
-      "low": 1.1096,
-      "close": 1.1111,
-      "volume": 2400
-    },
-    {
-      "symbol": "EURUSD",
-      "timeframe": "M1",
-      "timestamp": "2026-08-08 18:36:05.138696",
-      "open": 1.1106,
-      "high": 1.1121,
-      "low": 1.1101,
-      "close": 1.1116,
-      "volume": 2200
-    },
-    {
-      "symbol": "EURUSD",
-      "timeframe": "M1",
       "timestamp": "2026-08-08 18:37:00.974356",
       "open": 1.1114,
       "high": 1.1137,
@@ -9999,79 +9929,79 @@
       "low": 1.1059,
       "close": 1.1059,
       "volume": 2400
+    },
+    {
+      "symbol": "EURUSD",
+      "timeframe": "M1",
+      "timestamp": "2026-08-26 15:16:07.162883",
+      "open": 1.1005,
+      "high": 1.1007,
+      "low": 1.0985,
+      "close": 1.0985,
+      "volume": 2200
+    },
+    {
+      "symbol": "EURUSD",
+      "timeframe": "M1",
+      "timestamp": "2026-08-26 15:17:02.559257",
+      "open": 1.0987,
+      "high": 1.0999,
+      "low": 1.0975,
+      "close": 1.0975,
+      "volume": 2400
+    },
+    {
+      "symbol": "EURUSD",
+      "timeframe": "M1",
+      "timestamp": "2026-08-26 15:18:02.857634",
+      "open": 1.097,
+      "high": 1.0986,
+      "low": 1.0965,
+      "close": 1.0986,
+      "volume": 2400
+    },
+    {
+      "symbol": "EURUSD",
+      "timeframe": "M1",
+      "timestamp": "2026-08-26 15:19:03.175924",
+      "open": 1.0984,
+      "high": 1.0984,
+      "low": 1.0971,
+      "close": 1.0971,
+      "volume": 2400
+    },
+    {
+      "symbol": "EURUSD",
+      "timeframe": "M1",
+      "timestamp": "2026-08-26 15:21:06.230493",
+      "open": 1.0995,
+      "high": 1.0995,
+      "low": 1.0971,
+      "close": 1.0971,
+      "volume": 2200
+    },
+    {
+      "symbol": "EURUSD",
+      "timeframe": "M1",
+      "timestamp": "2026-08-26 15:22:01.502701",
+      "open": 1.0966,
+      "high": 1.0974,
+      "low": 1.0962,
+      "close": 1.0967,
+      "volume": 2400
+    },
+    {
+      "symbol": "EURUSD",
+      "timeframe": "M1",
+      "timestamp": "2026-08-26 15:23:01.781975",
+      "open": 1.0962,
+      "high": 1.0976,
+      "low": 1.0962,
+      "close": 1.0968,
+      "volume": 2400
     }
   ],
   "GBPUSD": [
-    {
-      "symbol": "GBPUSD",
-      "timeframe": "M1",
-      "timestamp": "2026-08-08 18:30:02.660401",
-      "open": 1.2562,
-      "high": 1.2579,
-      "low": 1.2559,
-      "close": 1.2574,
-      "volume": 2400
-    },
-    {
-      "symbol": "GBPUSD",
-      "timeframe": "M1",
-      "timestamp": "2026-08-08 18:31:03.661461",
-      "open": 1.2579,
-      "high": 1.2579,
-      "low": 1.2563,
-      "close": 1.257,
-      "volume": 2400
-    },
-    {
-      "symbol": "GBPUSD",
-      "timeframe": "M1",
-      "timestamp": "2026-08-08 18:32:09.700052",
-      "open": 1.2568,
-      "high": 1.2573,
-      "low": 1.2561,
-      "close": 1.2566,
-      "volume": 2000
-    },
-    {
-      "symbol": "GBPUSD",
-      "timeframe": "M1",
-      "timestamp": "2026-08-08 18:33:01.726238",
-      "open": 1.2568,
-      "high": 1.2574,
-      "low": 1.2559,
-      "close": 1.2559,
-      "volume": 2400
-    },
-    {
-      "symbol": "GBPUSD",
-      "timeframe": "M1",
-      "timestamp": "2026-08-08 18:34:02.673737",
-      "open": 1.2561,
-      "high": 1.2563,
-      "low": 1.2553,
-      "close": 1.2556,
-      "volume": 2400
-    },
-    {
-      "symbol": "GBPUSD",
-      "timeframe": "M1",
-      "timestamp": "2026-08-08 18:35:03.679398",
-      "open": 1.2558,
-      "high": 1.2558,
-      "low": 1.2543,
-      "close": 1.255,
-      "volume": 2400
-    },
-    {
-      "symbol": "GBPUSD",
-      "timeframe": "M1",
-      "timestamp": "2026-08-08 18:36:04.628906",
-      "open": 1.2545,
-      "high": 1.255,
-      "low": 1.2535,
-      "close": 1.2538,
-      "volume": 2200
-    },
     {
       "symbol": "GBPUSD",
       "timeframe": "M1",
@@ -20001,79 +19931,79 @@
       "low": 1.237,
       "close": 1.2386,
       "volume": 2400
+    },
+    {
+      "symbol": "GBPUSD",
+      "timeframe": "M1",
+      "timestamp": "2026-08-26 15:16:07.186111",
+      "open": 1.2798,
+      "high": 1.28,
+      "low": 1.2784,
+      "close": 1.2791,
+      "volume": 2200
+    },
+    {
+      "symbol": "GBPUSD",
+      "timeframe": "M1",
+      "timestamp": "2026-08-26 15:17:02.617255",
+      "open": 1.2789,
+      "high": 1.279,
+      "low": 1.2782,
+      "close": 1.2782,
+      "volume": 2400
+    },
+    {
+      "symbol": "GBPUSD",
+      "timeframe": "M1",
+      "timestamp": "2026-08-26 15:18:02.938196",
+      "open": 1.2784,
+      "high": 1.2784,
+      "low": 1.2764,
+      "close": 1.2779,
+      "volume": 2400
+    },
+    {
+      "symbol": "GBPUSD",
+      "timeframe": "M1",
+      "timestamp": "2026-08-26 15:19:03.226663",
+      "open": 1.2774,
+      "high": 1.2784,
+      "low": 1.2773,
+      "close": 1.2784,
+      "volume": 2400
+    },
+    {
+      "symbol": "GBPUSD",
+      "timeframe": "M1",
+      "timestamp": "2026-08-26 15:21:06.252688",
+      "open": 1.2795,
+      "high": 1.2797,
+      "low": 1.278,
+      "close": 1.2789,
+      "volume": 2200
+    },
+    {
+      "symbol": "GBPUSD",
+      "timeframe": "M1",
+      "timestamp": "2026-08-26 15:22:01.553346",
+      "open": 1.2794,
+      "high": 1.28,
+      "low": 1.2789,
+      "close": 1.28,
+      "volume": 2400
+    },
+    {
+      "symbol": "GBPUSD",
+      "timeframe": "M1",
+      "timestamp": "2026-08-26 15:23:01.837005",
+      "open": 1.2805,
+      "high": 1.2834,
+      "low": 1.2805,
+      "close": 1.2834,
+      "volume": 2400
     }
   ],
   "XAUUSD": [
-    {
-      "symbol": "XAUUSD",
-      "timeframe": "M1",
-      "timestamp": "2026-08-08 18:30:02.812984",
-      "open": 2296.0,
-      "high": 2305.0,
-      "low": 2296.0,
-      "close": 2304.0,
-      "volume": 2400
-    },
-    {
-      "symbol": "XAUUSD",
-      "timeframe": "M1",
-      "timestamp": "2026-08-08 18:31:03.835812",
-      "open": 2305.0,
-      "high": 2309.0,
-      "low": 2305.0,
-      "close": 2309.0,
-      "volume": 2400
-    },
-    {
-      "symbol": "XAUUSD",
-      "timeframe": "M1",
-      "timestamp": "2026-08-08 18:32:09.905594",
-      "open": 2308.0,
-      "high": 2308.0,
-      "low": 2301.0,
-      "close": 2306.0,
-      "volume": 2000
-    },
-    {
-      "symbol": "XAUUSD",
-      "timeframe": "M1",
-      "timestamp": "2026-08-08 18:33:01.932300",
-      "open": 2305.0,
-      "high": 2308.0,
-      "low": 2303.0,
-      "close": 2307.0,
-      "volume": 2400
-    },
-    {
-      "symbol": "XAUUSD",
-      "timeframe": "M1",
-      "timestamp": "2026-08-08 18:34:02.873957",
-      "open": 2305.0,
-      "high": 2307.0,
-      "low": 2302.0,
-      "close": 2307.0,
-      "volume": 2400
-    },
-    {
-      "symbol": "XAUUSD",
-      "timeframe": "M1",
-      "timestamp": "2026-08-08 18:35:03.893950",
-      "open": 2306.0,
-      "high": 2307.0,
-      "low": 2302.0,
-      "close": 2302.0,
-      "volume": 2400
-    },
-    {
-      "symbol": "XAUUSD",
-      "timeframe": "M1",
-      "timestamp": "2026-08-08 18:36:04.803330",
-      "open": 2301.0,
-      "high": 2306.0,
-      "low": 2301.0,
-      "close": 2302.0,
-      "volume": 2200
-    },
     {
       "symbol": "XAUUSD",
       "timeframe": "M1",
@@ -30003,79 +29933,79 @@
       "low": 2248.0,
       "close": 2248.0,
       "volume": 2400
+    },
+    {
+      "symbol": "XAUUSD",
+      "timeframe": "M1",
+      "timestamp": "2026-08-26 15:16:07.233646",
+      "open": 2432.0,
+      "high": 2433.0,
+      "low": 2427.0,
+      "close": 2427.0,
+      "volume": 2200
+    },
+    {
+      "symbol": "XAUUSD",
+      "timeframe": "M1",
+      "timestamp": "2026-08-26 15:17:02.669982",
+      "open": 2425.0,
+      "high": 2427.0,
+      "low": 2422.0,
+      "close": 2425.0,
+      "volume": 2400
+    },
+    {
+      "symbol": "XAUUSD",
+      "timeframe": "M1",
+      "timestamp": "2026-08-26 15:18:02.989748",
+      "open": 2426.0,
+      "high": 2436.0,
+      "low": 2426.0,
+      "close": 2432.0,
+      "volume": 2400
+    },
+    {
+      "symbol": "XAUUSD",
+      "timeframe": "M1",
+      "timestamp": "2026-08-26 15:19:03.275172",
+      "open": 2431.0,
+      "high": 2435.0,
+      "low": 2431.0,
+      "close": 2433.0,
+      "volume": 2400
+    },
+    {
+      "symbol": "XAUUSD",
+      "timeframe": "M1",
+      "timestamp": "2026-08-26 15:21:06.305820",
+      "open": 2431.0,
+      "high": 2438.0,
+      "low": 2431.0,
+      "close": 2436.0,
+      "volume": 2200
+    },
+    {
+      "symbol": "XAUUSD",
+      "timeframe": "M1",
+      "timestamp": "2026-08-26 15:22:01.601215",
+      "open": 2434.0,
+      "high": 2436.0,
+      "low": 2431.0,
+      "close": 2435.0,
+      "volume": 2400
+    },
+    {
+      "symbol": "XAUUSD",
+      "timeframe": "M1",
+      "timestamp": "2026-08-26 15:23:01.886286",
+      "open": 2437.0,
+      "high": 2442.0,
+      "low": 2437.0,
+      "close": 2440.0,
+      "volume": 2400
     }
   ],
   "BTCUSD": [
-    {
-      "symbol": "BTCUSD",
-      "timeframe": "M1",
-      "timestamp": "2026-08-08 18:30:03.000440",
-      "open": 65350.0,
-      "high": 65650.0,
-      "low": 65250.0,
-      "close": 65650.0,
-      "volume": 2400
-    },
-    {
-      "symbol": "BTCUSD",
-      "timeframe": "M1",
-      "timestamp": "2026-08-08 18:31:03.993444",
-      "open": 65550.0,
-      "high": 65900.0,
-      "low": 65550.0,
-      "close": 65900.0,
-      "volume": 2400
-    },
-    {
-      "symbol": "BTCUSD",
-      "timeframe": "M1",
-      "timestamp": "2026-08-08 18:32:10.108138",
-      "open": 65950.0,
-      "high": 66200.0,
-      "low": 65900.0,
-      "close": 66200.0,
-      "volume": 2000
-    },
-    {
-      "symbol": "BTCUSD",
-      "timeframe": "M1",
-      "timestamp": "2026-08-08 18:33:02.113889",
-      "open": 66100.0,
-      "high": 66500.0,
-      "low": 66100.0,
-      "close": 66400.0,
-      "volume": 2400
-    },
-    {
-      "symbol": "BTCUSD",
-      "timeframe": "M1",
-      "timestamp": "2026-08-08 18:34:03.048647",
-      "open": 66350.0,
-      "high": 66450.0,
-      "low": 66150.0,
-      "close": 66250.0,
-      "volume": 2400
-    },
-    {
-      "symbol": "BTCUSD",
-      "timeframe": "M1",
-      "timestamp": "2026-08-08 18:35:04.093381",
-      "open": 66200.0,
-      "high": 66400.0,
-      "low": 66200.0,
-      "close": 66250.0,
-      "volume": 2400
-    },
-    {
-      "symbol": "BTCUSD",
-      "timeframe": "M1",
-      "timestamp": "2026-08-08 18:36:04.948319",
-      "open": 66200.0,
-      "high": 66300.0,
-      "low": 66050.0,
-      "close": 66050.0,
-      "volume": 2200
-    },
     {
       "symbol": "BTCUSD",
       "timeframe": "M1",
@@ -40004,6 +39934,76 @@
       "high": 71750.0,
       "low": 71400.0,
       "close": 71550.0,
+      "volume": 2400
+    },
+    {
+      "symbol": "BTCUSD",
+      "timeframe": "M1",
+      "timestamp": "2026-08-26 15:16:07.253586",
+      "open": 63050.0,
+      "high": 63200.0,
+      "low": 62900.0,
+      "close": 63150.0,
+      "volume": 2200
+    },
+    {
+      "symbol": "BTCUSD",
+      "timeframe": "M1",
+      "timestamp": "2026-08-26 15:17:02.720289",
+      "open": 63100.0,
+      "high": 63100.0,
+      "low": 62750.0,
+      "close": 62900.0,
+      "volume": 2400
+    },
+    {
+      "symbol": "BTCUSD",
+      "timeframe": "M1",
+      "timestamp": "2026-08-26 15:18:03.077032",
+      "open": 62950.0,
+      "high": 63150.0,
+      "low": 62900.0,
+      "close": 63000.0,
+      "volume": 2400
+    },
+    {
+      "symbol": "BTCUSD",
+      "timeframe": "M1",
+      "timestamp": "2026-08-26 15:19:03.322476",
+      "open": 63100.0,
+      "high": 63250.0,
+      "low": 62950.0,
+      "close": 63050.0,
+      "volume": 2400
+    },
+    {
+      "symbol": "BTCUSD",
+      "timeframe": "M1",
+      "timestamp": "2026-08-26 15:21:06.322649",
+      "open": 63050.0,
+      "high": 63250.0,
+      "low": 63000.0,
+      "close": 63200.0,
+      "volume": 2200
+    },
+    {
+      "symbol": "BTCUSD",
+      "timeframe": "M1",
+      "timestamp": "2026-08-26 15:22:01.650273",
+      "open": 63250.0,
+      "high": 63300.0,
+      "low": 63100.0,
+      "close": 63300.0,
+      "volume": 2400
+    },
+    {
+      "symbol": "BTCUSD",
+      "timeframe": "M1",
+      "timestamp": "2026-08-26 15:23:01.932041",
+      "open": 63350.0,
+      "high": 63450.0,
+      "low": 63150.0,
+      "close": 63400.0,
       "volume": 2400
     }
   ]

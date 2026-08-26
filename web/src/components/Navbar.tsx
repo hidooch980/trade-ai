@@ -177,6 +177,9 @@ export function Navbar() {
                     {t("nav.admin")}
                   </Link>
                 )}
+                <Link to="/accounts" className="btn btn--quiet btn--sm nav__util">
+                  {t("nav.mt5")}
+                </Link>
                 <Link to="/account" className="btn btn--ghost btn--sm">
                   {t("nav.account")}
                 </Link>
@@ -265,6 +268,9 @@ export function Navbar() {
               <>
                 <Link to="/account" className="btn btn--ghost btn--block">
                   {t("nav.account")}
+                </Link>
+                <Link to="/accounts" className="btn btn--ghost btn--block">
+                  {t("nav.mt5")}
                 </Link>
                 <Link to="/dashboard" className="btn btn--ghost btn--block">
                   {t("nav.dashboard")}
