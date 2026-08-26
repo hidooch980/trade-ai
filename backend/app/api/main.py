@@ -16,6 +16,7 @@ from app.api.routes import auth
 from app.api.routes import admin_users
 from app.api.routes import accounts
 from app.api.routes import risk as risk_routes
+from app.api.routes import intelligence as intelligence_routes
 from app.api.routes.signal import router as signal_router
 from app.market.stream.market_stream_worker import market_stream_worker
 from app.i18n.routes import router as i18n_router
@@ -53,6 +54,7 @@ app.include_router(auth.router)
 app.include_router(admin_users.router)
 app.include_router(accounts.router)
 app.include_router(risk_routes.router)
+app.include_router(intelligence_routes.router)
 
 @app.get("/")
 def root():
