@@ -18,6 +18,9 @@ import type {
   AdminUserQuery,
   DashboardStatus,
   GuardianSummary,
+  IntelligenceMeta,
+  MarketView,
+  SignalPayload,
   RiskAssessPayload,
   RiskAssessment,
   RiskPolicy,
@@ -361,6 +364,22 @@ export const risk = {
     }),
 };
 
+/* ------------------------------------------------------------ intelligence */
+
+export const intelligence = {
+  /** GET /api/intelligence/meta */
+  meta: (signal?: AbortSignal) =>
+    request<IntelligenceMeta>("/api/intelligence/meta", { auth: true, signal }),
+
+  /** POST /api/intelligence/view */
+  view: (payload: { symbol: string; signals: SignalPayload[]; blockers?: string[] }) =>
+    request<MarketView>("/api/intelligence/view", {
+      method: "POST",
+      body: payload,
+      auth: true,
+    }),
+};
+
 /* --------------------------------------------------------------- dashboard */
 
 export const dashboard = {
@@ -521,6 +540,7 @@ export const api = {
   admin,
   accounts,
   risk,
+  intelligence,
   dashboard,
   market,
   backtest,

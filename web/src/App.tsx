@@ -6,6 +6,7 @@ import { Home } from "./pages/Home";
 import { AccountPage } from "./pages/Account";
 import { AccountsPage } from "./pages/Accounts";
 import { AdminUsersPage } from "./pages/AdminUsers";
+import { IntelligencePage } from "./pages/Intelligence";
 import { RiskPage } from "./pages/Risk";
 import { ContactPage } from "./pages/Contact";
 import { DashboardPage } from "./pages/Dashboard";
@@ -55,6 +56,8 @@ function renderRoute(path: string) {
       return <AccountsPage />;
     case "/risk":
       return <RiskPage />;
+    case "/intelligence":
+      return <IntelligencePage />;
     case "/admin/users":
       return <AdminUsersPage />;
     default:

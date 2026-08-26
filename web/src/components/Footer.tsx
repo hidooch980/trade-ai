@@ -48,6 +48,9 @@ export function Footer() {
               <li>
                 <Link to="/risk">{t("nav.risk")}</Link>
               </li>
+              <li>
+                <Link to="/intelligence">{t("nav.intel")}</Link>
+              </li>
             </ul>
           </div>
 

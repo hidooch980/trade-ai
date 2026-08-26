@@ -171,6 +171,62 @@ export interface RiskAssessPayload {
   } | null;
 }
 
+export type SignalKind =
+  | "TECHNICAL"
+  | "FLOW"
+  | "LIQUIDITY"
+  | "MACRO"
+  | "SENTIMENT"
+  | "NEWS";
+
+export type MarketBias =
+  | "STRONG_BULLISH"
+  | "BULLISH"
+  | "NEUTRAL"
+  | "BEARISH"
+  | "STRONG_BEARISH";
+
+export type MarketDecision = "BUY" | "SELL" | "WAIT" | "STAND_ASIDE";
+
+export interface SignalPayload {
+  kind: SignalKind;
+  value: string;
+  confidence: string;
+  source?: string;
+  note?: string;
+}
+
+export interface SourceWeight {
+  kind: SignalKind;
+  value: string;
+  confidence: string;
+  weight: string;
+  contribution: string;
+  source: string;
+  note: string;
+}
+
+export interface MarketView {
+  symbol: string;
+  score: string;
+  bias: MarketBias;
+  decision: MarketDecision;
+  actionable: boolean;
+  agreement: string;
+  confidence: string;
+  sources: SourceWeight[];
+  blockers: string[];
+  notes: string[];
+}
+
+export interface IntelligenceMeta {
+  kinds: { kind: SignalKind; default_weight: string }[];
+  strong_threshold: string;
+  lean_threshold: string;
+  min_agreement: string;
+  min_confidence: string;
+}
+
 export interface RegisterPayload {
   email: string;
   username: string;
