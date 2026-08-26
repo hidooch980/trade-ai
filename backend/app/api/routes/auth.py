@@ -1,3 +1,5 @@
+from datetime import datetime, timezone
+
 from fastapi import APIRouter, Depends, HTTPException, Request, status
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -20,14 +22,16 @@ from app.security.auth.session_manager import (
     RefreshTokenReplayError,
 )
 from app.repositories.auth_session_repository import AuthSessionRepository
-from app.services.user_service import UserService
+from app.repositories.password_reset_repository import PasswordResetRepository
+from app.services.user_service import AuthOutcome, UserService
 from app.i18n.manager import i18n, normalize_language
 from app.security.auth.rate_limit import auth_rate_limiter
-from app.security.auth.brute_force import (
-    is_account_locked,
-    register_failed_login,
-    reset_failed_logins,
+from app.security.auth.password_reset import (
+    generate_reset_token,
+    hash_reset_token,
+    reset_token_expiry,
 )
+from app.security.password import hash_password
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 
@@ -101,24 +105,30 @@ async def login(
         normalize_language(data.language)
     )
 
-    user = await service.authenticate(
+    attempt = await service.authenticate(
         username=data.username,
         password=data.password,
     )
 
-    if user and is_account_locked(user):
+    if attempt.outcome is AuthOutcome.LOCKED:
         raise HTTPException(
             status_code=status.HTTP_423_LOCKED,
             detail="Account temporarily locked",
         )
 
-    if not user:
+    if not attempt.ok:
+        # The attempt counter was just incremented on the user row. Without
+        # this commit the 401 discards it and the lockout never arms.
+        await db.commit()
+
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail=i18n.translate(
                 "auth.invalid_credentials"
             ),
         )
+
+    user = attempt.user
 
     access_token = create_access_token(
         user_id=user.id,
@@ -159,7 +169,7 @@ async def refresh(
     manager = get_session_manager(db)
 
     try:
-        result = await manager.rotate(
+        new_refresh_token, session, replay_detected = await manager.rotate(
             data.refresh_token,
             ip_address=(
                 request.client.host
@@ -177,7 +187,7 @@ async def refresh(
             detail="Refresh token reuse detected",
         )
 
-    if not result:
+    if new_refresh_token is None or session is None:
         await db.rollback()
 
         raise HTTPException(
@@ -186,8 +196,6 @@ async def refresh(
                 "auth.invalid_or_expired_session"
             ),
         )
-
-    new_refresh_token, session, replay_detected = result
 
     if replay_detected:
         await db.commit()
@@ -347,9 +355,7 @@ async def reset_password(
             detail=i18n.translate("auth.invalid_reset_token"),
         )
 
-    now = __import__("datetime").datetime.now(
-        __import__("datetime").timezone.utc
-    )
+    now = datetime.now(timezone.utc)
 
     if item.used_at is not None or item.expires_at <= now:
         raise HTTPException(

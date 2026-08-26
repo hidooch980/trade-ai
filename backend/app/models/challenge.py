@@ -13,7 +13,9 @@ from sqlalchemy import (
     String,
     Text,
     UniqueConstraint,
+    false as sa_false,
     func,
+    true as sa_true,
 )
 from sqlalchemy.dialects.postgresql import JSONB, UUID as PGUUID
 from sqlalchemy.orm import Mapped, mapped_column
@@ -109,7 +111,7 @@ class ChallengePlan(Base):
         Boolean,
         nullable=False,
         default=True,
-        server_default=func.true(),
+        server_default=sa_true(),
     )
 
     created_at: Mapped[datetime] = mapped_column(
@@ -345,35 +347,35 @@ class ChallengeResult(Base):
         Boolean,
         nullable=False,
         default=False,
-        server_default=func.false(),
+        server_default=sa_false(),
     )
 
     daily_drawdown_ok: Mapped[bool] = mapped_column(
         Boolean,
         nullable=False,
         default=True,
-        server_default=func.true(),
+        server_default=sa_true(),
     )
 
     max_drawdown_ok: Mapped[bool] = mapped_column(
         Boolean,
         nullable=False,
         default=True,
-        server_default=func.true(),
+        server_default=sa_true(),
     )
 
     minimum_trading_days_ok: Mapped[bool] = mapped_column(
         Boolean,
         nullable=False,
         default=False,
-        server_default=func.false(),
+        server_default=sa_false(),
     )
 
     rules_ok: Mapped[bool] = mapped_column(
         Boolean,
         nullable=False,
         default=True,
-        server_default=func.true(),
+        server_default=sa_true(),
     )
 
     final_balance: Mapped[Decimal] = mapped_column(

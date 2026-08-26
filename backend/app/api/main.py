@@ -13,6 +13,7 @@ from app.api.routes import live_market
 from app.api.routes import market_signal
 from app.api.routes import trading
 from app.api.routes import auth
+from app.api.routes import admin_users
 from app.api.routes.signal import router as signal_router
 from app.market.stream.market_stream_worker import market_stream_worker
 from app.i18n.routes import router as i18n_router
@@ -42,6 +43,7 @@ app.include_router(websocket_market.router)
 app.include_router(market_status.router)
 app.include_router(trading.router)
 app.include_router(auth.router)
+app.include_router(admin_users.router)
 
 @app.get("/")
 def root():

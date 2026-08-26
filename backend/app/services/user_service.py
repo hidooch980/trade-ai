@@ -1,4 +1,5 @@
-from datetime import datetime, timezone
+from enum import Enum
+from typing import NamedTuple
 from uuid import UUID
 
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -12,6 +13,24 @@ from app.security.auth.brute_force import (
     register_failed_login,
     reset_failed_logins,
 )
+
+
+class AuthOutcome(str, Enum):
+    """Why an authentication attempt ended the way it did."""
+
+    OK = "OK"
+    UNKNOWN_USER = "UNKNOWN_USER"
+    LOCKED = "LOCKED"
+    BAD_PASSWORD = "BAD_PASSWORD"
+
+
+class AuthAttempt(NamedTuple):
+    outcome: AuthOutcome
+    user: User | None = None
+
+    @property
+    def ok(self) -> bool:
+        return self.outcome is AuthOutcome.OK
 
 
 class UserService:
@@ -64,22 +83,31 @@ class UserService:
         self,
         username: str,
         password: str,
-    ) -> User | None:
+    ) -> AuthAttempt:
+        """
+        Reports *why* an attempt failed, not just that it did.
+
+        Collapsing a locked account into the same answer as a wrong password
+        leaves the caller unable to say so, and leaves the failure counter
+        unreadable. The counter is mutated here but only reaches the database
+        if the caller commits — a rejected login has to commit too, or the
+        lockout threshold is never crossed.
+        """
         user = await self.repository.get_by_username(username)
 
         if not user or not user.password_hash:
-            return None
+            return AuthAttempt(AuthOutcome.UNKNOWN_USER)
 
         if is_account_locked(user):
-            return None
+            return AuthAttempt(AuthOutcome.LOCKED, user)
 
         if not verify_password(
             password,
             user.password_hash,
         ):
             register_failed_login(user)
-            return None
+            return AuthAttempt(AuthOutcome.BAD_PASSWORD, user)
 
         reset_failed_logins(user)
 
-        return user
+        return AuthAttempt(AuthOutcome.OK, user)

@@ -6,7 +6,10 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.db.session import get_db
 from app.security.auth.jwt import decode_access_token
 from app.services.user_service import UserService
+from app.security.permissions.permission_manager import PermissionManager
 from app.i18n.manager import i18n, normalize_language
+
+_permissions = PermissionManager()
 
 bearer_scheme = HTTPBearer(auto_error=False)
 
@@ -39,3 +42,21 @@ async def get_current_user(
 
     i18n.set_language(normalize_language(user.language))
     return user
+
+
+async def require_admin(current_user=Depends(get_current_user)):
+    """
+    Gate for the user-administration routes.
+
+    The role vocabulary lives in PermissionManager, so an unknown role falls
+    through to an empty permission list and is refused.
+    """
+    verdict = _permissions.check(current_user.role, "MANAGE_USERS")
+
+    if not verdict["allowed"]:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail=i18n.translate("error.forbidden"),
+        )
+
+    return current_user
